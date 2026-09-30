@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title -->
+  <title>Newsletter | GAD'S LEADERSHIP FOUNDATION</title>
+
+  <!-- Description -->
+  <meta name="description"
+    content="Stay updated with the latest leadership insights, business strategies, and exclusive updates from Mr. GAD." />
+
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/x-icon" href="./fav/favicon.ico" />
+  <link rel="stylesheet" href="social.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <!-- PNG Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png" />
+  <!-- Apple Touch Icon (For iOS Devices) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
+  <!-- Android Chrome Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="./fav/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./fav/android-chrome-512x512.png" />
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="./fav/site.webmanifest" />
+
+  <!-- FA -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE8MNDF7ZM"></script>
+  <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BE8MNDF7ZM'); </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+
+    })(window, document, 'script', 'dataLayer', 'GTM-NHBPTSJF');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Internal -->
+  <link rel="stylesheet" href="common.css?v=103">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./article.css" />
+
+  <style>
+    .article-height-adjuster {
+      height: 3rem !important;
+    }
+
+    .art-main-01 {
+      padding: 2rem 2.5% !important;
+    }
+
+    .newsletter-form-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem;
+      border-radius: 20px;
+      margin-top: 2rem;
+      max-width: 600px;
+    }
+
+    .newsletter-input {
+      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(114, 19, 234, 0.3);
+      color: #333;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .newsletter-input:focus {
+      outline: none;
+      border-color: #7213ea;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .newsletter-submit {
+      background: linear-gradient(90deg, #0066ff 0%, #00d2ff 100%);
+      color: white;
+      border: none;
+      padding: 1.1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .newsletter-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+    }
+
+    .success-message {
+      display: none;
+      background: rgba(40, 167, 69, 0.2);
+      border: 1px solid #28a745;
+      color: #28a745;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .download-btn-container {
+      display: none;
+      margin-top: 1.5rem;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(90deg, #0066ff 0%, #00d2ff 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      width: 100%;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+    }
+
+    .am-2-right {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 2rem !important;
+      width: 100% !important;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1100px) {
+      .am-2-right {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .am-2-right {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    .am-2-div {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .am-2-div:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .am-2-div img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1440px) {
+      .art-main-01-left .layer-2 {
+        font-size: 4rem;
+      }
+
+      .am-2-right {
+        gap: 1.5rem !important;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .am-2-right {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .art-main-01-left .layer-2 {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .art-main-01 {
+        flex-direction: column !important;
+        padding: 2rem 5% !important;
+        text-align: center;
+      }
+
+      .art-main-01-left {
+        border-left: none !important;
+        padding: 0 !important;
+        align-items: center !important;
+      }
+
+      .art-main-01-left .layer-2 {
+        font-size: 3rem !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .art-main-01-left .layer-3 {
+        font-size: 1.1rem !important;
+        max-width: 100% !important;
+      }
+
+      .newsletter-form-container {
+        padding: 2rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 2rem 0 !important;
+      }
+
+      .art-main-01-right {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-top: 2rem;
+      }
+
+      .art-main-01-right img {
+        height: 350px !important;
+        min-height: 350px !important;
+        border-radius: 20px !important;
+      }
+
+      .am-2-right {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+
+      .past-newsletters h2 {
+        font-size: 2.5rem !important;
+        text-align: center !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .art-main-01-left .layer-2 {
+        font-size: 2.2rem !important;
+      }
+
+      .art-main-01-left .layer-3 {
+        font-size: 1rem !important;
+      }
+
+      .newsletter-form-container {
+        padding: 1.5rem !important;
+      }
+
+      .newsletter-input {
+        padding: 0.8rem 1rem !important;
+        font-size: 1rem !important;
+      }
+
+      .newsletter-submit {
+        padding: 1rem !important;
+        font-size: 0.9rem !important;
+      }
+
+      .art-main-01-right img {
+        height: 250px !important;
+        min-height: 250px !important;
+      }
+
+      .past-newsletters h2 {
+        font-size: 2rem !important;
+      }
+
+      .am-2-div-content h2 {
+        font-size: 1.4rem !important;
+      }
+    }
+
+    .am-2-div-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      position: relative;
+      z-index: 2;
+      background: white !important;
+    }
+
+    .am-2-div-content h3 {
+      color: #7213ea !important;
+      font-size: 0.85rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1px !important;
+      margin-bottom: 0 !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: block !important;
+    }
+
+    .am-2-div-content h2 {
+      color: #000 !important;
+      font-size: 1.6rem !important;
+      line-height: 1.3 !important;
+      margin-bottom: 0.5rem !important;
+      font-weight: 800 !important;
+      background: transparent !important;
+      padding: 0 !important;
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      text-shadow: none !important;
+      transform: none !important;
+    }
+
+    .am-2-div-content p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .edition-download-link {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(90deg, #0066ff 0%, #00d2ff 100%);
+      color: white !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 1.1rem 1.5rem;
+      border-radius: 50px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
+    }
+
+    .edition-download-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
+    }
+
+    .edition-download-link svg path {
+      fill: white;
+    }
+
+    /* Lock Overlay System */
+    .am-2-div {
+      position: relative;
+    }
+
+    .edition-locked .am-2-div-content,
+    .edition-locked img {
+      filter: blur(4px);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .lock-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      border-radius: 20px;
+      backdrop-filter: blur(2px);
+      transition: all 0.5s ease;
+    }
+
+    .lock-overlay i {
+      font-size: 2.5rem;
+      color: #0066ff;
+      margin-bottom: 1rem;
+    }
+
+    .lock-overlay span {
+      font-weight: 700;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+
+    .unlocked .lock-overlay {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .unlocked .am-2-div-content,
+    .unlocked img {
+      filter: blur(0);
+      pointer-events: auto;
+    }
+
+    .past-newsletters h2 {
+      font-size: 3rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      color: #111;
+      text-align: left;
+      grid-column: 1 / -1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu First -->
+  <div id="header-container"></div>
+
+  <!-- Article height -->
+  <div class="article-height-adjuster no-print"></div>
+
+  <!-- Hero Section -->
+  <div class="art-main-01">
+    <svg class="svg-article" viewBox="0 0 1504 864" xmlns="http://www.w3.org/2000/svg">
+      <!-- SVG path simplified for brevity as it's decorative -->
+      <g fill="#000" fill-rule="nonzero" opacity="0.15">
+        <path
+          d="M1600.28128,1253 L1615,1263.43538 L1612.81945,1267.36107 C1574.70935,1340.20994 1526.19207,1407.39389 1468.65524,1466.87554 L1464.74016,1471 L1430,1424.14019 L1434.11331,1421.20834 C1497.74578,1376.08776 1552.75516,1320.97903 1597.50603,1257.17415 L1600.23172,1253.04969 L1600.28128,1253 Z"
+          opacity="0.4" transform="translate(-140, -864)"></path>
+      </g>
+    </svg>
+
+    <div class="art-main-01-left">
+      <div class="layer-0-nav">
+        <a href="./">
+          <i class="fa-solid fa-house"></i>
+        </a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="./newsletter.html" class="active"> Newsletter </a>
+      </div>
+
+      <h1 class="layer-2">The Pulse - GAD Newsletter</h1>
+
+      <div class="layer-3">
+        Stay ahead of the curve with our weekly dispatch.
+        Insights on leadership, organizational transformation, and strategic growth
+        delivered straight to your inbox.
+      </div>
+
+      <div class="newsletter-form-container" data-aos="fade-up">
+        <form id="newsletter-form">
+          <input type="text" name="name" class="newsletter-input" placeholder="Your Name" required>
+          <input type="email" name="email" class="newsletter-input" placeholder="Email Address" required>
+          <button type="submit" class="newsletter-submit">Access Newsletter</button>
+        </form>
+        <div id="form-response" class="success-message"></div>
+        <div id="download-container" class="download-btn-container">
+          <a href="./newsletter-preview.pdf" download class="download-btn">
+            <i class="fa-solid fa-file-pdf"></i> Access Newsletter PDF
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="art-main-01-right">
+      <img src="./discover/06.jpg" alt="Newsletter" />
+    </div>
+  </div>
+
+  <!-- Past Newsletters Section -->
+  <div class="art-main-02 past-newsletters">
+    <div class="am-2-right">
+      <h2 data-aos="fade-up">Recent Editions</h2>
+
+      <div class="am-2-div edition-locked" data-aos="fade-up">
+        <div class="lock-overlay">
+          <i class="fa-solid fa-lock"></i>
+          <span>Unlock Your Access</span>
+        </div>
+        <img src="./article/03.jpg" alt="Edition" />
+        <div class="am-2-div-content">
+          <h3>March 2026 Edition</h3>
+          <h2>Mastering the Art of Remote Leadership</h2>
+          <p>
+            Strategies for building trust and maintaining high performance
+            in distributed teams.
+          </p>
+          <a href="./newsletter-preview.pdf" download class="edition-download-link">
+            Access Now
+            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.00078 5L1.00078 10L0.300781 9.3L4.60078 5L0.300781 0.7L1.00078 0L6.00078 5Z" fill="#7213ea">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="am-2-div edition-locked" data-aos="fade-up">
+        <div class="lock-overlay">
+          <i class="fa-solid fa-lock"></i>
+          <span>Unlock Your Access</span>
+        </div>
+        <img src="./article/04.webp" alt="Edition" />
+        <div class="am-2-div-content">
+          <h3>February 2026 Edition</h3>
+          <h2>The Psychology of Change Management</h2>
+          <p>
+            Understanding the human element in organizational transformation
+            and how to overcome resistance.
+          </p>
+          <a href="./newsletter-preview.pdf" download class="edition-download-link">
+            Access Now
+            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.00078 5L1.00078 10L0.300781 9.3L4.60078 5L0.300781 0.7L1.00078 0L6.00078 5Z" fill="#7213ea">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="am-2-div edition-locked" data-aos="fade-up">
+        <div class="lock-overlay">
+          <i class="fa-solid fa-lock"></i>
+          <span>Unlock Your Access</span>
+        </div>
+        <img src="./article/01.avif" alt="Edition" />
+        <div class="am-2-div-content">
+          <h3>January 2026 Edition</h3>
+          <h2>Strategic Resilience in a Volatile World</h2>
+          <p>
+            How to build organizational structures that thrive amidst
+            uncertainty and rapid market shifts.
+          </p>
+          <a href="./newsletter-preview.pdf" download class="edition-download-link">
+            Access Now
+            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.00078 5L1.00078 10L0.300781 9.3L4.60078 5L0.300781 0.7L1.00078 0L6.00078 5Z" fill="#7213ea">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="am-2-bg"></div>
+  </div>
+
+  <!-- gradient before footer -->
+  <div class="lt-grad"></div>
+
+  <!-- TR Side Angle Section CTA -->
+  <div class="section-17-up no-print">
+    <h2 data-aos="fade-up">Live Life Beyond Boundaries….!!!</h2>
+    <p data-aos="fade-up">Unleash yours.</p>
+    <a href="contact.html" data-aos="fade-up">Start now</a>
+  </div>
+
+  <!-- Footer Before -->
+  <div class="footer-before no-print">
+    <div>Start Exploring the GAD world</div>
+    <a href="./mr-gad.html" target="_blank">
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.2505 1.25L20.5 7.50076L14.2506 13.7502" stroke="#000" stroke-width="1.5"></path>
+        <line x1="0.499512" y1="7.25" x2="20.4995" y2="7.25" stroke="#000" stroke-width="1.5"></line>
+      </svg>
+    </a>
+  </div>
+
+  <!-- logo -->
+  <div class="footer-logo no-print">
+    <img src="./logo/LogoW.webp" alt="image" />
+  </div>
+
+  <!-- Footer Main -->
+  <div class="footer no-print">
+    <div class="foot-div">
+      <h3>Coaching</h3>
+      <a href="./elite-coaching.html">Elite Coaching</a>
+      <a href="./leadership-coaching.html">Leadership Coaching</a>
+      <a href="./business-growth-coaching.html">Business Coaching</a>
+    </div>
+    <div class="foot-div">
+      <h3>Consulting</h3>
+      <a href="./board-advsiory.html">Board Advisory</a>
+      <a href="./organizational-structuring.html">Organisational Structuring</a>
+      <a href="./business-strategy.html">Business Strategy</a>
+    </div>
+    <div class="foot-div">
+      <h3>Corporate</h3>
+      <a href="./hi-po-culture.html">Hi-Po Culture</a>
+      <a href="./succession-planning.html">Succession Planning</a>
+      <a href="./senior-management-coaching.html">Senior Management Coaching</a>
+    </div>
+
+    <div class="footer-social-icons no-print">
+      <a class="facebook" href="https://www.facebook.com/profile.php?id=61574957045555" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a class="instagram" href="https://www.instagram.com/geraldarundass/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a class="linkedin" href="https://www.linkedin.com/company/gadsleadershipfoundation/" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a class="youtube" href="https://www.youtube.com/channel/UCi3g8LPK_E4Aa31VLcZD6zQ" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Copyrights -->
+  <div class="copyrights no-print">
+    <span class="cp-02">© Copyright | All rights reserved : GAD'S LEADERSHIP FOUNDATION</span>
+    <span id="scrollTopBtn">
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.2505 1.25L20.5 7.50076L14.2506 13.7502" stroke="#000" stroke-width="1.5"></path>
+        <line x1="0.499512" y1="7.25" x2="20.4995" y2="7.25" stroke="#000" stroke-width="1.5"></line>
+      </svg>
+    </span>
+  </div>
+
+  <script src="./common.js"></script>
+  <script src="load.js"></script>
+  <script src="menu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+    integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-container").innerHTML = data;
+        initMenu();
+      });
+
+    // Form Handling
+    const form = document.getElementById('newsletter-form');
+    const responseDiv = document.getElementById('form-response');
+    const downloadContainer = document.getElementById('download-container');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button');
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Processing...';
+
+      try {
+        const response = await fetch('./api/subscribe.php', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.status) {
+          responseDiv.innerText = "Access Granted! You now have full access to all editions.";
+          responseDiv.style.display = 'block';
+          downloadContainer.style.display = 'block';
+          form.style.display = 'none';
+
+          // Unlock all gated content
+          document.querySelectorAll('.am-2-div').forEach(card => {
+            card.classList.remove('edition-locked');
+            card.classList.add('unlocked');
+          });
+
+          // Reveal all edition download links
+          document.querySelectorAll('.edition-download-link').forEach(link => {
+            link.style.display = 'inline-flex';
+          });
+        } else {
+          alert('Error: ' + result.message);
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Access Newsletter';
+        }
+      } catch (error) {
+        console.error('Subscription error:', error);
+        alert('An unexpected error occurred. Please try again later.');
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Download Newsletter';
+      }
+    });
+  </script>
+</body>
+
+</html>

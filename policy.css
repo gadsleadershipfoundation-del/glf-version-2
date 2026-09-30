@@ -1,0 +1,92 @@
+.policy {
+  padding: 8rem 30% 3rem;
+}
+
+.policy h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #0055cb, #01d4ed, #78d911);
+  background-clip: text;
+  color: transparent;
+  max-width: max-content;
+}
+
+.policy p {
+  margin-bottom: 2rem;
+}
+
+.policy * {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  /* text-align: justify; */
+  text-transform: initial;
+}
+
+.policy h4 {
+  font-weight: 900;
+}
+
+.policy span {
+  font-weight: 900 !important;
+}
+
+.policy ul {
+  margin-bottom: 2rem;
+}
+
+.policy ul h3 {
+  font-weight: 900;
+}
+
+.policy ul li {
+  list-style: none;
+}
+
+.policy p:last-child {
+  margin-bottom: 0;
+}
+
+.pwithmb {
+  margin-bottom: 0 !important;
+}
+
+.policy1 ul {
+  padding-left: 1rem;
+}
+
+.policy2 ul {
+  padding-left: 5%;
+}
+
+.policy2 ul li {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1700px) {
+  .policy {
+    padding: 8rem 25% 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .policy {
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  .policy * {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    /* text-align: justify; */
+  }
+
+  .policy h1 {
+    font-size: 2rem;
+  }
+
+  .policy1 ul {
+    padding-left: 0rem;
+  }
+}

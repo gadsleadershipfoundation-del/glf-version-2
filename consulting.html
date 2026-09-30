@@ -1,0 +1,4567 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Consulting & Strategic Advisory | GAD's Leadership Foundation</title>
+<meta name="description" content="Coaching programs from GAD's Leadership Foundation." />
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Corporate Header & Footer Stylesheets -->
+<link rel="stylesheet" href="social.css" />
+<link rel="stylesheet" href="footer.css" />
+<link rel="stylesheet" href="common.css?v=101" />
+<link rel="stylesheet" href="./style.css?v=512" />
+<link rel="stylesheet" href="./responsive.css?v=14" />
+<link rel="stylesheet" href="./swiper/swiper.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<style>
+/* FontAwesome font-family override against common.css universal Inter */
+i.fa, i.fas, i.fab, i.far, .fa, .fas, .fab, .far,
+[class*="fa-"]::before, [class*="fa-"]::after {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  font-weight: 900 !important;
+  display: inline-block !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-rendering: auto !important;
+  line-height: 1 !important;
+}
+i.fab, .fab {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400 !important;
+}
+
+/* ==========================================================================
+   COACHING PAGE INTERNAL STYLES (UNIQUE SCOPE & CUSTOM GRADIENT SYSTEM)
+   ========================================================================== */
+
+/* Header top bar phone, email & social icons (white & high visibility) */
+#header-container .menu-first,
+#header-container .menu-first a,
+#header-container .menu-first div > a,
+#header-container .menu-first i {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  opacity: 1 !important;
+}
+#header-container .menu-first a:hover {
+  color: #C0973F !important;
+}
+
+/* Header navbar links (dark slate on white navbar) */
+#header-container .nav-link,
+#header-container .mega-btn,
+#header-container .nav-menu-ul-01 > li > a,
+#header-container .nav-menu-ul-01 > li > div {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  opacity: 1 !important;
+}
+#header-container .nav-link:hover,
+#header-container .mega-btn:hover {
+  color: #C0973F !important;
+}
+
+/* Custom Hero Section & Slider */
+.cx-hero-section {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background-color: #152B54 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.cx-hero-slider {
+  width: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.cx-hero-slide {
+  position: relative !important;
+  padding-top: 180px !important;
+  padding-bottom: 4.5rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+@media screen and (max-height: 850px) and (min-width: 992px) {
+  .cx-hero-slide {
+    padding-top: 150px !important;
+    padding-bottom: 4rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .cx-hero-slide {
+    padding-top: 130px !important;
+    padding-bottom: 3.5rem !important;
+  }
+}
+.cx-hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center right !important;
+  z-index: 1 !important;
+}
+.cx-hero-scrim {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(21, 43, 84, 0.94) 0%,
+    rgba(21, 43, 84, 0.84) 42%,
+    rgba(21, 43, 84, 0.5) 70%,
+    rgba(21, 43, 84, 0.2) 100%
+  ) !important;
+  z-index: 2 !important;
+}
+.cx-hero-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+  z-index: 5 !important;
+}
+.cx-hero-pagination {
+  position: absolute !important;
+  bottom: 18px !important;
+  left: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  z-index: 25 !important;
+}
+.cx-hero-pagination .swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+}
+.cx-hero-pagination .swiper-pagination-bullet-active {
+  width: 36px !important;
+  height: 7px !important;
+  border-radius: 999px !important;
+  background: #C0973F !important;
+  box-shadow: 0 0 12px rgba(192, 151, 63, 0.7) !important;
+}
+
+/* Hero H1 Title */
+/* Hero H1 Title */
+.cx-hero-title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  max-width: 65rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.85rem, 3.8vw, 3.25rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.01em !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  text-align: left !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7) !important;
+}
+.cx-hero-title span,
+.cx-hero-part {
+  display: block !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: 800 !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+  color: #ffffff !important;
+  margin-bottom: 0.55rem !important;
+}
+.cx-hero-title span:last-child,
+.cx-hero-part:last-child {
+  margin-bottom: 0 !important;
+}
+.cx-hero-title .cx-blue-highlight {
+  color: #C0973F !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #C0973F !important;
+  background-clip: initial !important;
+}
+
+/* Buttons */
+.cx-hero-btn-row {
+  margin-top: 1.75rem !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 1.15rem !important;
+}
+.cx-btn-solid {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 0.95rem 2.2rem !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 8px 24px -4px rgba(192, 151, 63, 0.45) !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+.cx-btn-solid:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 28px -4px rgba(192, 151, 63, 0.6) !important;
+}
+.cx-btn-ghost {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 0.95rem 2.2rem !important;
+  border-radius: 0.5rem !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+.cx-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Floating Stats Card */
+.cx-hero-stats-grid {
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  background: rgba(21, 43, 84, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7) !important;
+}
+@media (min-width: 768px) {
+  .cx-hero-stats-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+.cx-stat-box {
+  padding: 1.25rem 1.4rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+@media (min-width: 768px) {
+  .cx-stat-box {
+    border-bottom: none !important;
+  }
+  .cx-stat-box:last-child {
+    border-right: none !important;
+  }
+}
+.cx-stat-num {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.8rem, 3vw, 2.4rem) !important;
+  font-weight: 900 !important;
+  color: #C0973F !important;
+  line-height: 1 !important;
+  letter-spacing: -0.01em !important;
+}
+.cx-stat-lbl {
+  margin-top: 0.5rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: #EDEBE4 !important;
+  opacity: 0.95 !important;
+}
+
+/* ==========================================================================
+   SECTION 2: MESSAGE FROM MR. GAD (EXACT REFERENCE MATCH)
+   ========================================================================== */
+.cx-sec-founder {
+  background-color: #ffffff !important;
+  padding-block: 5rem 5rem !important;
+  border-top: 1px solid #e5e7eb !important;
+}
+.cx-founder-container {
+  width: 100% !important;
+  max-width: 72rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-founder-card {
+  position: relative !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(229, 231, 235, 0.8) !important;
+  border-radius: 0.85rem !important;
+  padding: clamp(1.75rem, 4vw, 3.5rem) clamp(1.25rem, 4vw, 4rem) !important;
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.07) !important;
+  overflow: hidden !important;
+}
+.cx-founder-card::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 4px !important;
+  background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important;
+}
+.cx-founder-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2.1rem, 4vw, 2.65rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: #0f172a !important;
+  margin: 0 0 1.75rem 0 !important;
+  line-height: 1.15 !important;
+}
+.cx-founder-title .cx-blue-text {
+  color: #C0973F !important;
+  background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: inherit !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  display: inline-block !important;
+  vertical-align: baseline !important;
+}
+.cx-founder-body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.08rem !important;
+  line-height: 1.75 !important;
+  color: #334155 !important;
+}
+.cx-founder-body strong {
+  color: #C0973F !important;
+  font-weight: 800 !important;
+}
+.cx-founder-footer {
+  margin-top: 2.5rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1.5px solid #cbd5e1 !important;
+}
+.cx-founder-name {
+  display: block !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #0f172a !important;
+}
+.cx-founder-role {
+  display: block !important;
+  margin-top: 0.35rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #6b7280 !important;
+}
+
+/* ==========================================================================
+   SECTION 3: HOLISTIC TRANSFORMATION / 7 ELEMENTS (SCOPED: .cx-sec-elements)
+   ========================================================================== */
+.cx-sec-elements {
+  background-color: #152B54 !important;
+  color: #ffffff !important;
+  padding-block: 6rem 6rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  position: relative !important;
+}
+.cx-elements-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-elements-layout {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3rem !important;
+}
+@media (min-width: 1024px) {
+  .cx-elements-layout {
+    grid-template-columns: 0.9fr 1.1fr !important;
+    gap: 4rem !important;
+    align-items: start !important;
+  }
+}
+.cx-sticky-left {
+  position: relative !important;
+}
+@media (min-width: 1024px) {
+  .cx-sticky-left {
+    position: sticky !important;
+    top: 170px !important;
+    align-self: start !important;
+  }
+}
+.cx-elements-eyebrow {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: #C0973F !important;
+  background: linear-gradient(135deg, #C0973F 0%, #dfb762 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+  margin-bottom: 0.85rem !important;
+}
+.cx-elements-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  margin: 0 0 1.75rem 0 !important;
+}
+.cx-elements-desc-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.125rem !important;
+  line-height: 1.75 !important;
+  color: #cbd5e1 !important;
+}
+.cx-elements-right {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+}
+.cx-element-card {
+  position: relative !important;
+  background: rgba(15, 22, 38, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1.5px solid rgba(192, 151, 63, 0.25) !important;
+  border-left: 4px solid #C0973F !important;
+  border-radius: 0.75rem !important;
+  padding: 1.5rem 1.85rem !important;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.cx-element-card:hover {
+  transform: translateX(8px) !important;
+  border-color: rgba(192, 151, 63, 0.8) !important;
+  border-left-color: #C0973F !important;
+  box-shadow: 0 12px 35px -8px rgba(192, 151, 63, 0.25) !important;
+  background: rgba(20, 30, 52, 0.92) !important;
+}
+.cx-element-num {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: #C0973F !important;
+  background: linear-gradient(135deg, #C0973F 0%, #dfb762 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+}
+.cx-element-card-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0.35rem 0 0.25rem 0 !important;
+  line-height: 1.25 !important;
+}
+.cx-element-card-desc {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   SECTION 4: WHY PARTNER SLIDER (SCOPED: .cx-sec-why - DARK THEME)
+   ========================================================================== */
+.cx-sec-why {
+  background-color: #0b172a !important;
+  background: linear-gradient(180deg, #091322 0%, #0d1e38 100%) !important;
+  padding-block: 5.5rem 5.5rem !important;
+  border-top: 1px solid rgba(192, 151, 63, 0.25) !important;
+  border-bottom: 1px solid rgba(192, 151, 63, 0.25) !important;
+  position: relative !important;
+}
+.cx-why-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-why-header {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 1.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+.cx-why-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.5rem, 3vw, 2.1rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #ECC269 0%, #ffffff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  max-width: 52rem !important;
+  margin: 0 !important;
+}
+.cx-why-nav-btns {
+  display: flex !important;
+  gap: 0.75rem !important;
+  align-self: flex-end !important;
+}
+.cx-why-btn {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+}
+.cx-why-btn:hover {
+  border-color: #C0973F !important;
+  color: #091322 !important;
+  background: #C0973F !important;
+  transform: scale(1.08) !important;
+  box-shadow: 0 6px 18px rgba(192, 151, 63, 0.4) !important;
+}
+.cx-why-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  stroke-width: 2.2 !important;
+}
+
+/* Track & Viewport */
+.cx-why-viewport {
+  overflow: hidden !important;
+  padding-block: 0.5rem 1rem !important;
+}
+.cx-why-track {
+  display: flex !important;
+  gap: 1.25rem !important;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.cx-why-slide {
+  flex: 0 0 calc(25% - 0.94rem) !important;
+  min-width: 260px !important;
+}
+@media (max-width: 1024px) {
+  .cx-why-slide { flex: 0 0 calc(33.333% - 0.85rem) !important; }
+}
+@media (max-width: 768px) {
+  .cx-why-slide { flex: 0 0 calc(50% - 0.65rem) !important; }
+}
+@media (max-width: 480px) {
+  .cx-why-slide { flex: 0 0 100% !important; }
+}
+
+/* Individual Card */
+.cx-why-card {
+  position: relative !important;
+  height: 440px !important;
+  border-radius: 1.25rem !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background-color: #152B54 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 16px 40px -12px rgba(15, 23, 42, 0.25) !important;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 2rem 1.5rem !important;
+}
+.cx-why-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 24px 50px -12px rgba(192, 151, 63, 0.35) !important;
+}
+.cx-why-card-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -2 !important;
+  transition: transform 0.55s ease !important;
+}
+.cx-why-card:hover .cx-why-card-bg {
+  transform: scale(1.08) !important;
+}
+.cx-why-card-scrim {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.15) 0%,
+    rgba(15, 23, 42, 0.65) 50%,
+    rgba(15, 23, 42, 0.95) 100%
+  ) !important;
+  z-index: -1 !important;
+}
+.cx-why-card-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 15rem !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Dots Indicator */
+.cx-why-dots {
+  margin-top: 2rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+}
+.cx-why-dot {
+  height: 8px !important;
+  width: 8px !important;
+  border-radius: 50% !important;
+  background-color: #cbd5e1 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.35s ease !important;
+}
+.cx-why-dot.active {
+  background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important;
+  width: 32px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 0 10px rgba(192, 151, 63, 0.4) !important;
+}
+
+/* ==========================================================================
+   SECTION 5: PROVEN LEADERSHIP IMPACT / METRICS (SCOPED: .cx-sec-impact)
+   ========================================================================== */
+.cx-sec-impact {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  padding-block: 6rem 6rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  text-align: center !important;
+  position: relative !important;
+}
+.cx-impact-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-impact-eyebrow {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: #C0973F !important;
+  margin-bottom: 0.75rem !important;
+}
+.cx-impact-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  color: #0f172a !important;
+  text-transform: uppercase !important;
+  max-width: 48rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 4rem !important;
+}
+.cx-impact-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3.5rem !important;
+  justify-items: center !important;
+}
+@media (min-width: 768px) {
+  .cx-impact-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2.5rem !important;
+  }
+}
+.cx-impact-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+.cx-impact-circle {
+  width: 13rem !important;
+  height: 13rem !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #f8fafc !important;
+  border: 2px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.12) !important;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease !important;
+  cursor: pointer !important;
+}
+.cx-impact-circle:hover {
+  transform: translateY(-8px) scale(1.05) !important;
+}
+
+/* Liquid Wave Fill Component */
+.cx-metric-fill {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 0% !important;
+  z-index: 1 !important;
+  transition: height 2.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.cx-sec-impact.is-inview .cx-metric-fill,
+.cx-impact-circle.is-filled .cx-metric-fill {
+  height: 100% !important;
+}
+
+.cx-circle-blue .cx-metric-fill { background: linear-gradient(180deg, #28518F 0%, #152B54 100%) !important; }
+.cx-circle-blue:hover {
+  box-shadow: 0 24px 50px -10px rgba(192, 151, 63, 0.55) !important;
+}
+
+.cx-circle-gold .cx-metric-fill { background: linear-gradient(180deg, #C0973F 0%, #9e7929 100%) !important; }
+.cx-circle-gold:hover {
+  box-shadow: 0 24px 50px -10px rgba(116, 192, 67, 0.55) !important;
+}
+
+.cx-circle-rose .cx-metric-fill { background: linear-gradient(180deg, #28518F 0%, #152B54 100%) !important; }
+.cx-circle-rose:hover {
+  box-shadow: 0 24px 50px -10px rgba(28, 53, 94, 0.55) !important;
+}
+
+/* Wave Surface Animations */
+.cx-metric-fill::before,
+.cx-metric-fill::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 220% !important;
+  height: 220% !important;
+  top: -190% !important;
+  left: -60% !important;
+  border-radius: 40% !important;
+}
+.cx-metric-fill::before {
+  background: rgba(255, 255, 255, 0.25) !important;
+  animation: cxWaveSpin 6s linear infinite !important;
+}
+.cx-metric-fill::after {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 35% !important;
+  animation: cxWaveSpin 9s linear infinite !important;
+}
+
+@keyframes cxWaterRise {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes cxWaveSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cx-impact-number {
+  position: relative !important;
+  z-index: 10 !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6) !important;
+  line-height: 1 !important;
+}
+.cx-impact-desc {
+  margin-top: 1.5rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   SECTION 6: COACHING OUTCOMES SLIDER (SCOPED: .cx-sec-outcomes)
+   ========================================================================== */
+.cx-sec-outcomes {
+  background-color: #ffffff !important;
+  padding-block: 5.5rem 5.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  position: relative !important;
+}
+.cx-outcomes-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-outcomes-header {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 1.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+/* ==========================================================================
+   SECTION 6: GLF'S SIGNATURE COACHING OUTCOMES (ARROW RIBBON INFOGRAPHIC DESIGN)
+   ========================================================================== */
+.cx-sec-outcomes {
+  background: #ffffff !important;
+  padding-block: 6rem !important;
+  position: relative !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+.cx-outcomes-container {
+  max-width: 84rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-outcomes-header-centered {
+  text-align: center !important;
+  margin-bottom: 4rem !important;
+}
+.cx-outcomes-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2rem, 3.8vw, 3rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: #0f172a !important;
+  margin: 0 !important;
+}
+
+/* 2-Column Infographic Grid */
+.cx-ribbon-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 3.5rem !important;
+}
+@media (max-width: 991px) {
+  .cx-ribbon-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+}
+
+/* Ribbon Column */
+.cx-ribbon-col {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.85rem !important;
+}
+
+/* Individual Ribbon Row */
+.cx-ribbon-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.25rem !important;
+  padding-bottom: 0.75rem !important;
+  border-bottom: 1px solid #edf2f7 !important;
+  transition: transform 0.25s ease !important;
+}
+.cx-ribbon-row:hover {
+  transform: translateX(4px) !important;
+}
+
+/* Ribbon Arrow Shape with Clip Path (Uniform Exact Size) */
+.cx-ribbon-arrow {
+  flex-shrink: 0 !important;
+  width: 105px !important;
+  min-width: 105px !important;
+  max-width: 105px !important;
+  height: 44px !important;
+  padding-left: 1.1rem !important;
+  padding-right: 1.4rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 0.65rem !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.9rem !important;
+  clip-path: polygon(0% 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 0% 100%) !important;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.12) !important;
+  transition: all 0.25s ease !important;
+}
+
+/* Ribbon Color Shades (GAD Blues, Cyans, Teals, and Accents) */
+.cx-rb-c1 { background: linear-gradient(135deg, #152B54 0%, #28518F 100%) !important; }
+.cx-rb-c2 { background: linear-gradient(135deg, #28518F 0%, #1e3f70 100%) !important; }
+.cx-rb-c3 { background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important; }
+.cx-rb-c4 { background: linear-gradient(135deg, #28518F 0%, #C0973F 100%) !important; }
+.cx-rb-c5 { background: linear-gradient(135deg, #152B54 0%, #28518F 100%) !important; }
+.cx-rb-c6 { background: linear-gradient(135deg, #C0973F 0%, #8f6c20 100%) !important; }
+.cx-rb-c7 { background: linear-gradient(135deg, #28518F 0%, #152B54 100%) !important; }
+.cx-rb-c8 { background: linear-gradient(135deg, #C0973F 0%, #a67f2e 100%) !important; }
+.cx-rb-c9 { background: linear-gradient(135deg, #152B54 0%, #0d1b36 100%) !important; }
+.cx-rb-c10 { background: linear-gradient(135deg, #28518F 0%, #C0973F 100%) !important; }
+
+.cx-ribbon-num {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+}
+.cx-ribbon-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.cx-ribbon-icon svg {
+  width: 17px !important;
+  height: 17px !important;
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+/* Outcome Text */
+.cx-ribbon-text {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  color: #334155 !important;
+  margin: 0 !important;
+  transition: color 0.2s ease !important;
+}
+.cx-ribbon-row:hover .cx-ribbon-text {
+  color: #C0973F !important;
+}
+@media (max-width: 480px) {
+  .cx-ribbon-row {
+    gap: 0.85rem !important;
+  }
+  .cx-ribbon-arrow {
+    width: 85px !important;
+    min-width: 85px !important;
+    max-width: 85px !important;
+    height: 38px !important;
+    padding-left: 0.75rem !important;
+    padding-right: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+  .cx-ribbon-text {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ==========================================================================
+   SECTION 7: COACHING ECOSYSTEMS 1, 2, 3 (SCOPED: .cx-sec-eco)
+   ========================================================================== */
+.cx-sec-eco {
+  padding: 0 !important;
+}
+.cx-eco-block {
+  padding-block: 5.5rem 5.5rem !important;
+  position: relative !important;
+}
+.cx-eco-1 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+.cx-eco-2 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+.cx-eco-3 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-top: 1px solid #e5dfd5 !important;
+  border-bottom: 1px solid #e5dfd5 !important;
+}
+
+.cx-eco-container {
+  width: 100% !important;
+  max-width: 78rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-eco-header-centered {
+  text-align: center !important;
+  max-width: 54rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 3rem !important;
+}
+.cx-eco-badge {
+  display: inline-block !important;
+  padding: 0.35rem 1.25rem !important;
+  border-radius: 999px !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1rem !important;
+  background: #ffffff !important;
+  color: #152B54 !important;
+  border: 1px solid rgba(192, 151, 63, 0.45) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+.cx-eco-1 .cx-eco-badge,
+.cx-eco-2 .cx-eco-badge,
+.cx-eco-3 .cx-eco-badge {
+  background: #ffffff !important;
+  color: #152B54 !important;
+  border: 1px solid rgba(192, 151, 63, 0.45) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+.cx-eco-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2rem, 3.8vw, 2.75rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 0.75rem 0 !important;
+  line-height: 1.15 !important;
+}
+.cx-eco-1 .cx-eco-title,
+.cx-eco-2 .cx-eco-title,
+.cx-eco-3 .cx-eco-title {
+  color: #152B54 !important;
+}
+
+.cx-eco-tagline {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 2.25rem !important;
+  line-height: 1.5 !important;
+}
+.cx-eco-1 .cx-eco-tagline,
+.cx-eco-2 .cx-eco-tagline,
+.cx-eco-3 .cx-eco-tagline {
+  color: #C0973F !important;
+  -webkit-text-fill-color: #C0973F !important;
+  background: transparent !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Eco Media Image Container */
+.cx-eco-media-wrap,
+.cx-eco-video-wrap {
+  width: 100% !important;
+  border-radius: 1.25rem !important;
+  overflow: hidden !important;
+  position: relative !important;
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.15) !important;
+  max-height: 480px !important;
+}
+.cx-eco-media-img,
+.cx-eco-video {
+  width: 100% !important;
+  height: 420px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Body & Content */
+.cx-eco-content {
+  text-align: center !important;
+}
+
+.cx-eco-body-text {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.75 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 2.75rem !important;
+  max-width: 60rem !important;
+  margin-inline: auto !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+.cx-eco-1 .cx-eco-body-text,
+.cx-eco-2 .cx-eco-body-text,
+.cx-eco-3 .cx-eco-body-text {
+  color: #475569 !important;
+}
+
+.cx-eco-subheading {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.25rem !important;
+  text-align: center !important;
+  display: block !important;
+}
+.cx-eco-1 .cx-eco-subheading,
+.cx-eco-2 .cx-eco-subheading,
+.cx-eco-3 .cx-eco-subheading {
+  color: #152B54 !important;
+}
+
+/* Product Suite Header Row & Know More Arrow Link */
+.cx-eco-suite-head {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin-bottom: 1.25rem !important;
+  text-align: center !important;
+}
+.cx-eco-suite-head .cx-eco-subheading {
+  margin-bottom: 0 !important;
+}
+.cx-know-more-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+.cx-eco-1 .cx-know-more-link,
+.cx-eco-2 .cx-know-more-link,
+.cx-eco-3 .cx-know-more-link {
+  color: #C0973F !important;
+}
+.cx-know-more-link:hover {
+  transform: translateX(4px) !important;
+}
+.cx-know-more-link svg {
+  transition: transform 0.25s ease !important;
+}
+.cx-know-more-link:hover svg {
+  transform: translateX(4px) !important;
+}
+
+/* Ideal Pill List */
+.cx-ideal-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.85rem !important;
+  max-width: 62rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 3rem !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+.cx-ideal-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.6rem 1.35rem !important;
+  border-radius: 999px !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease !important;
+  cursor: default !important;
+}
+
+.cx-eco-1 .cx-ideal-item,
+.cx-eco-2 .cx-ideal-item,
+.cx-eco-3 .cx-ideal-item {
+  background: #ffffff !important;
+  border: 1px solid #e2d8ce !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+.cx-eco-1 .cx-ideal-item:hover,
+.cx-eco-2 .cx-ideal-item:hover,
+.cx-eco-3 .cx-ideal-item:hover {
+  border-color: rgba(192, 151, 63, 0.6) !important;
+  color: #152B54 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(192, 151, 63, 0.15) !important;
+}
+
+/* Accordion Group */
+.cx-acc-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  max-width: 62rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 3rem !important;
+  width: 100% !important;
+}
+.cx-acc-item {
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+.cx-eco-1 .cx-acc-item,
+.cx-eco-2 .cx-acc-item,
+.cx-eco-3 .cx-acc-item {
+  background: #ffffff !important;
+  border: 1.5px solid #e2d8ce !important;
+}
+.cx-acc-item.is-open {
+  border-color: #C0973F !important;
+}
+
+.cx-acc-trigger {
+  width: 100% !important;
+  padding: 1.25rem 1.5rem !important;
+  background: transparent !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+  text-align: left !important;
+}
+.cx-acc-heading-link {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+.cx-eco-1 .cx-acc-heading-link,
+.cx-eco-2 .cx-acc-heading-link,
+.cx-eco-3 .cx-acc-heading-link {
+  color: #152B54 !important;
+}
+.cx-eco-1 .cx-acc-item.is-open .cx-acc-heading-link,
+.cx-eco-2 .cx-acc-item.is-open .cx-acc-heading-link,
+.cx-eco-3 .cx-acc-item.is-open .cx-acc-heading-link {
+  color: #C0973F !important;
+}
+
+.cx-acc-chevron,
+.cx-acc-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 20px !important;
+  height: 20px !important;
+  color: #152B54 !important;
+  stroke: #152B54 !important;
+  transition: transform 0.3s ease, color 0.3s ease !important;
+}
+.cx-acc-item.is-open .cx-acc-chevron,
+.cx-acc-item.is-open .cx-acc-icon {
+  transform: rotate(180deg) !important;
+  color: #C0973F !important;
+}
+
+.cx-acc-panel {
+  display: none !important;
+  padding: 0.25rem 1.5rem 1.25rem 1.5rem !important;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  color: #475569 !important;
+  text-align: left !important;
+}
+.cx-acc-item.is-open .cx-acc-panel {
+  display: block !important;
+}
+.cx-acc-desc,
+.cx-acc-panel p,
+.cx-acc-panel .cx-acc-desc {
+  margin: 0 !important;
+  color: #475569 !important;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  text-align: left !important;
+}
+.cx-eco-1 .cx-acc-panel,
+.cx-eco-1 .cx-acc-panel p,
+.cx-eco-1 .cx-acc-desc,
+.cx-eco-2 .cx-acc-panel,
+.cx-eco-2 .cx-acc-panel p,
+.cx-eco-2 .cx-acc-desc,
+.cx-eco-3 .cx-acc-panel,
+.cx-eco-3 .cx-acc-panel p,
+.cx-eco-3 .cx-acc-desc {
+  color: #475569 !important;
+}
+
+/* Inside Accordion Know More Link */
+.cx-acc-know-more {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  margin-top: 0.85rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+.cx-eco-1 .cx-acc-know-more {
+  color: #C0973F !important;
+}
+.cx-eco-2 .cx-acc-know-more, .cx-eco-3 .cx-acc-know-more {
+  color: #C0973F !important;
+}
+.cx-acc-know-more:hover {
+  transform: translateX(4px) !important;
+}
+.cx-acc-know-more svg {
+  transition: transform 0.25s ease !important;
+}
+.cx-acc-know-more:hover svg {
+  transform: translateX(4px) !important;
+}
+
+/* Milestones Chips & Trophy Title */
+.cx-milestones-block {
+  margin-bottom: 2.5rem !important;
+  padding-top: 1.75rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  max-width: 62rem !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+.cx-milestones-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.6rem !important;
+  text-align: center !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  margin-bottom: 1.5rem !important;
+}
+.cx-trophy-icon {
+  width: 22px !important;
+  height: 22px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+}
+.cx-eco-1 .cx-trophy-icon {
+  stroke: #C0973F !important;
+  filter: drop-shadow(0 2px 6px rgba(192, 151, 63, 0.4)) !important;
+}
+.cx-eco-2 .cx-trophy-icon {
+  stroke: #28518F !important;
+  filter: drop-shadow(0 2px 6px rgba(40, 81, 143, 0.35)) !important;
+}
+.cx-eco-3 .cx-trophy-icon {
+  stroke: #d97706 !important;
+  filter: drop-shadow(0 2px 6px rgba(217, 119, 6, 0.25)) !important;
+}
+.cx-eco-2 .cx-milestones-block, .cx-eco-3 .cx-milestones-block {
+  border-top-color: #e2d8ce !important;
+}
+.cx-chips {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.65rem !important;
+  margin-top: 0.75rem !important;
+}
+.cx-chip {
+  display: inline-block !important;
+  padding: 0.45rem 1.1rem !important;
+  border-radius: 999px !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+.cx-eco-1 .cx-chip {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
+}
+.cx-eco-2 .cx-chip, .cx-eco-3 .cx-chip {
+  background: #ffffff !important;
+  border: 1px solid #e2d8ce !important;
+  color: #0f172a !important;
+}
+
+
+/* ==========================================================================
+   ASCENDING GROWTH STEPPER MILESTONES (COMPACT SLEEK DESIGN)
+   ========================================================================== */
+.cx-milestone-stepper-wrap {
+  width: 100% !important;
+  max-width: 52rem !important;
+  margin-inline: auto !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 2rem !important;
+  padding-inline: 1rem !important;
+}
+
+.cx-milestone-stepper {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  position: relative !important;
+  width: 100% !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Step Column */
+.cx-step-col {
+  flex: 1 !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Ascending Step Heights */
+/* 3-Step Layout (Ecosystem 1) */
+.cx-stepper-3 .cx-step-col:nth-child(1) { margin-bottom: 0px !important; }
+.cx-stepper-3 .cx-step-col:nth-child(2) { margin-bottom: 26px !important; }
+.cx-stepper-3 .cx-step-col:nth-child(3) { margin-bottom: 52px !important; }
+
+/* 4-Step Layout (Ecosystem 2 & 3) */
+.cx-stepper-4 .cx-step-col:nth-child(1) { margin-bottom: 0px !important; }
+.cx-stepper-4 .cx-step-col:nth-child(2) { margin-bottom: 22px !important; }
+.cx-stepper-4 .cx-step-col:nth-child(3) { margin-bottom: 44px !important; }
+.cx-stepper-4 .cx-step-col:nth-child(4) { margin-bottom: 66px !important; }
+
+/* Top Section (Step Index, Pearl, Connector) */
+.cx-step-top {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+  width: 100% !important;
+  z-index: 3 !important;
+}
+
+/* Step Badge (01 • ..........) */
+.cx-step-badge {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  width: 100% !important;
+  padding-left: 0.5rem !important;
+  margin-bottom: -1.25rem !important;
+  z-index: 1 !important;
+}
+
+.cx-step-index {
+  font-family: "Outfit", "Plus Jakarta Sans", ui-sans-serif, sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1 !important;
+}
+.cx-eco-1 .cx-step-index {
+  color: #C0973F !important;
+  text-shadow: 0 0 8px rgba(192, 151, 63, 0.4) !important;
+}
+.cx-eco-2 .cx-step-index {
+  color: #28518F !important;
+  text-shadow: 0 0 8px rgba(40, 81, 143, 0.25) !important;
+}
+.cx-eco-3 .cx-step-index {
+  color: #C0973F !important;
+}
+
+.cx-step-dot {
+  width: 4px !important;
+  height: 4px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+}
+.cx-eco-1 .cx-step-dot {
+  background-color: #C0973F !important;
+  box-shadow: 0 0 6px rgba(192, 151, 63, 0.6) !important;
+}
+.cx-eco-2 .cx-step-dot {
+  background-color: #28518F !important;
+  box-shadow: 0 0 6px rgba(40, 81, 143, 0.5) !important;
+}
+.cx-eco-3 .cx-step-dot {
+  background-color: #C0973F !important;
+}
+
+.cx-step-dotted-line {
+  flex: 1 !important;
+  height: 1px !important;
+  border-bottom: 1px dotted rgba(192, 151, 63, 0.35) !important;
+  margin-right: 0.75rem !important;
+}
+.cx-eco-1 .cx-step-dotted-line {
+  border-bottom-color: rgba(192, 151, 63, 0.3) !important;
+}
+.cx-eco-2 .cx-step-dotted-line {
+  border-bottom-color: rgba(40, 81, 143, 0.35) !important;
+}
+.cx-eco-3 .cx-step-dotted-line {
+  border-bottom-color: rgba(192, 151, 63, 0.35) !important;
+}
+
+/* 3D Pearl Sphere Node */
+.cx-step-pearl {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease !important;
+  cursor: pointer !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* 1. Eco 1 (Dark Theme) */
+.cx-eco-1 .cx-step-pearl {
+  background: radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.18) 0%, rgba(30, 41, 59, 0.8) 55%, rgba(15, 23, 42, 0.95) 100%) !important;
+  border: 1.5px solid rgba(192, 151, 63, 0.5) !important;
+  box-shadow: 0 8px 22px -3px rgba(0, 0, 0, 0.6), 0 0 16px rgba(192, 151, 63, 0.2), inset 0 2px 5px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(192, 151, 63, 0.25) !important;
+}
+.cx-eco-1 .cx-step-pearl:hover {
+  transform: translateY(-4px) scale(1.08) !important;
+  box-shadow: 0 12px 28px -3px rgba(192, 151, 63, 0.35), 0 0 20px rgba(192, 151, 63, 0.3) !important;
+}
+
+/* 2. Eco 2 (Royal Navy & Electric Sapphire Theme) */
+.cx-eco-2 .cx-step-pearl {
+  background: radial-gradient(circle at 35% 25%, #ffffff 0%, #f0f9ff 45%, #dbeafe 100%) !important;
+  border: 1.5px solid rgba(40, 81, 143, 0.45) !important;
+  box-shadow: 0 8px 20px -3px rgba(40, 81, 143, 0.22), 0 3px 6px rgba(0, 0, 0, 0.04), inset 0 2px 5px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(40, 81, 143, 0.22) !important;
+}
+.cx-eco-2 .cx-step-pearl:hover {
+  transform: translateY(-4px) scale(1.08) !important;
+  box-shadow: 0 12px 28px -3px rgba(40, 81, 143, 0.4), inset 0 2px 6px rgba(255, 255, 255, 1) !important;
+}
+
+/* 3. Eco 3 (Classic Gold & Ivory Theme) */
+.cx-eco-3 .cx-step-pearl {
+  background: radial-gradient(circle at 35% 25%, #ffffff 0%, #faf6f0 45%, #ede3d1 100%) !important;
+  border: 1.5px solid rgba(192, 151, 63, 0.4) !important;
+  box-shadow: 0 8px 20px -3px rgba(192, 151, 63, 0.2), 0 3px 6px rgba(0, 0, 0, 0.04), inset 0 2px 5px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(192, 151, 63, 0.22) !important;
+}
+.cx-eco-3 .cx-step-pearl:hover {
+  transform: translateY(-4px) scale(1.08) !important;
+  box-shadow: 0 12px 28px -3px rgba(192, 151, 63, 0.3), inset 0 2px 6px rgba(255, 255, 255, 1) !important;
+}
+
+.cx-pearl-icon {
+  width: 22px !important;
+  height: 22px !important;
+  transition: transform 0.3s ease !important;
+}
+.cx-eco-1 .cx-pearl-icon {
+  stroke: #C0973F !important;
+  color: #C0973F !important;
+}
+.cx-eco-2 .cx-pearl-icon {
+  stroke: #28518F !important;
+  color: #28518F !important;
+}
+.cx-eco-3 .cx-pearl-icon {
+  stroke: #1e293b !important;
+  color: #1e293b !important;
+}
+.cx-step-pearl:hover .cx-pearl-icon {
+  transform: scale(1.1) !important;
+}
+
+/* Dashed vertical connector from Pearl to Step Line */
+.cx-step-connector {
+  width: 0 !important;
+  height: 10px !important;
+  border-left: 1.5px dashed rgba(192, 151, 63, 0.6) !important;
+  margin-inline: auto !important;
+}
+.cx-eco-1 .cx-step-connector {
+  border-left-color: rgba(192, 151, 63, 0.6) !important;
+}
+.cx-eco-2 .cx-step-connector {
+  border-left-color: rgba(40, 81, 143, 0.6) !important;
+}
+.cx-eco-3 .cx-step-connector {
+  border-left-color: rgba(192, 151, 63, 0.6) !important;
+}
+
+/* Continuous Stepped Line */
+.cx-step-line-segment {
+  width: 100% !important;
+  position: relative !important;
+  height: 1.5px !important;
+  background-color: #C0973F !important;
+  z-index: 2 !important;
+}
+.cx-eco-1 .cx-step-line-segment {
+  background-color: #C0973F !important;
+  box-shadow: 0 0 6px rgba(192, 151, 63, 0.4) !important;
+}
+.cx-eco-2 .cx-step-line-segment {
+  background: linear-gradient(90deg, #28518F 0%, #152B54 100%) !important;
+  box-shadow: 0 0 6px rgba(40, 81, 143, 0.35) !important;
+}
+
+/* Left Vertical Riser on Step 1 */
+.cx-step-col:first-child .cx-step-line-segment::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1.5px !important;
+  height: 28px !important;
+  background-color: #C0973F !important;
+}
+.cx-eco-1 .cx-step-col:first-child .cx-step-line-segment::before {
+  background-color: #C0973F !important;
+}
+.cx-eco-2 .cx-step-col:first-child .cx-step-line-segment::before {
+  background-color: #28518F !important;
+}
+.cx-eco-3 .cx-step-col:first-child .cx-step-line-segment::before {
+  background-color: #C0973F !important;
+}
+
+/* Vertical Risers connecting between steps */
+.cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1.5px !important;
+  height: 26px !important;
+  background-color: #C0973F !important;
+}
+.cx-stepper-4 .cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  height: 22px !important;
+}
+.cx-eco-1 .cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  background-color: #C0973F !important;
+}
+.cx-eco-2 .cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  background-color: #28518F !important;
+}
+.cx-eco-3 .cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  background-color: #C0973F !important;
+}
+
+/* Arrowhead at end of last step */
+.cx-step-arrow {
+  position: absolute !important;
+  right: -6px !important;
+  top: -4px !important;
+  width: 10px !important;
+  height: 10px !important;
+  color: #C0973F !important;
+}
+.cx-eco-1 .cx-step-arrow {
+  color: #C0973F !important;
+}
+.cx-eco-2 .cx-step-arrow {
+  color: #28518F !important;
+}
+.cx-eco-3 .cx-step-arrow {
+  color: #C0973F !important;
+}
+
+/* Bottom Metrics Section (Big Serif Number & Subtitle) */
+.cx-step-bottom {
+  padding-top: 1.15rem !important;
+  text-align: center !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.cx-step-num {
+  font-family: "Outfit", "Plus Jakarta Sans", ui-sans-serif, sans-serif !important;
+  font-size: clamp(1.65rem, 2.6vw, 2.25rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.03em !important;
+  font-feature-settings: "tnum" on, "lnum" on !important;
+  margin-bottom: 0.25rem !important;
+  transition: transform 0.3s ease !important;
+}
+
+.cx-eco-1 .cx-step-num {
+  color: #ffffff !important;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.2) !important;
+}
+.cx-eco-2 .cx-step-num {
+  color: #0c2b5e !important;
+}
+.cx-eco-3 .cx-step-num {
+  color: #0b1e3f !important;
+}
+
+.cx-step-label {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+}
+.cx-eco-1 .cx-step-label {
+  color: #94a3b8 !important;
+}
+.cx-eco-2 .cx-step-label,
+.cx-eco-3 .cx-step-label {
+  color: #334155 !important;
+}
+
+/* Responsive adjustment for Mobile / Small Screens */
+@media (max-width: 768px) {
+  .cx-milestone-stepper {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 2rem !important;
+  }
+  .cx-stepper-3 .cx-step-col,
+  .cx-stepper-4 .cx-step-col {
+    margin-bottom: 0 !important;
+  }
+  .cx-step-line-segment::before {
+    display: none !important;
+  }
+  .cx-step-arrow {
+    display: none !important;
+  }
+  .cx-step-badge {
+    margin-bottom: 0.35rem !important;
+  }
+}
+
+/* CTA Wrap */
+.cx-eco-cta-wrap {
+  margin-top: 2rem !important;
+}
+.cx-eco-btn-solid {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem 2.25rem !important;
+  border-radius: 0.5rem !important;
+  background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 25px -5px rgba(192, 151, 63, 0.4) !important;
+  transition: all 0.25s ease !important;
+}
+.cx-eco-btn-solid:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 30px -4px rgba(192, 151, 63, 0.6) !important;
+}
+
+/* ==========================================================================
+   SECTION 8: WHY LEADERS CHOOSE US / TAG CLOUD (EXACT REFERENCE MATCH)
+   ========================================================================== */
+.cx-sec-choose {
+  background-color: #ffffff !important;
+  padding-block: 5rem 5rem !important;
+  border-top: 1px solid #e5e7eb !important;
+  position: relative !important;
+}
+.cx-choose-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+  text-align: center !important;
+}
+.cx-choose-eyebrow {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: #C0973F !important;
+  margin-bottom: 0.75rem !important;
+  text-align: center !important;
+}
+.cx-choose-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: uppercase !important;
+  color: #0d121c !important;
+  margin: 0 auto 1.5rem auto !important;
+  max-width: 68rem !important;
+  text-align: center !important;
+}
+.cx-choose-title .cx-blue-text {
+  color: #C0973F !important;
+  background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  display: block !important;
+  margin-top: 0.25rem !important;
+  text-align: center !important;
+}
+.cx-choose-desc {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.925rem !important;
+  line-height: 1.75 !important;
+  color: #4b5563 !important;
+  max-width: 54rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 2.25rem !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+.cx-tag-cloud {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.75rem 0.85rem !important;
+  max-width: 76rem !important;
+  margin-inline: auto !important;
+}
+.cx-tag-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.65rem 1.25rem !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 0.5rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #475569 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.25s ease !important;
+  cursor: default !important;
+}
+.cx-tag-item:hover {
+  transform: translateY(-2px) !important;
+  border-color: #C0973F !important;
+  color: #C0973F !important;
+  box-shadow: 0 6px 16px rgba(192, 151, 63, 0.2) !important;
+}
+
+/* ==========================================================================
+   SECTION 9: CONTACT CTA (SCOPED: .cx-sec-cta)
+   ========================================================================== */
+.cx-sec-cta {
+  background-color: #152B54 !important;
+  color: #ffffff !important;
+  padding-block: 6rem 6rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  text-align: center !important;
+  position: relative !important;
+}
+.cx-cta-container {
+  width: 100% !important;
+  max-width: 54rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-cta-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2rem, 3.8vw, 2.75rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+.cx-cta-title .cx-blue-text {
+  color: #C0973F !important;
+  background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  display: inline-block !important;
+  vertical-align: baseline !important;
+}
+.cx-cta-desc {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  color: #94a3b8 !important;
+  margin-bottom: 2.5rem !important;
+}
+.cx-cta-btn-wrap {
+  margin-bottom: 2rem !important;
+}
+.cx-cta-btn-solid {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.1rem 2.5rem !important;
+  border-radius: 0.5rem !important;
+  background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: 0 12px 30px -5px rgba(192, 151, 63, 0.45) !important;
+  transition: all 0.25s ease !important;
+}
+.cx-cta-btn-solid:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 16px 36px -4px rgba(192, 151, 63, 0.6) !important;
+}
+.cx-cta-subtext {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+}
+</style>
+
+</head>
+<body class="coaching-page">
+
+<!-- WEBSITE HEADER CONTAINER (Loaded dynamically by load.js) -->
+<div id="header-container"></div>
+
+
+<main>
+  <!-- SECTION 1: HERO SECTION SLIDER -->
+  <section class="cx-hero-section" id="top">
+    <div class="swiper cx-hero-slider">
+      <div class="swiper-wrapper">
+        <!-- Slide 1: Building Businesses That Can Scale -->
+        <div class="swiper-slide cx-hero-slide">
+          <img class="cx-hero-bg" src="images/corporate-coaching-bg.webp" width="1920" height="1080" alt="Building Businesses That Can Scale" loading="eager" onerror="this.src='images/pillars-bg.jpg'" />
+          <div class="cx-hero-scrim"></div>
+          <div class="cx-hero-container">
+            <div style="display:inline-block; padding: 0.35rem 1.25rem; border-radius: 999px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 1.25rem; background: rgba(192, 151, 63, 0.12); color: #C0973F; border: 1px solid rgba(192, 151, 63, 0.45); box-shadow: 0 0 16px rgba(192, 151, 63, 0.2);">
+              CONSULTING &amp; STRATEGIC ADVISORY
+            </div>
+            <h1 class="cx-hero-title">
+              <span class="cx-hero-part">BUILDING BUSINESSES</span>
+              <span class="cx-hero-part cx-blue-highlight">THAT CAN SCALE.</span>
+            </h1>
+            <div class="cx-hero-btn-row">
+              <a class="cx-btn-solid" href="#contact">SCHEDULE A CONVERSATION</a>
+              <a class="cx-btn-ghost" href="#practices">EXPLORE ADVISORY PRACTICES</a>
+            </div>
+            <dl class="cx-hero-stats-grid">
+              <div class="cx-stat-box"><dt class="cx-stat-num">900+</dt><dd class="cx-stat-lbl">CLIENT ENGAGEMENTS</dd></div>
+              <div class="cx-stat-box"><dt class="cx-stat-num">3,500+</dt><dd class="cx-stat-lbl">LEADERS COACHED</dd></div>
+              <div class="cx-stat-box"><dt class="cx-stat-num">75,000+</dt><dd class="cx-stat-lbl">MANAGERS IMPACTED</dd></div>
+              <div class="cx-stat-box"><dt class="cx-stat-num">140+</dt><dd class="cx-stat-lbl">STRATEGIC TRANSFORMATION PROJECTS</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Slide 2: Building Organisations That Can Endure -->
+        <div class="swiper-slide cx-hero-slide">
+          <img class="cx-hero-bg" src="images/3 PILLARS OF LEADERSHIP STRATEGY.webp" width="1920" height="1080" alt="Building Organisations That Can Endure" loading="lazy" onerror="this.src='images/pillars-bg.jpg'" />
+          <div class="cx-hero-scrim"></div>
+          <div class="cx-hero-container">
+            <div style="display:inline-block; padding: 0.35rem 1.25rem; border-radius: 999px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 1.25rem; background: rgba(192, 151, 63, 0.12); color: #C0973F; border: 1px solid rgba(192, 151, 63, 0.45); box-shadow: 0 0 16px rgba(192, 151, 63, 0.2);">
+              CONSULTING &amp; STRATEGIC ADVISORY
+            </div>
+            <h1 class="cx-hero-title">
+              <span class="cx-hero-part">BUILDING ORGANISATIONS</span>
+              <span class="cx-hero-part cx-blue-highlight">THAT CAN ENDURE.</span>
+            </h1>
+            <div class="cx-hero-btn-row">
+              <a class="cx-btn-solid" href="#contact">SCHEDULE A CONVERSATION</a>
+              <a class="cx-btn-ghost" href="#practices">EXPLORE ADVISORY PRACTICES</a>
+            </div>
+            <dl class="cx-hero-stats-grid">
+              <div class="cx-stat-box"><dt class="cx-stat-num">900+</dt><dd class="cx-stat-lbl">CLIENT ENGAGEMENTS</dd></div>
+              <div class="cx-stat-box"><dt class="cx-stat-num">3,500+</dt><dd class="cx-stat-lbl">LEADERS COACHED</dd></div>
+              <div class="cx-stat-box"><dt class="cx-stat-num">75,000+</dt><dd class="cx-stat-lbl">MANAGERS IMPACTED</dd></div>
+              <div class="cx-stat-box"><dt class="cx-stat-num">140+</dt><dd class="cx-stat-lbl">STRATEGIC TRANSFORMATION PROJECTS</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <!-- Swiper Pagination -->
+      <div class="swiper-pagination cx-hero-pagination"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: OUR CONSULTING PHILOSOPHY -->
+  <section class="cx-sec-founder" id="philosophy">
+    <div class="cx-founder-container">
+      <div class="cx-founder-card">
+        <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: #C0973F; margin-bottom: 1.5rem;">
+          Our consulting philosophy:
+        </div>
+        <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(1.35rem, 2.5vw, 1.9rem); font-weight: 800; color: #0f172a; line-height: 1.35; margin: 0 0 1.75rem 0;">
+          We don't stop with recommendations. We partner in transformation.
+        </h2>
+        <div class="cx-founder-body" style="font-size: clamp(1rem, 1.35vw, 1.12rem); line-height: 1.8; color: #1e293b;">
+          <p style="margin: 0 0 1.25rem 0;">
+            Every organisation reaches defining moments when yesterday's thinking, structures and capabilities are no longer sufficient for tomorrow's ambition. Growth creates complexity. Scale exposes weaknesses. New markets demand new capabilities. Succession changes leadership equations. Institutionalisation requires stronger systems. And transformation demands far more than a strategy document.
+          </p>
+          <p style="margin: 0;">
+            At <strong>GAD's</strong>, we partner with <strong>Boards, Promoters, Founders, CEOs and Leadership Teams</strong> to navigate these defining moments and convert ambition into sustainable organisational performance. We work across strategy, leadership, people, performance, processes and execution to build organisations capable of achieving their next level of growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: FROM THE BOARDROOM TO THE BUSINESS -->
+  <section class="cx-sec-boardroom" id="boardroom">
+    <style>
+      #boardroom.cx-sec-boardroom {
+        background-color: #152B54 !important;
+        background: radial-gradient(circle at 90% 10%, rgba(192, 151, 63, 0.15), transparent 45%),
+                    radial-gradient(circle at 10% 90%, rgba(12, 26, 48, 0.7), transparent 50%),
+                    #152B54 !important;
+        color: #ffffff !important;
+        padding-block: 5.5rem 5.5rem !important;
+        padding-inline: 1.5rem !important;
+        border-top: 1px solid rgba(192, 151, 63, 0.25) !important;
+        border-bottom: 1px solid rgba(192, 151, 63, 0.25) !important;
+        position: relative !important;
+      }
+      #boardroom .cx-boardroom-container {
+        max-width: 82rem !important;
+        margin-inline: auto !important;
+      }
+      #boardroom .cx-boardroom-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 3.25rem !important;
+        align-items: center !important;
+      }
+      @media (min-width: 992px) {
+        #boardroom .cx-boardroom-grid {
+          grid-template-columns: 1fr 1.15fr !important;
+          gap: 5rem !important;
+        }
+      }
+      #boardroom .cx-boardroom-eyebrow {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 0.82rem !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.22em !important;
+        text-transform: uppercase !important;
+        color: #C0973F !important;
+        margin: 0 0 1.25rem 0 !important;
+        display: inline-block !important;
+      }
+      #boardroom .cx-boardroom-title {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: clamp(2.3rem, 4.4vw, 3.6rem) !important;
+        font-weight: 800 !important;
+        line-height: 1.12 !important;
+        color: #ffffff !important;
+        text-transform: uppercase !important;
+        letter-spacing: -0.015em !important;
+        margin: 0 !important;
+      }
+      #boardroom .cx-boardroom-left-line {
+        width: 52px !important;
+        height: 3px !important;
+        background: #C0973F !important;
+        border-radius: 2px !important;
+        margin: 2rem 0 0 0 !important;
+      }
+      #boardroom .cx-boardroom-card {
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(192, 151, 63, 0.25) !important;
+        border-top: 4px solid #C0973F !important;
+        border-radius: 1.15rem !important;
+        padding: 2.75rem 2.5rem !important;
+        box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.35) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+      }
+      #boardroom .cx-boardroom-bullets {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.95rem !important;
+      }
+      #boardroom .cx-boardroom-bullet-item {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 0.85rem !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: clamp(1rem, 1.4vw, 1.12rem) !important;
+        line-height: 1.6 !important;
+        color: #e2e8f0 !important;
+        margin: 0 !important;
+      }
+      #boardroom .cx-boardroom-bullet-dot {
+        color: #C0973F !important;
+        font-size: 1.35rem !important;
+        line-height: 1.3 !important;
+        flex-shrink: 0 !important;
+      }
+      #boardroom .cx-boardroom-desc {
+        font-family: 'Inter', sans-serif !important;
+        font-size: clamp(1rem, 1.35vw, 1.12rem) !important;
+        line-height: 1.75 !important;
+        color: #cbd5e1 !important;
+        margin: 0.25rem 0 0 0 !important;
+        padding-top: 1.35rem !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+      }
+      #boardroom .cx-boardroom-tags {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: clamp(0.92rem, 1.3vw, 1.05rem) !important;
+        font-weight: 800 !important;
+        color: #C0973F !important;
+        letter-spacing: 0.04em !important;
+        line-height: 1.75 !important;
+        margin: 0 !important;
+      }
+    </style>
+
+    <div class="cx-boardroom-container">
+      <div class="cx-boardroom-grid">
+        
+        <!-- Left Column: Eyebrow & Title -->
+        <div>
+          <span class="cx-boardroom-eyebrow">ONE INTEGRATED TRANSFORMATION PARTNER</span>
+          <h2 class="cx-boardroom-title">
+            FROM THE<br>
+            BOARDROOM<br>
+            TO THE BUSINESS
+          </h2>
+          <div class="cx-boardroom-left-line"></div>
+        </div>
+
+        <!-- Right Column: Bullets, Paragraph & Strategy Tags in Card -->
+        <div class="cx-boardroom-card">
+          <ul class="cx-boardroom-bullets">
+            <li class="cx-boardroom-bullet-item">
+              <span class="cx-boardroom-bullet-dot">&bull;</span>
+              <span>Organisational challenges rarely exist in isolation.</span>
+            </li>
+            <li class="cx-boardroom-bullet-item">
+              <span class="cx-boardroom-bullet-dot">&bull;</span>
+              <span>A revenue challenge could actually be a leadership challenge.</span>
+            </li>
+            <li class="cx-boardroom-bullet-item">
+              <span class="cx-boardroom-bullet-dot">&bull;</span>
+              <span>A performance problem could originate from unclear accountability.</span>
+            </li>
+            <li class="cx-boardroom-bullet-item">
+              <span class="cx-boardroom-bullet-dot">&bull;</span>
+              <span>A strategy problem could actually be an execution problem.</span>
+            </li>
+            <li class="cx-boardroom-bullet-item">
+              <span class="cx-boardroom-bullet-dot">&bull;</span>
+              <span>A people problem could be rooted in organisational design.</span>
+            </li>
+          </ul>
+
+          <p class="cx-boardroom-desc">
+            Our consulting engagements look at the organisation as an integrated system. We identify the forces restricting growth, determine what must change and architect the interventions.
+          </p>
+
+          <p class="cx-boardroom-tags">
+            Strategy &bull; Leadership &bull; People &bull; Performance &bull; Process &bull; Culture &bull; Execution &bull; Growth
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE GAD'S TRANSFORMATION APPROACH (PERFECTED EXACT DESIGN & ALIGNMENT) -->
+  <section class="cx-sec-approach" id="approach">
+    <style>
+      #approach.cx-sec-approach {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+        color: #0c1a30 !important;
+        padding-block: 6.5rem 6.5rem !important;
+        padding-inline: 1.5rem !important;
+        border-top: 1px solid rgba(192, 151, 63, 0.2) !important;
+        border-bottom: 1px solid rgba(192, 151, 63, 0.2) !important;
+        position: relative !important;
+        overflow: hidden !important;
+      }
+      #approach .cx-approach-container {
+        max-width: 86rem !important;
+        margin-inline: auto !important;
+        padding-inline: 0.5rem !important;
+      }
+      #approach .cx-approach-header {
+        text-align: center !important;
+        max-width: 50rem !important;
+        margin-inline: auto !important;
+        margin-bottom: 3.25rem !important;
+      }
+      #approach .cx-approach-title {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: clamp(2rem, 3.8vw, 2.9rem) !important;
+        font-weight: 800 !important;
+        color: #0c1a30 !important;
+        text-transform: uppercase !important;
+        letter-spacing: -0.01em !important;
+        margin: 0 0 1rem 0 !important;
+        line-height: 1.15 !important;
+      }
+      #approach .cx-approach-subtitle {
+        font-family: 'Inter', sans-serif !important;
+        font-size: clamp(1.05rem, 1.8vw, 1.25rem) !important;
+        color: #556987 !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
+        font-weight: 400 !important;
+      }
+      #approach .cx-approach-callout {
+        max-width: 58rem !important;
+        margin-inline: auto !important;
+        margin-bottom: 3.75rem !important;
+        background: #ffffff !important;
+        border: 1px solid rgba(192, 151, 63, 0.28) !important;
+        border-radius: 1.15rem !important;
+        padding: 1.75rem 2.25rem !important;
+        box-shadow: 0 12px 32px -8px rgba(12, 26, 48, 0.06) !important;
+        text-align: center !important;
+      }
+      #approach .cx-approach-callout-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.85rem !important;
+        font-family: 'Inter', sans-serif !important;
+      }
+      #approach .cx-pattern-text {
+        margin: 0 !important;
+        font-size: 0.98rem !important;
+        color: #64748b !important;
+        font-weight: 500 !important;
+      }
+      #approach .cx-pattern-flow {
+        display: inline-block !important;
+        margin-left: 6px !important;
+        font-weight: 700 !important;
+        color: #0c1a30 !important;
+        letter-spacing: 0.03em !important;
+      }
+      #approach .cx-callout-divider {
+        width: 48px !important;
+        height: 2px !important;
+        background: #C0973F !important;
+        margin: 0.25rem auto !important;
+        border-radius: 2px !important;
+      }
+      #approach .cx-belief-text {
+        margin: 0 !important;
+        font-size: 1.02rem !important;
+        color: #1e293b !important;
+        line-height: 1.65 !important;
+        font-weight: 500 !important;
+      }
+
+      /* Responsive Flow Timeline */
+      #approach .cx-timeline-track {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        justify-items: center !important;
+        margin-bottom: 4rem !important;
+      }
+      @media (min-width: 640px) {
+        #approach .cx-timeline-track {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 1.5rem !important;
+        }
+      }
+      @media (min-width: 992px) {
+        #approach .cx-timeline-track {
+          grid-template-columns: repeat(3, 1fr) !important;
+          gap: 1.75rem !important;
+        }
+      }
+      @media (min-width: 1260px) {
+        #approach .cx-timeline-track {
+          display: flex !important;
+          flex-direction: row !important;
+          align-items: stretch !important;
+          justify-content: space-between !important;
+          gap: 0 !important;
+        }
+      }
+
+      #approach .cx-stage-card {
+        position: relative !important;
+        background: #fbf9f4 !important;
+        border-radius: 2.5rem 2.5rem 1.35rem 1.35rem !important;
+        padding: 2.75rem 1.35rem 2.35rem 1.35rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        border: 1px solid rgba(192, 151, 63, 0.18) !important;
+        box-shadow: 0 10px 25px -8px rgba(12, 26, 48, 0.04) !important;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      @media (min-width: 1260px) {
+        #approach .cx-stage-card {
+          flex: 1 1 0 !important;
+          min-width: 0 !important;
+        }
+      }
+      #approach .cx-stage-card:hover {
+        transform: translateY(-8px) !important;
+        background: #ffffff !important;
+        border-color: rgba(192, 151, 63, 0.48) !important;
+        box-shadow: 0 20px 38px -10px rgba(192, 151, 63, 0.22) !important;
+      }
+
+      #approach .cx-halo-avatar {
+        width: 78px !important;
+        height: 78px !important;
+        border-radius: 50% !important;
+        background: #0c1a30 !important;
+        border: 2px solid #C0973F !important;
+        box-shadow: 0 0 0 5px rgba(192, 151, 63, 0.18), 0 10px 20px -4px rgba(12, 26, 48, 0.35) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 1.6rem !important;
+        color: #ffffff !important;
+        transition: all 0.35s ease !important;
+        flex-shrink: 0 !important;
+      }
+      #approach .cx-stage-card:hover .cx-halo-avatar {
+        transform: scale(1.08) !important;
+        border-color: #dfb762 !important;
+        box-shadow: 0 0 0 7px rgba(192, 151, 63, 0.28), 0 14px 26px -4px rgba(192, 151, 63, 0.4) !important;
+      }
+
+      #approach .cx-stage-pill {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 0.72rem !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.24em !important;
+        text-transform: uppercase !important;
+        color: #C0973F !important;
+        margin-bottom: 0.55rem !important;
+        display: block !important;
+      }
+      #approach .cx-stage-name {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 1.35rem !important;
+        font-weight: 800 !important;
+        color: #0c1a30 !important;
+        margin: 0 0 1.15rem 0 !important;
+        line-height: 1.25 !important;
+      }
+      #approach .cx-stage-desc {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.9rem !important;
+        line-height: 1.65 !important;
+        color: #556987 !important;
+        margin: 0 !important;
+        flex-grow: 1 !important;
+      }
+
+      #approach .cx-arrow-separator {
+        display: none !important;
+      }
+      @media (min-width: 1260px) {
+        #approach .cx-arrow-separator {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          color: #C0973F !important;
+          padding-inline: 0.45rem !important;
+          flex-shrink: 0 !important;
+          opacity: 0.8 !important;
+        }
+      }
+
+      #approach .cx-quote-dock {
+        text-align: center !important;
+        max-width: 52rem !important;
+        margin-inline: auto !important;
+        background: #0c1a30 !important;
+        border-radius: 1.35rem !important;
+        padding: 2.4rem 2.25rem !important;
+        box-shadow: 0 18px 40px -10px rgba(12, 26, 48, 0.3) !important;
+        border: 1px solid rgba(192, 151, 63, 0.35) !important;
+      }
+      #approach .cx-quote-lead {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: clamp(1.1rem, 2vw, 1.35rem) !important;
+        color: #ffffff !important;
+        margin: 0 0 0.6rem 0 !important;
+        font-weight: 500 !important;
+      }
+      #approach .cx-quote-highlight {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: clamp(1.2rem, 2.3vw, 1.55rem) !important;
+        color: #C0973F !important;
+        margin: 0 !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.015em !important;
+      }
+    </style>
+
+    <div class="cx-approach-container">
+      
+      <!-- Top Section Header -->
+      <div class="cx-approach-header">
+        <h2 class="cx-approach-title">
+          Transformation Approach
+        </h2>
+        <p class="cx-approach-subtitle">
+          We don't consult from the outside. We transform from the inside.
+        </p>
+      </div>
+
+      <!-- Traditional Consulting vs Our Approach Highlight Box -->
+      <div class="cx-approach-callout">
+        <div class="cx-approach-callout-inner">
+          <p class="cx-pattern-text">
+            Traditional consulting often follows a familiar pattern:
+            <span class="cx-pattern-flow">Study &rarr; Recommend &rarr; Report &rarr; Exit.</span>
+          </p>
+          <div class="cx-callout-divider"></div>
+          <p class="cx-belief-text">
+            <strong style="color: #C0973F;">Our approach is different.</strong> We believe transformation requires the consultant to understand the organisation deeply, work alongside its leaders and remain connected to implementation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Process Cards Layout matching the reference image -->
+      <div class="cx-timeline-track">
+        
+        <!-- STEP 01 -->
+        <div class="cx-stage-card">
+          <div class="cx-halo-avatar">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+          </div>
+          <span class="cx-stage-pill">STEP 01</span>
+          <h3 class="cx-stage-name">Discover</h3>
+          <p class="cx-stage-desc">Understand the organisation's ambition, business reality, leadership context and critical challenges.</p>
+        </div>
+
+        <!-- Arrow 1 -->
+        <div class="cx-arrow-separator">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+
+        <!-- STEP 02 -->
+        <div class="cx-stage-card">
+          <div class="cx-halo-avatar">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <span class="cx-stage-pill">STEP 02</span>
+          <h3 class="cx-stage-name">Diagnose</h3>
+          <p class="cx-stage-desc">Identify visible problems as well as the deeper organisational forces creating them.</p>
+        </div>
+
+        <!-- Arrow 2 -->
+        <div class="cx-arrow-separator">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+
+        <!-- STEP 03 -->
+        <div class="cx-stage-card">
+          <div class="cx-halo-avatar">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <span class="cx-stage-pill">STEP 03</span>
+          <h3 class="cx-stage-name">Design</h3>
+          <p class="cx-stage-desc">Build a customised transformation architecture connecting strategy, people, structure and performance.</p>
+        </div>
+
+        <!-- Arrow 3 -->
+        <div class="cx-arrow-separator">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+
+        <!-- STEP 04 -->
+        <div class="cx-stage-card">
+          <div class="cx-halo-avatar">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+            </svg>
+          </div>
+          <span class="cx-stage-pill">STEP 04</span>
+          <h3 class="cx-stage-name">Deploy</h3>
+          <p class="cx-stage-desc">Translate strategy into interventions, systems, leadership actions and organisational priorities.</p>
+        </div>
+
+        <!-- Arrow 4 -->
+        <div class="cx-arrow-separator">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+
+        <!-- STEP 05 -->
+        <div class="cx-stage-card">
+          <div class="cx-halo-avatar">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <span class="cx-stage-pill">STEP 05</span>
+          <h3 class="cx-stage-name">Drive</h3>
+          <p class="cx-stage-desc">Work alongside leaders to accelerate implementation, overcome resistance and strengthen execution.</p>
+        </div>
+
+        <!-- Arrow 5 -->
+        <div class="cx-arrow-separator">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+
+        <!-- STEP 06 -->
+        <div class="cx-stage-card">
+          <div class="cx-halo-avatar">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+              <polyline points="2 8 8 2 14 8 22 0"></polyline>
+            </svg>
+          </div>
+          <span class="cx-stage-pill">STEP 06</span>
+          <h3 class="cx-stage-name">Measure</h3>
+          <p class="cx-stage-desc">Track transformation against defined business and organisational outcomes.</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strategic Quote Dock -->
+      <div class="cx-quote-dock">
+        <p class="cx-quote-lead">
+          "We don't measure success by the quality of our presentation."
+        </p>
+        <p class="cx-quote-highlight">
+          We measure it by what changes after the presentation.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE GAD'S DIFFERENCE SLIDER (EXACT COACHING LAYOUT) -->
+  <section class="cx-sec-why" id="why">
+    <div class="cx-why-container">
+      <div class="cx-why-header" style="align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.12); padding-bottom: 2rem; margin-bottom: 3rem;">
+        <div>
+          <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; margin: 0 0 0.5rem 0; line-height: 1.15; background: linear-gradient(135deg, #ECC269 0%, #ffffff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            THE GAD'S DIFFERENCE
+          </h2>
+          <div style="display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;">
+            <span style="display: inline-block; width: 32px; height: 3px; background: linear-gradient(90deg, #C0973F, #dfb762); border-radius: 2px;"></span>
+            <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(0.95rem, 1.8vw, 1.2rem); font-weight: 800; color: #f1f5f9; letter-spacing: 0.12em; text-transform: uppercase; margin: 0;">
+              CONSULTING THAT GOES BEYOND
+            </p>
+          </div>
+        </div>
+        <div class="cx-why-nav-btns">
+          <button class="cx-why-btn" data-why-prev aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button class="cx-why-btn" data-why-next aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="cx-why-viewport">
+        <div class="cx-why-track" data-why-track>
+          <div class="cx-why-slide">
+            <div class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner/consulting/growth_consulting-04.webp" alt="Business First" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">BUSINESS FIRST<br><span style="font-size: 0.72rem; font-weight: 500; text-transform: none; display: block; margin-top: 6px; color: #cbd5e1;">Every engagement begins with the business — ambition, economics, and priorities.</span></h3>
+            </div>
+          </div>
+
+          <div class="cx-why-slide">
+            <div class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner/consulting/management_consulting-05.webp" alt="Leadership at the Centre" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">LEADERSHIP AT THE CENTRE<br><span style="font-size: 0.72rem; font-weight: 500; text-transform: none; display: block; margin-top: 6px; color: #cbd5e1;">Organisations don't execute strategies. People do.</span></h3>
+            </div>
+          </div>
+
+          <div class="cx-why-slide">
+            <div class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner/consulting/branding_consulting-02.webp" alt="Behaviour + Business" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">BEHAVIOUR + BUSINESS<br><span style="font-size: 0.72rem; font-weight: 500; text-transform: none; display: block; margin-top: 6px; color: #cbd5e1;">Hard architecture of business plus human psychology of change.</span></h3>
+            </div>
+          </div>
+
+          <div class="cx-why-slide">
+            <div class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner/consulting/HR & process_consulting-01.webp" alt="Custom-Built" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">CUSTOM-BUILT<br><span style="font-size: 0.72rem; font-weight: 500; text-transform: none; display: block; margin-top: 6px; color: #cbd5e1;">Solutions precisely tailored to unique organizational dynamics.</span></h3>
+            </div>
+          </div>
+
+          <div class="cx-why-slide">
+            <div class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner/consulting/transformation_consulting-03.webp" alt="Implementation-Oriented" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">IMPLEMENTATION-ORIENTED<br><span style="font-size: 0.72rem; font-weight: 500; text-transform: none; display: block; margin-top: 6px; color: #cbd5e1;">We partner with leadership teams through execution and transformation.</span></h3>
+            </div>
+          </div>
+
+          <div class="cx-why-slide">
+            <div class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner/consulting/performance_consulting-06.webp" alt="Outcome-Driven" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">OUTCOME-DRIVEN<br><span style="font-size: 0.72rem; font-weight: 500; text-transform: none; display: block; margin-top: 6px; color: #cbd5e1;">The purpose of consulting is measurable organizational progress.</span></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cx-why-dots" data-why-dots></div>
+    </div>
+  </section>
+
+  <!-- SECTION: TRANSFORMATION ACROSS THE ENTERPRISE (MOUNTAIN ARC UI) -->
+  <style>
+    .cx-trans-mountain-sec {
+      position: relative;
+      background: linear-gradient(180deg, #f8fafc 0%, #edf4fc 50%, #f0f6fc 100%);
+      padding: 6.5rem 1.5rem 7rem 1.5rem;
+      border-top: 1px solid rgba(192, 151, 63, 0.22);
+      border-bottom: 1px solid rgba(192, 151, 63, 0.22);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Ambient Warm Sunrise / Sky Glow */
+    .cx-trans-mountain-sec::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 55%;
+      height: 70%;
+      background: radial-gradient(circle at 85% 15%, rgba(254, 215, 170, 0.35) 0%, rgba(253, 230, 138, 0.15) 35%, rgba(255, 255, 255, 0) 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .cx-trans-mountain-container {
+      position: relative;
+      z-index: 3;
+      max-width: 88rem;
+      margin: 0 auto;
+    }
+
+    .cx-trans-mountain-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    @media (min-width: 1200px) {
+      .cx-trans-mountain-grid {
+        display: grid;
+        grid-template-columns: 310px 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+    }
+
+    @media (min-width: 1380px) {
+      .cx-trans-mountain-grid {
+        grid-template-columns: 330px 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    /* Left Intro Column (Clean text on Mountain Sky) */
+    .cx-trans-intro-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .cx-trans-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 0.75rem;
+    }
+
+    .cx-trans-brand-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #152B54;
+      margin: 0;
+    }
+
+    .cx-trans-gold-rule {
+      display: inline-block;
+      width: 54px;
+      height: 2.5px;
+      background: #C0973F;
+      border-radius: 2px;
+    }
+
+    .cx-trans-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.1rem, 3.2vw, 2.85rem);
+      font-weight: 700;
+      color: #152B54;
+      line-height: 1.16;
+      letter-spacing: -0.015em;
+      margin: 0 0 1.25rem 0;
+    }
+
+    .cx-trans-taglines {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0;
+    }
+
+    .cx-trans-taglines p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+      font-weight: 700;
+      color: #28518F;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .cx-trans-accent-bar {
+      width: 44px;
+      height: 2.5px;
+      background: #C0973F;
+      margin: 1.25rem 0;
+      border-radius: 2px;
+    }
+
+    .cx-trans-summary {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: #475569;
+      margin: 0;
+      max-width: 330px;
+      font-weight: 400;
+    }
+
+    /* Right Arc / Flow Area */
+    .cx-trans-arc-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    /* Arc SVG Connector Line */
+    .cx-trans-curve-svg {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 6%;
+      width: 88%;
+      height: 100px;
+      pointer-events: none;
+      z-index: 1;
+      overflow: visible;
+    }
+
+    @media (min-width: 1200px) {
+      .cx-trans-curve-svg {
+        display: block;
+      }
+    }
+
+    /* 4 Steps Grid */
+    .cx-trans-steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 640px) {
+      .cx-trans-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1.75rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .cx-trans-steps-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        align-items: flex-start;
+        padding-top: 2.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      /* Parabolic / Arc vertical trajectory offsets for desktop */
+      .cx-trans-node[data-step="1"] { transform: translateY(24px); }
+      .cx-trans-node[data-step="2"] { transform: translateY(-24px); }
+      .cx-trans-node[data-step="3"] { transform: translateY(-24px); }
+      .cx-trans-node[data-step="4"] { transform: translateY(24px); }
+    }
+
+    /* Individual Step Node */
+    .cx-trans-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media (min-width: 1200px) {
+      .cx-trans-node[data-step="1"]:hover { transform: translateY(16px) scale(1.03); }
+      .cx-trans-node[data-step="2"]:hover { transform: translateY(-32px) scale(1.03); }
+      .cx-trans-node[data-step="3"]:hover { transform: translateY(-32px) scale(1.03); }
+      .cx-trans-node[data-step="4"]:hover { transform: translateY(16px) scale(1.03); }
+    }
+
+    /* Step Number */
+    .cx-trans-node-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .cx-trans-node[data-step="1"] .cx-trans-node-num { color: #152B54; }
+    .cx-trans-node[data-step="2"] .cx-trans-node-num { color: #15803d; }
+    .cx-trans-node[data-step="3"] .cx-trans-node-num { color: #6b21a8; }
+    .cx-trans-node[data-step="4"] .cx-trans-node-num { color: #d97706; }
+
+    /* Circular Icon Badge */
+    .cx-trans-node-badge {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3.5px solid #ffffff;
+      box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.8);
+      position: relative;
+      z-index: 3;
+      transition: all 0.35s ease;
+      flex-shrink: 0;
+    }
+
+    .cx-trans-node-badge i,
+    .cx-trans-node-badge svg {
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+
+    /* Node Badge Colors */
+    .cx-trans-node[data-step="1"] .cx-trans-node-badge {
+      background: #11284d;
+      box-shadow: 0 10px 25px -4px rgba(17, 40, 77, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.8);
+    }
+    .cx-trans-node[data-step="2"] .cx-trans-node-badge {
+      background: #16a34a;
+      box-shadow: 0 10px 25px -4px rgba(22, 163, 74, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.8);
+    }
+    .cx-trans-node[data-step="3"] .cx-trans-node-badge {
+      background: #6b3ba6;
+      box-shadow: 0 10px 25px -4px rgba(107, 59, 166, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.8);
+    }
+    .cx-trans-node[data-step="4"] .cx-trans-node-badge {
+      background: #d97706;
+      box-shadow: 0 10px 25px -4px rgba(217, 119, 6, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.8);
+    }
+
+    .cx-trans-node:hover .cx-trans-node-badge {
+      transform: scale(1.08);
+    }
+
+    /* Node Title */
+    .cx-trans-node-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 1.15rem 0 0.6rem 0;
+      line-height: 1.25;
+      text-align: center;
+      min-height: 2.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Node Description */
+    .cx-trans-node-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #475569;
+      text-align: center;
+      margin: 0;
+      font-weight: 500;
+      max-width: 240px;
+    }
+
+    .cx-trans-node-desc .cx-bullet-dot {
+      color: #C0973F;
+      font-weight: 700;
+      margin: 0 4px;
+    }
+
+    /* Bottom Full-width Callout Box */
+    .cx-trans-callout-wrap {
+      margin-top: 3.5rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .cx-trans-callout-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(192, 151, 63, 0.35);
+      border-radius: 1.25rem;
+      padding: 1.5rem 2.25rem;
+      text-align: center;
+      box-shadow: 0 10px 30px -8px rgba(21, 43, 84, 0.08);
+      max-width: 62rem;
+      margin: 0 auto;
+    }
+
+    .cx-trans-callout-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.08rem, 1.6vw, 1.32rem);
+      font-style: italic;
+      font-weight: 600;
+      color: #152B54;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Mobile / Tablet Responsive */
+    @media (max-width: 1199px) {
+      .cx-trans-mountain-sec {
+        padding: 4.5rem 1.25rem 5rem 1.25rem;
+      }
+      .cx-trans-intro-col {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .cx-trans-summary {
+        max-width: 560px;
+      }
+      .cx-trans-node {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        border-radius: 1.25rem;
+        padding: 1.75rem 1.25rem;
+        box-shadow: 0 8px 24px -6px rgba(15, 23, 42, 0.06);
+      }
+      .cx-trans-node-title {
+        min-height: auto;
+      }
+      .cx-trans-node-desc {
+        max-width: none;
+      }
+      .cx-trans-callout-wrap {
+        margin-top: 2.5rem;
+      }
+    }
+  </style>
+
+  <section class="cx-trans-mountain-sec" id="enterprise-transformation">
+    <div class="cx-trans-mountain-container">
+      <div class="cx-trans-mountain-grid">
+        
+        <!-- Left Title & Philosophy Block -->
+        <div class="cx-trans-intro-col">
+          <div class="cx-trans-brand-wrap">
+            <span class="cx-trans-brand-label">THE GAD'S</span>
+            <span class="cx-trans-gold-rule"></span>
+          </div>
+
+          <h2 class="cx-trans-heading">
+            Transformation<br>Across the Enterprise
+          </h2>
+
+          <div class="cx-trans-taglines">
+            <p>A consulting engagement may begin with one problem.</p>
+          </div>
+
+          <div class="cx-trans-accent-bar"></div>
+
+          <p class="cx-trans-summary">
+            But our ability to work across the enterprise allows us to identify how that problem connects with the rest of the organisation.
+          </p>
+        </div>
+
+        <!-- Right 4-Step Enterprise Arc Flow -->
+        <div class="cx-trans-arc-wrapper">
+          
+          <!-- Curved Arc Connecting Line for Desktop -->
+          <svg class="cx-trans-curve-svg" viewBox="0 0 900 100" fill="none" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="cxArcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#152B54" stop-opacity="0.4" />
+                <stop offset="35%" stop-color="#16a34a" stop-opacity="0.6" />
+                <stop offset="65%" stop-color="#7c3aed" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="#d97706" stop-opacity="0.4" />
+              </linearGradient>
+            </defs>
+            <path d="M 60 76 C 220 12, 380 4, 450 4 C 520 4, 680 12, 840 76" stroke="url(#cxArcGrad)" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" />
+            <!-- Small directional arrows along arc -->
+            <polygon points="310,26 300,20 302,28" fill="#16a34a" opacity="0.9" />
+            <polygon points="600,26 610,20 608,28" fill="#7c3aed" opacity="0.9" />
+          </svg>
+
+          <div class="cx-trans-steps-grid">
+            
+            <!-- STEP 01: BOARD -->
+            <div class="cx-trans-node" data-step="1">
+              <span class="cx-trans-node-num">01</span>
+              <div class="cx-trans-node-badge">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h3 class="cx-trans-node-title">Board</h3>
+              <p class="cx-trans-node-desc">Governance <span class="cx-bullet-dot">•</span> Strategic Direction <span class="cx-bullet-dot">•</span> Enterprise Priorities <span class="cx-bullet-dot">•</span> Succession</p>
+            </div>
+
+            <!-- STEP 02: CEO & EXECUTIVE LEADERSHIP -->
+            <div class="cx-trans-node" data-step="2">
+              <span class="cx-trans-node-num">02</span>
+              <div class="cx-trans-node-badge">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <h3 class="cx-trans-node-title">CEO &amp; Executive Leadership</h3>
+              <p class="cx-trans-node-desc">Growth <span class="cx-bullet-dot">•</span> Strategy <span class="cx-bullet-dot">•</span> Leadership Alignment <span class="cx-bullet-dot">•</span> Transformation</p>
+            </div>
+
+            <!-- STEP 03: ORGANISATION -->
+            <div class="cx-trans-node" data-step="3">
+              <span class="cx-trans-node-num">03</span>
+              <div class="cx-trans-node-badge">
+                <i class="fa-solid fa-sitemap"></i>
+              </div>
+              <h3 class="cx-trans-node-title">Organisation</h3>
+              <p class="cx-trans-node-desc">Structure <span class="cx-bullet-dot">•</span> Processes <span class="cx-bullet-dot">•</span> Performance <span class="cx-bullet-dot">•</span> Culture <span class="cx-bullet-dot">•</span> Talent</p>
+            </div>
+
+            <!-- STEP 04: BUSINESS -->
+            <div class="cx-trans-node" data-step="4">
+              <span class="cx-trans-node-num">04</span>
+              <div class="cx-trans-node-badge">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3 class="cx-trans-node-title">Business</h3>
+              <p class="cx-trans-node-desc">Customers <span class="cx-bullet-dot">•</span> Revenue <span class="cx-bullet-dot">•</span> Productivity <span class="cx-bullet-dot">•</span> Execution <span class="cx-bullet-dot">•</span> Growth</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom System Callout -->
+      <div class="cx-trans-callout-wrap">
+        <div class="cx-trans-callout-card">
+          <p class="cx-trans-callout-text">
+            &ldquo;This enables us to work not merely on the symptom, but on the organisational system producing it.&rdquo;
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: PROVEN METRICS / IMPACT (EXACT COACHING LAYOUT) -->
+  <section class="cx-sec-impact" id="impact">
+    <div class="cx-impact-container">
+      <h2 class="cx-impact-title">OUR EXPERIENCE. YOUR ADVANTAGE.</h2>
+      <div class="cx-impact-grid">
+        <div class="cx-impact-item">
+          <div class="cx-impact-circle cx-circle-blue is-filled">
+            <div class="cx-metric-fill"></div>
+            <div class="cx-metric-val" style="position:relative; z-index:2; font-family:'Plus Jakarta Sans',sans-serif; font-size:2.4rem; font-weight:900; color:#fff;">20,000+</div>
+          </div>
+          <p class="cx-metric-lbl" style="margin-top:1.25rem; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color: #334155;">LEADERS DEVELOPED</p>
+        </div>
+
+        <div class="cx-impact-item">
+          <div class="cx-impact-circle cx-circle-gold is-filled">
+            <div class="cx-metric-fill"></div>
+            <div class="cx-metric-val" style="position:relative; z-index:2; font-family:'Plus Jakarta Sans',sans-serif; font-size:2.4rem; font-weight:900; color:#fff;">1,200+</div>
+          </div>
+          <p class="cx-metric-lbl" style="margin-top:1.25rem; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color: #334155;">KEYNOTES &amp; INTERVENTIONS</p>
+        </div>
+
+        <div class="cx-impact-item">
+          <div class="cx-impact-circle cx-circle-rose is-filled">
+            <div class="cx-metric-fill"></div>
+            <div class="cx-metric-val" style="position:relative; z-index:2; font-family:'Plus Jakarta Sans',sans-serif; font-size:2.4rem; font-weight:900; color:#fff;">100%</div>
+          </div>
+          <p class="cx-metric-lbl" style="margin-top:1.25rem; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color: #334155;">EXECUTION &amp; OUTCOME ORIENTED</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: EXPERIENCE ACROSS THE BUSINESS LIFECYCLE (EXACT COACHING RIBBON LAYOUT) -->
+  <section class="cx-sec-ribbon" id="lifecycle" style="background: #152B54; padding: 5.5rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <div style="max-width: 82rem; margin: 0 auto; text-align: center;">
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(1.75rem,3.2vw,2.4rem); font-weight:800; color:#fff; text-transform:uppercase; margin-bottom:1rem; letter-spacing:-0.01em;">
+        EXPERIENCE ACROSS THE BUSINESS LIFECYCLE
+      </h2>
+      <p style="color:#cbd5e1; font-size:1.02rem; max-width:48rem; margin:0 auto 3rem auto; font-family:'Inter',sans-serif; line-height:1.6;">
+        We partner with organisations navigating critical moments such as:
+      </p>
+
+      <style>
+        .cx-lifecycle-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1.35rem;
+          text-align: left;
+        }
+        @media (min-width: 640px) {
+          .cx-lifecycle-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (min-width: 992px) {
+          .cx-lifecycle-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+      </style>
+
+      <div class="cx-lifecycle-grid">
+        <!-- 01 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">01</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">RAPID GROWTH</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When the business is growing faster than the organisation supporting it.</div>
+        </div>
+
+        <!-- 02 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">02</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">TRANSFORMATION</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When existing ways of working can no longer deliver future ambition.</div>
+        </div>
+
+        <!-- 03 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">03</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">SCALE</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When entrepreneurial success must evolve into institutional capability.</div>
+        </div>
+
+        <!-- 04 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">04</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">LEADERSHIP TRANSITION</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When the next generation of leaders must be identified and prepared.</div>
+        </div>
+
+        <!-- 05 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">05</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">SUCCESSION</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When organisational continuity cannot remain dependent on a few individuals.</div>
+        </div>
+
+        <!-- 06 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">06</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">INSTITUTIONALISATION</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When systems, structures and governance must replace personality-driven operations.</div>
+        </div>
+
+        <!-- 07 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">07</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">PERFORMANCE ACCELERATION</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When potential exists, but execution is not producing the required results.</div>
+        </div>
+
+        <!-- 08 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">08</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">PE / VC TRANSFORMATION</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When leadership and organisational capability must accelerate alongside investment expectations.</div>
+        </div>
+
+        <!-- 09 -->
+        <div style="background: #152B54; border:1px solid rgba(255,255,255,0.08); border-left: 4px solid #C0973F; border-radius:0.75rem; padding:1.4rem; box-shadow:0 8px 24px -4px rgba(0,0,0,0.5); transition:all 0.3s ease;">
+          <div style="color:#C0973F; font-size:0.8rem; font-weight:800; letter-spacing:0.15em; margin-bottom:6px;">09</div>
+          <div style="color:#fff; font-weight:800; font-size:1.05rem; margin-bottom:6px; font-family:'Plus Jakarta Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;">IPO READINESS</div>
+          <div style="color:#94a3b8; font-size:0.88rem; line-height:1.55; font-family:'Inter',sans-serif;">When an organisation must strengthen leadership, systems, culture, governance and execution for its next stage.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: OUR CONSULTING & ADVISORY PRACTICES (10 PRACTICES IN EXACT COACHING .cx-sec-eco LAYOUT) -->
+  <div class="cx-sec-eco" id="practices">
+
+    <!-- PRACTICE 01 -->
+    <section class="cx-eco-block cx-eco-1">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 01</span>
+          <h2 class="cx-eco-title">01 | BOARD ADVISORY &amp; STRATEGIC ADVISORY</h2>
+          <p class="cx-eco-tagline">When the decisions are bigger, the quality of thinking around the table matters more.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/board-advisory-strategic-advisory.webp" alt="Board Advisory &amp; Strategic Advisory" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-weight: 800; color: #152B54; line-height: 1.45; margin: 0 0 1.35rem 0;">
+              When the decisions are bigger, the quality of thinking around the table matters more.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.35rem 0; line-height: 1.8; color: #475569; font-size: 1rem;">
+              Boards, Promoters, Founders and CEOs often operate in environments where the decisions are complex, the stakes are high and the consequences are long-term.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.35rem 0; line-height: 1.8; color: #475569; font-size: 1rem;">
+              At these moments, leaders need more than information.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.35rem 0; line-height: 1.8; color: #475569; font-size: 1rem;">
+              They need <strong style="color: #152B54; font-weight: 700;">perspective, challenge, clarity and an independent strategic mind at the table.</strong>
+            </p>
+            <p style="text-align: center !important; margin: 0; line-height: 1.8; color: #475569; font-size: 1rem;">
+              Our Board &amp; Strategic Advisory engagements provide senior decision-makers with an external thinking partner who can challenge assumptions, uncover blind spots, evaluate strategic alternatives and bring greater clarity to consequential decisions.
+            </p>
+          </div>
+
+          <div class="cx-eco-suite-head">
+            <span class="cx-eco-subheading">OUR ADVISORY AREAS INCLUDE</span>
+          </div>
+
+          <div class="cx-acc-group">
+            <div class="cx-acc-item is-open">
+              <button class="cx-acc-trigger" type="button" aria-expanded="true">
+                <span class="cx-acc-heading-link">Board &amp; CEO Advisory</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Independent strategic perspective for critical business and organisational decisions.</p></div>
+            </div>
+
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Promoter &amp; Founder Advisory</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Helping entrepreneurial organisations navigate the transition from founder-led growth to institution-led scale.</p></div>
+            </div>
+
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Strategic Direction</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Clarifying enterprise priorities, strategic choices and long-term business direction.</p></div>
+            </div>
+
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Board Effectiveness</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Strengthening board conversations, strategic oversight, decision quality and leadership alignment.</p></div>
+            </div>
+
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Growth &amp; Transformation Advisory</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Identifying transformational priorities required for the organisation's next growth chapter.</p></div>
+            </div>
+
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Succession &amp; Leadership Architecture</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Building leadership continuity and preparing the next generation of enterprise leaders.</p></div>
+            </div>
+
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Institutionalisation</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Moving organisations from personality-dependent operations towards stronger systems, structures and governance.</p></div>
+            </div>
+
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">IPO &amp; Scale Readiness</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Strengthening leadership, culture, performance systems and organisational capabilities required for larger stages of growth.</p></div>
+            </div>
+
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Enterprise Value Creation</span>
+                <span class="cx-acc-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="cx-acc-panel"><p class="cx-acc-desc">Aligning leadership and organisational transformation towards sustainable long-term value.</p></div>
+            </div>
+          </div>
+
+          <div style="max-width:54rem; margin:0 auto; padding:1.25rem; border-radius:0.5rem; background:#fbf9f4; border:1px solid rgba(192, 151, 63, 0.4); color:#152B54; font-weight:700; font-size:0.95rem;">
+            When the stakes are high, leaders don't always need another consultant. Sometimes, they need the right strategic mind at the table.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE 02 -->
+    <section class="cx-eco-block cx-eco-2">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 02</span>
+          <h2 class="cx-eco-title">02 | BUSINESS GROWTH &amp; STRATEGY CONSULTING</h2>
+          <p class="cx-eco-tagline">Growth Doesn't Come From Doing More. It Comes From Making Better Choices.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/business-growth-strategy-consulting.webp" alt="Business Growth &amp; Strategy Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Organisations frequently reach a stage where their existing growth engine begins losing momentum.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              The question then becomes:
+            </p>
+            <p style="text-align: center !important; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; font-weight: 800; color: #0f172a; line-height: 1.45; margin: 0 0 1.35rem 0;">
+              Where will the next phase of growth come from?
+            </p>
+            <p style="text-align: center !important; margin: 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              We work with leadership teams to challenge existing assumptions, identify growth possibilities and create strategic roadmaps capable of converting ambition into action.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Business Growth Strategy</li>
+            <li class="cx-ideal-item">Strategic Planning &amp; Roadmaps</li>
+            <li class="cx-ideal-item">Business Model Transformation</li>
+            <li class="cx-ideal-item">Revenue Acceleration</li>
+            <li class="cx-ideal-item">New Market Opportunities</li>
+            <li class="cx-ideal-item">Market Expansion</li>
+            <li class="cx-ideal-item">Competitive Positioning</li>
+            <li class="cx-ideal-item">Business Portfolio Strategy</li>
+            <li class="cx-ideal-item">Strategic Prioritisation</li>
+            <li class="cx-ideal-item">Growth Bottleneck Identification</li>
+            <li class="cx-ideal-item">Strategy-to-Execution Alignment</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.25rem; border-radius:0.5rem; background:#e0e7ff; border:1px solid #c7d2fe; color:#1e40af; font-weight:700; font-size:0.95rem; text-align:center; line-height:1.6;">
+            Our objective is not merely to create a strategy.<br>It is to build an organisation capable of executing it.
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- PRACTICE 03 -->
+    <section class="cx-eco-block cx-eco-3">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 03</span>
+          <h2 class="cx-eco-title">03 | ORGANISATIONAL TRANSFORMATION CONSULTING</h2>
+          <p class="cx-eco-tagline">Your Organisation Must Evolve as Fast as Your Ambition.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/organisational-transformation-consulting.webp" alt="Organisational Transformation Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              What works at one stage of growth can become the biggest constraint at the next.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              As organisations scale, structures become complicated, decisions slow down, accountability gets diluted and functions begin operating in silos.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              We help organisations redesign themselves for their next stage.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Organisation Design</li>
+            <li class="cx-ideal-item">Operating Model Transformation</li>
+            <li class="cx-ideal-item">Roles & Accountability</li>
+            <li class="cx-ideal-item">Decision Architecture</li>
+            <li class="cx-ideal-item">Cross-Functional Effectiveness</li>
+            <li class="cx-ideal-item">Structural Realignment</li>
+            <li class="cx-ideal-item">Management Systems</li>
+            <li class="cx-ideal-item">Execution Excellence</li>
+            <li class="cx-ideal-item">Organisational Agility</li>
+            <li class="cx-ideal-item">Transformation Roadmaps</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.25rem; border-radius:0.5rem; background:#ede9fe; border:1px solid #ddd6fe; color:#5b21b6; font-weight:700; font-size:0.95rem; text-align:center; line-height:1.6;">
+            The objective is to create an organisation where structure enables strategy rather than restricting it.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE 04 -->
+    <section class="cx-eco-block cx-eco-1">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 04</span>
+          <h2 class="cx-eco-title">04 | LEADERSHIP & PEOPLE CONSULTING</h2>
+          <p class="cx-eco-tagline">The Organisation of Tomorrow Requires the Leaders of Tomorrow.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/leadership-people-consulting.webp" alt="Leadership &amp; People Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Strategy cannot outperform the leadership capability responsible for executing it.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              We help organisations identify, develop and build the leadership capability required for their future.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Our work extends beyond individual development into building an integrated leadership architecture across the enterprise.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Leadership Capability Mapping</li>
+            <li class="cx-ideal-item">Leadership Competency Frameworks</li>
+            <li class="cx-ideal-item">Succession Planning</li>
+            <li class="cx-ideal-item">High-Potential Identification</li>
+            <li class="cx-ideal-item">Leadership Pipeline Development</li>
+            <li class="cx-ideal-item">Future Leadership Readiness</li>
+            <li class="cx-ideal-item">Leadership Assessments</li>
+            <li class="cx-ideal-item">Executive Team Effectiveness</li>
+            <li class="cx-ideal-item">Leadership Culture</li>
+            <li class="cx-ideal-item">Talent Architecture</li>
+            <li class="cx-ideal-item">Critical Role Mapping</li>
+            <li class="cx-ideal-item">Leadership Development Strategy</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.5rem 2rem; border-radius:0.5rem; background:#fbf9f4; border:1px solid rgba(192, 151, 63, 0.4); text-align:center;">
+            <p style="margin:0 0 0.6rem 0; font-size:0.95rem; font-weight:500; color:#475569; line-height:1.6;">The question we help organisations answer is not simply:</p>
+            <p style="margin:0 0 1.25rem 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:1.15rem; font-weight:800; color:#152B54; line-height:1.4;">"Who are our best leaders today?"</p>
+            <p style="margin:0 0 0.6rem 0; font-size:0.95rem; font-weight:500; color:#475569; line-height:1.6;">It is:</p>
+            <p style="margin:0; font-family:'Plus Jakarta Sans',sans-serif; font-size:1.15rem; font-weight:800; color:#152B54; line-height:1.4;">"Who can carry this organisation into its next decade?"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE 05 -->
+    <section class="cx-eco-block cx-eco-2">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 05</span>
+          <h2 class="cx-eco-title">05 | PERFORMANCE CONSULTING</h2>
+          <p class="cx-eco-tagline">Turn Ambition Into Accountability.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/performance-consulting.webp" alt="Performance Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              High-performance organisations don't depend solely on highly motivated individuals.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              They build systems that make performance visible, measurable and accountable.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              We help organisations create performance architectures that connect enterprise goals to functions, teams and individuals.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Performance Management Systems</li>
+            <li class="cx-ideal-item">KRA & KPI Architecture</li>
+            <li class="cx-ideal-item">Enterprise-to-Individual Goal Alignment</li>
+            <li class="cx-ideal-item">Performance Scorecards</li>
+            <li class="cx-ideal-item">Accountability Systems</li>
+            <li class="cx-ideal-item">Productivity Enhancement</li>
+            <li class="cx-ideal-item">Performance Review Architecture</li>
+            <li class="cx-ideal-item">Execution Discipline</li>
+            <li class="cx-ideal-item">High-Performance Culture</li>
+            <li class="cx-ideal-item">Business Performance Alignment</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.25rem; border-radius:0.5rem; background:#dcfce7; border:1px solid #bbf7d0; color:#166534; font-weight:700; font-size:0.95rem; text-align:center; line-height:1.6;">
+            The objective is simple: Everyone should know what winning looks like — and how their work contributes to it.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE 06 -->
+    <section class="cx-eco-block cx-eco-3">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 06</span>
+          <h2 class="cx-eco-title">06 | SALES & REVENUE CONSULTING</h2>
+          <p class="cx-eco-tagline">Build a Revenue Engine. Not Just a Sales Target.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/sales-revenue-consulting.webp" alt="Sales &amp; Revenue Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Sustainable revenue growth requires more than sales pressure.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              It requires the right market strategy, customer proposition, sales process, capability, discipline and leadership.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              We work with organisations to identify revenue leakages and strengthen the entire commercial engine.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Sales Strategy</li>
+            <li class="cx-ideal-item">Revenue Growth Architecture</li>
+            <li class="cx-ideal-item">Business Development Strategy</li>
+            <li class="cx-ideal-item">Sales Force Effectiveness</li>
+            <li class="cx-ideal-item">Sales Productivity</li>
+            <li class="cx-ideal-item">Conversion Improvement</li>
+            <li class="cx-ideal-item">Key Account Strategy</li>
+            <li class="cx-ideal-item">Customer Acquisition</li>
+            <li class="cx-ideal-item">Sales Leadership</li>
+            <li class="cx-ideal-item">Sales Capability Building</li>
+            <li class="cx-ideal-item">Pipeline Effectiveness</li>
+            <li class="cx-ideal-item">Sales Performance Systems</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.5rem 2rem; border-radius:0.5rem; background:#fef3c7; border:1px solid #fde68a; text-align:center;">
+            <p style="margin:0 0 0.6rem 0; font-size:0.95rem; font-weight:500; color:#78350f; line-height:1.6;">We don't merely ask:</p>
+            <p style="margin:0 0 1.25rem 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:1.15rem; font-weight:800; color:#92400e; line-height:1.4;">"How do we sell more?"</p>
+            <p style="margin:0 0 0.6rem 0; font-size:0.95rem; font-weight:500; color:#78350f; line-height:1.6;">We ask:</p>
+            <p style="margin:0; font-family:'Plus Jakarta Sans',sans-serif; font-size:1.15rem; font-weight:800; color:#92400e; line-height:1.4;">"What must change across the organisation for revenue growth to become repeatable?"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE 07 -->
+    <section class="cx-eco-block cx-eco-1">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 07</span>
+          <h2 class="cx-eco-title">07 | BRAND & MARKET CONSULTING</h2>
+          <p class="cx-eco-tagline">Powerful Brands Don't Just Get Noticed. They Get Chosen.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/brand-market-consulting.webp" alt="Brand &amp; Market Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Markets are increasingly crowded. Products can be replicated. Features can be copied. Prices can be challenged.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Differentiation therefore becomes strategic.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              We help organisations strengthen the way they are positioned, perceived and chosen by the market.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Brand Strategy</li>
+            <li class="cx-ideal-item">Brand Positioning</li>
+            <li class="cx-ideal-item">Corporate Brand Architecture</li>
+            <li class="cx-ideal-item">Market Differentiation</li>
+            <li class="cx-ideal-item">Value Proposition</li>
+            <li class="cx-ideal-item">Customer Perception</li>
+            <li class="cx-ideal-item">Competitive Positioning</li>
+            <li class="cx-ideal-item">Category Strategy</li>
+            <li class="cx-ideal-item">Brand Experience</li>
+            <li class="cx-ideal-item">Market Relevance</li>
+            <li class="cx-ideal-item">Leadership & Corporate Brand Alignment</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.25rem; border-radius:0.5rem; background:#fbf9f4; border:1px solid rgba(192, 151, 63, 0.4); color:#152B54; font-weight:700; font-size:0.95rem; text-align:center; line-height:1.6;">
+            The objective is to create a brand that doesn't merely participate in a category — but has the potential to define it.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE 08 -->
+    <section class="cx-eco-block cx-eco-2">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 08</span>
+          <h2 class="cx-eco-title">08 | START-UP & SCALE-UP CONSULTING</h2>
+          <p class="cx-eco-tagline">Starting Requires Courage. Scaling Requires Architecture.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/start-up-scale-upconsulting.webp" alt="Start-Up &amp; Scale-Up Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              The capabilities required to build a company are not necessarily the capabilities required to scale one.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              As businesses grow, founders face new questions around structure, leadership, capital, talent, systems and market expansion.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              We work with Founders and Leadership Teams to navigate the transition from entrepreneurial momentum to organisational scale.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Founder Advisory</li>
+            <li class="cx-ideal-item">Business Model Strategy</li>
+            <li class="cx-ideal-item">Growth Architecture</li>
+            <li class="cx-ideal-item">Scale-Up Strategy</li>
+            <li class="cx-ideal-item">Leadership Structure</li>
+            <li class="cx-ideal-item">Organisation Building</li>
+            <li class="cx-ideal-item">Investor Readiness</li>
+            <li class="cx-ideal-item">Pitch Strategy</li>
+            <li class="cx-ideal-item">Strategic Storytelling</li>
+            <li class="cx-ideal-item">Business Planning</li>
+            <li class="cx-ideal-item">Market Expansion</li>
+            <li class="cx-ideal-item">Institutionalisation</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.25rem; border-radius:0.5rem; background:#e0f2fe; border:1px solid #bae6fd; color:#0369a1; font-weight:700; font-size:0.95rem; text-align:center; line-height:1.6;">
+            We help founders build businesses that can eventually become bigger than the founder.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE 09 -->
+    <section class="cx-eco-block cx-eco-3">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 09</span>
+          <h2 class="cx-eco-title">09 | PROCESS & MANAGEMENT CONSULTING</h2>
+          <p class="cx-eco-tagline">Simplify. Strengthen. Scale.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/process-management-consulting.webp" alt="Process &amp; Management Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Growth without strong processes eventually creates complexity.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Complexity creates delays. Delays create cost.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              And unclear processes create dependence on individuals rather than institutions.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              We help organisations simplify and strengthen their management and operating systems.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Process Optimisation</li>
+            <li class="cx-ideal-item">Operational Effectiveness</li>
+            <li class="cx-ideal-item">Management Systems</li>
+            <li class="cx-ideal-item">Workflow Improvement</li>
+            <li class="cx-ideal-item">Decision Processes</li>
+            <li class="cx-ideal-item">Accountability Architecture</li>
+            <li class="cx-ideal-item">Process Governance</li>
+            <li class="cx-ideal-item">Cross-Functional Integration</li>
+            <li class="cx-ideal-item">Execution Systems</li>
+            <li class="cx-ideal-item">Productivity Improvement</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.25rem; border-radius:0.5rem; background:#f1f5f9; border:1px solid #cbd5e1; color:#334155; font-weight:700; font-size:0.95rem; text-align:center; line-height:1.6;">
+            The goal is not bureaucracy. The goal is organisational reliability at scale.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE 10 -->
+    <section class="cx-eco-block cx-eco-1">
+      <div class="cx-eco-container">
+        <header class="cx-eco-header-centered">
+          <span class="cx-eco-badge">CONSULTING PRACTICE 10</span>
+          <h2 class="cx-eco-title">10 | HR & PEOPLE CONSULTING</h2>
+          <p class="cx-eco-tagline">Build the People Architecture Behind Business Performance.</p>
+        </header>
+
+        <div class="cx-eco-media-wrap">
+          <img class="cx-eco-media-img" src="consulting-banner/hr-people-consulting.webp" alt="HR &amp; People Consulting" loading="lazy" />
+        </div>
+
+        <div class="cx-eco-content">
+          <div class="cx-eco-body-text" style="text-align: center !important; max-width: 58rem; margin: 2.5rem auto 2.75rem auto;">
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              People strategy should never operate separately from business strategy.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              As organisations grow, they require greater clarity around capabilities, competencies, performance, talent and future workforce requirements.
+            </p>
+            <p style="text-align: center !important; margin: 0 0 1.25rem 0; line-height: 1.8; color: #475569; font-size: 1.05rem;">
+              Our People Consulting interventions connect the organisation's human capital architecture directly to its strategic ambition.
+            </p>
+          </div>
+
+          <span class="cx-eco-subheading">OUR FOCUS AREAS</span>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">People Strategy</li>
+            <li class="cx-ideal-item">Competency Frameworks</li>
+            <li class="cx-ideal-item">Talent Assessment</li>
+            <li class="cx-ideal-item">Leadership Assessment</li>
+            <li class="cx-ideal-item">Performance Architecture</li>
+            <li class="cx-ideal-item">High-Potential Identification</li>
+            <li class="cx-ideal-item">Career & Succession Architecture</li>
+            <li class="cx-ideal-item">Employee Capability Development</li>
+            <li class="cx-ideal-item">Talent Management</li>
+            <li class="cx-ideal-item">Role Competency Mapping</li>
+            <li class="cx-ideal-item">People Analytics & Diagnostics</li>
+            <li class="cx-ideal-item">Culture Alignment</li>
+          </ul>
+
+          <div style="max-width:54rem; margin:2.5rem auto 0 auto; padding:1.25rem; border-radius:0.5rem; background:#fbf9f4; border:1px solid rgba(192, 151, 63, 0.4); color:#152B54; font-weight:700; font-size:0.95rem; text-align:center; line-height:1.6;">
+            The objective is to move HR from being predominantly an administrative function to becoming a strategic engine of organisational capability.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- SECTION 9.5: LED BY GERALD ARUN DASS (EXECUTIVE PROFILE) -->
+  <section class="cx-sec-leader" id="leadership" style="padding: 6rem 1.5rem; background: #ffffff; border-top: 1px solid #e2e8f0;">
+    <div style="max-width: 82rem; margin: 0 auto;">
+      <div class="cx-leader-grid" style="display: grid; grid-template-columns: 1fr; gap: 3.5rem; align-items: center;">
+        
+        <!-- Left: GAD Sir Photo with Executive Badge -->
+        <div style="position: relative; max-width: 460px; margin: 0 auto; width: 100%;">
+          <div style="position: relative; border-radius: 1.25rem; overflow: hidden; box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.25); background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+            <img src="images/gad_picture.png" alt="Gerald Arun Dass (Mr. GAD)" style="width: 100%; height: auto; display: block; object-fit: cover; filter: contrast(1.03) brightness(1.02);">
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 65%, rgba(15, 23, 42, 0.8) 100%); pointer-events: none;"></div>
+          </div>
+          <!-- Accent floating tag -->
+          <div style="position: absolute; bottom: -15px; right: 20px; background: linear-gradient(135deg, #C0973F 0%, #28518F 100%); color: #ffffff; padding: 0.75rem 1.25rem; border-radius: 0.65rem; box-shadow: 0 10px 25px -5px rgba(192, 151, 63, 0.4); font-family: 'Plus Jakarta Sans', sans-serif;">
+            <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.85;">Leadership &amp; Advisory</div>
+            <div style="font-size: 1.05rem; font-weight: 800; letter-spacing: -0.01em;">MR. GAD</div>
+          </div>
+        </div>
+
+        <!-- Right: Profile Content -->
+        <div style="font-family: 'Inter', sans-serif; color: #334155;">
+          <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(1.85rem, 3.5vw, 2.65rem); font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; color: #0f172a; margin: 0 0 0.5rem 0; line-height: 1.15;">
+            LED BY GERALD ARUN DASS
+          </h2>
+          <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; font-weight: 800; color: #C0973F; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 1.75rem 0;">
+            Strategy. Leadership. Transformation.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1.15rem; font-size: 0.98rem; line-height: 1.75; color: #475569;">
+            <p style="margin: 0;">
+              <strong>Gerald Arun Dass</strong> — widely known as <strong>Mr. GAD</strong> — is a Leadership Coach, Strategic Advisor and Organisational Transformation Partner who has worked extensively with CEOs, CXOs, entrepreneurs, leadership teams and organisations across different stages of growth.
+            </p>
+            <p style="margin: 0;">
+              His work sits at the intersection of business strategy, leadership psychology, organisational transformation and execution.
+            </p>
+            <p style="margin: 0;">
+              Over the years, his interventions have extended across thousands of leaders and managers and numerous strategic transformation engagements.
+            </p>
+            <p style="margin: 0;">
+              What differentiates his approach is the ability to move seamlessly between the boardroom and the individual leader — understanding enterprise strategy while simultaneously understanding the human behaviours that determine whether that strategy succeeds or fails.
+            </p>
+
+            <!-- Fundamental Belief Callout Box -->
+            <div style="margin-top: 0.75rem; background: #fbf9f4; border: 1px solid #e2e8f0; border-left: 4px solid #C0973F; border-radius: 0.65rem; padding: 1.35rem 1.5rem;">
+              <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: #C0973F; margin-bottom: 0.5rem;">
+                His fundamental belief:
+              </div>
+              <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.02rem; font-weight: 700; color: #0f172a; margin: 0 0 1rem 0; line-height: 1.5;">
+                Organisations rarely outperform the quality of thinking, courage and leadership at the top.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.4rem; font-family: 'Inter', sans-serif; font-size: 0.94rem; font-weight: 600; color: #334155;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <i class="fa-solid fa-arrow-right" style="color: #C0973F; font-size: 0.8rem;"></i>
+                  <span>Transform the leader and you begin transforming the team.</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <i class="fa-solid fa-arrow-right" style="color: #C0973F; font-size: 0.8rem;"></i>
+                  <span>Transform the team and you begin transforming the culture.</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <i class="fa-solid fa-arrow-right" style="color: #C0973F; font-size: 0.8rem;"></i>
+                  <span>Transform the culture and you can transform the trajectory of the business.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (min-width: 992px) {
+      .cx-leader-grid {
+        grid-template-columns: 420px 1fr !important;
+        gap: 4.5rem !important;
+      }
+    }
+  </style>
+
+  <!-- SECTION 8: WHO WE PARTNER WITH & TRANSFORMATION ADVANTAGE (EXACT COACHING LAYOUT) -->
+  <section class="cx-sec-founder" id="partner" style="border-top:1px solid #e2e8f0; background: #ffffff;">
+    <div class="cx-founder-container">
+      <div class="cx-founder-card" style="margin-bottom:3rem; text-align:center;">
+        <h2 class="cx-founder-title" style="font-size:clamp(1.6rem, 3vw, 2.2rem); text-align:center;">
+          COACHING TRANSFORMS THE LEADER.<br>
+          <span class="cx-blue-text">CONSULTING TRANSFORMS THE ORGANISATION.</span>
+        </h2>
+        <div class="cx-founder-body" style="text-align:center; align-items:center;">
+          <p><strong>Our Advantage Is Knowing How to Transform Both.</strong></p>
+          <p>Many consulting firms understand strategy. Many coaching organisations understand people. Our work sits at the intersection.</p>
+          <p>We understand that even the most sophisticated strategy can fail when leadership behaviour, organisational culture, talent, systems and execution are not aligned behind it. That is why our transformation philosophy integrates the business and the human system.</p>
+          <p><strong>Because organisations don't transform on PowerPoint. People transform them.</strong></p>
+        </div>
+      </div>
+
+      <!-- Who We Partner With Grid -->
+      <div style="text-align:center; margin-bottom:2.5rem;">
+        <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(1.6rem,2.8vw,2.2rem); font-weight:800; text-transform:uppercase; color:#0f172a; margin:0 0 0.75rem 0;">WHO WE PARTNER WITH</h3>
+        <p style="font-family:'Inter',sans-serif; font-size:1.02rem; color:#475569; max-width:46rem; margin:0 auto; line-height:1.6;">
+          Our Consulting &amp; Strategic Advisory engagements are particularly relevant for:
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem;">
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:0.65rem; padding:1.25rem; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.55; color:#334155; display:flex; gap:12px; align-items:flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: #C0973F; margin-top:3px;"></i>
+          <span><strong>Boards</strong> seeking stronger strategic perspective and enterprise oversight.</span>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:0.65rem; padding:1.25rem; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.55; color:#334155; display:flex; gap:12px; align-items:flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: #C0973F; margin-top:3px;"></i>
+          <span><strong>Promoters &amp; Founders</strong> navigating growth, institutionalisation or succession.</span>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:0.65rem; padding:1.25rem; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.55; color:#334155; display:flex; gap:12px; align-items:flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: #C0973F; margin-top:3px;"></i>
+          <span><strong>CEOs</strong> leading major business or organisational transformations.</span>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:0.65rem; padding:1.25rem; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.55; color:#334155; display:flex; gap:12px; align-items:flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: #C0973F; margin-top:3px;"></i>
+          <span><strong>CXO Teams</strong> requiring stronger alignment and execution.</span>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:0.65rem; padding:1.25rem; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.55; color:#334155; display:flex; gap:12px; align-items:flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: #C0973F; margin-top:3px;"></i>
+          <span><strong>Family Businesses</strong> transitioning between generations or professionalising management.</span>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:0.65rem; padding:1.25rem; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.55; color:#334155; display:flex; gap:12px; align-items:flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: #C0973F; margin-top:3px;"></i>
+          <span><strong>High-Growth Companies</strong> whose organisational capability must catch up with business ambition.</span>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:0.65rem; padding:1.25rem; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.55; color:#334155; display:flex; gap:12px; align-items:flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: #C0973F; margin-top:3px;"></i>
+          <span><strong>PE &amp; VC-Backed Organisations</strong> under pressure to accelerate enterprise value creation.</span>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:0.65rem; padding:1.25rem; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.55; color:#334155; display:flex; gap:12px; align-items:flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: #C0973F; margin-top:3px;"></i>
+          <span><strong>Organisations Preparing for IPO</strong> that need stronger leadership, systems, performance architecture and organisational maturity.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: INDUSTRIES WE HAVE IMPACTED (EXACT COACHING TAG CLOUD LAYOUT) -->
+  <section class="cx-sec-choose" id="industries">
+    <div class="cx-choose-container">
+      <h2 class="cx-choose-title">INDUSTRIES WE HAVE IMPACTED</h2>
+      <p style="color:#64748b; font-size:0.95rem; max-width:52rem; margin:0 auto 2.5rem auto; font-family:'Inter',sans-serif;">
+        Our experience spans diverse industries and business environments, giving us the ability to combine deep organisational understanding with cross-industry perspectives.
+      </p>
+
+      <ul class="cx-tag-cloud" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem; list-style:none; padding:0; margin:0 0 3rem 0;">
+        <li class="cx-tag-item">Technology &amp; IT Services</li>
+        <li class="cx-tag-item">Automotive &amp; Engineering</li>
+        <li class="cx-tag-item">Manufacturing</li>
+        <li class="cx-tag-item">Banking &amp; Financial Services</li>
+        <li class="cx-tag-item">Infrastructure</li>
+        <li class="cx-tag-item">Healthcare</li>
+        <li class="cx-tag-item">Education</li>
+        <li class="cx-tag-item">Retail &amp; Consumer Businesses</li>
+        <li class="cx-tag-item">Professional Services</li>
+        <li class="cx-tag-item">Start-Ups &amp; Growth Companies</li>
+        <li class="cx-tag-item">Family-Owned Enterprises</li>
+        <li class="cx-tag-item">PE &amp; VC-Backed Organisations</li>
+      </ul>
+
+      <div style="background:#ffffff; border:1px dashed #cbd5e1; border-radius:0.75rem; padding:2rem; max-width:48rem; margin:0 auto; color:#64748b; font-size:0.9rem;">
+        <span style="display:block; font-weight:800; letter-spacing:0.15em; text-transform:uppercase; color: #C0973F; margin-bottom:0.5rem;">[CLIENT LOGO WALL]</span>
+        Selected premium client logos and credentials can be placed here.
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: CLOSING CTA (EXACT COACHING LAYOUT) -->
+  <!-- SECTION 10: CLOSING CTA (EXACT COACHING LAYOUT) -->
+  <section class="cx-sec-cta" id="contact" style="background-color: #152B54; color: #ffffff; padding: 6.5rem 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.08); text-align: center; position: relative;">
+    <div class="cx-cta-container" style="max-width: 58rem; margin: 0 auto;">
+      
+      <!-- Topic Pills (Row 1: 6 pills, Row 2: 1 pill centered) -->
+      <style>
+        .cx-closing-pill {
+          display: inline-flex;
+          align-items: center;
+          background: #152B54;
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          border-radius: 999px;
+          padding: 0.42rem 1.25rem;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: #cbd5e1;
+          transition: all 0.25s ease;
+        }
+        .cx-closing-pill:hover {
+          border-color: #C0973F;
+          color: #ffffff;
+          background: rgba(192, 151, 63, 0.12);
+        }
+      </style>
+
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 0.65rem; margin-bottom: 2.25rem;">
+        <div style="display: flex; flex-wrap: wrap; gap: 0.65rem; justify-content: center;">
+          <span class="cx-closing-pill">Growth?</span>
+          <span class="cx-closing-pill">Transformation?</span>
+          <span class="cx-closing-pill">Succession?</span>
+          <span class="cx-closing-pill">Institutionalisation?</span>
+          <span class="cx-closing-pill">Performance?</span>
+          <span class="cx-closing-pill">Scale?</span>
+        </div>
+        <div style="display: flex; justify-content: center;">
+          <span class="cx-closing-pill">IPO readiness?</span>
+        </div>
+      </div>
+
+      <!-- Main Headline -->
+      <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2rem, 3.8vw, 2.9rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; text-transform: uppercase; color: #ffffff; margin: 0 0 1.5rem 0;">
+        WHAT IS YOUR ORGANISATION'S<br>
+        <span style="color: #C0973F; background: linear-gradient(135deg, #C0973F 0%, #dfb762 50%, #28518F 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;">NEXT DEFINING CHAPTER?</span>
+      </h2>
+
+      <!-- Description -->
+      <p style="font-family: 'Inter', sans-serif; font-size: 1.02rem; line-height: 1.75; color: #94a3b8; max-width: 52rem; margin: 0 auto 2.75rem auto;">
+        Whatever the destination, the organisation that brought you here may not be the organisation capable of taking you there. The next chapter will demand different thinking. Different leadership. Different capabilities. And different execution.
+      </p>
+
+      <!-- Subheading Callout -->
+      <div style="margin-bottom: 2.75rem;">
+        <h3 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(1.25rem, 2.2vw, 1.55rem); font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 0.02em; margin: 0 0 0.6rem 0; line-height: 1.3;">
+          YOUR NEXT LEVEL OF GROWTH WILL DEMAND A DIFFERENT ORGANISATION.
+        </h3>
+        <div style="color: #C0973F; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">
+          LET'S BUILD IT.
+        </div>
+      </div>
+
+      <!-- Two Action Buttons -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; margin-bottom: 3.5rem;">
+        <a href="./contact.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.15rem 2.4rem; border-radius: 8px; background: linear-gradient(135deg, #C0973F 0%, #9e7929 100%); color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; box-shadow: 0 10px 28px -4px rgba(192, 151, 63, 0.4); transition: all 0.25s ease;">
+          SCHEDULE A STRATEGIC CONVERSATION
+        </a>
+        <a href="./contact.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.15rem 2.4rem; border-radius: 8px; background: #152B54; border: 1px solid rgba(255, 255, 255, 0.22); color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: all 0.25s ease;">
+          REQUEST A CONSULTING DISCUSSION
+        </a>
+      </div>
+
+      <!-- Bottom Signature -->
+      <div style="margin-top: 2rem; text-align: center;">
+        <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #94a3b8; margin-bottom: 0.4rem;">
+          GAD'S CONSULTING &amp; STRATEGIC ADVISORY
+        </div>
+        <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #64748b;">
+          TRANSFORMING LEADERS. TRANSFORMING ORGANISATIONS. CREATING LEGACIES.
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+<footer>
+  <!-- Footer Before -->
+  <div class="footer-before">
+    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+      Start Exploring the GAD world
+    </div>
+    <a href="./mr-gad.html" target="_blank">
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.2505 1.25L20.5 7.50076L14.2506 13.7502" stroke="#000" stroke-width="1.5"></path>
+        <line x1="0.499512" y1="7.25" x2="20.4995" y2="7.25" stroke="#000" stroke-width="1.5"></line>
+      </svg>
+    </a>
+  </div>
+
+  <!-- logo -->
+  <div class="footer-logo">
+    <img src="./logo/LogoW.webp" alt="image" loading="lazy" />
+  </div>
+
+  <!-- Footer Main -->
+  <div class="footer">
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+      <h3>Coaching</h3>
+      <a href="./elite-coaching.html" target="_self">Elite Coaching</a>
+      <a href="./leadership-coaching.html" target="_self">Leadership Coaching</a>
+      <a href="./business-growth-coaching.html" target="_self">Business Coaching</a>
+    </div>
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+      <h3>Consulting</h3>
+      <a href="./board-advsiory.html" target="_self">Board Advisory</a>
+      <a href="./organizational-structuring.html" target="_self">Organisational Structuring</a>
+      <a href="./business-strategy.html" target="_self">Business Strategy</a>
+    </div>
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">
+      <h3>Corporate</h3>
+      <a href="./hi-po-culture.html" target="_self">Hi-Po Culture</a>
+      <a href="./succession-planning.html" target="_self">Succession Planning</a>
+      <a href="./senior-management-coaching.html" target="_self">Senior Management Coaching</a>
+    </div>
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+      <h3>Events</h3>
+      <a href="./upcoming-events.html" target="_self">Upcoming Events</a>
+      <a href="./growth-university.html" target="_self">Growth University</a>
+      <a href="./articles.html" target="_self">Articles</a>
+    </div>
+
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
+      <h3>Shop</h3>
+      <a href="./influencing-skills.html" target="_self">Influencing</a>
+      <a href="./presentation-skills.html" target="_self">Presentation</a>
+      <a href="./hi-po-leadership.html" target="_self">Leadership</a>
+    </div>
+  </div>
+
+  <div class="footer-after">
+    <div>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">B</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">E</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">C</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">O</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">M</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">E</span>
+    </div>
+
+    <div>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">L</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">I</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="900">M</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1000">I</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1100">T</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">L</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1300">E</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1400">S</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1500">S</span>
+    </div>
+  </div>
+
+  <div class="footer-social">
+    <div class="footer-contact">
+      <a href="tel:918939106000">
+        <i class="fa-solid fa-phone"></i> +91 89391 06000
+      </a>
+      <a href="mailto:info@geraldarundass.com">
+        <i class="fa-solid fa-envelope"></i> info@geraldarundass.com
+      </a>
+    </div>
+
+    <div class="footer-social-icons">
+      <a class="facebook" href="https://www.facebook.com/profile.php?id=61574957045555" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a class="instagram" href="https://www.instagram.com/geraldarundass/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a class="linkedin" href="https://www.linkedin.com/company/gadsleadershipfoundation/" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a class="youtube" href="https://www.youtube.com/channel/UCi3g8LPK_E4Aa31VLcZD6zQ" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Copyrights -->
+  <div class="copyrights">
+    <span class="cp-02">
+      © Copyright | All rights reserved : GAD'S LEADERSHIP FOUNDATION
+    </span>
+    <span class="policy-links">
+      <a href="./privacy-policy.html">Privacy Policy</a>
+      <a href="./product-policy.html">Product Policy</a>
+      <a href="./refund-cancellation.html">Refund and Cancellation</a>
+      <a href="./terms-condition.html">Terms &amp; Condition</a>
+      <a href="./price-policy.html">Price Policy</a>
+      <a href="./disclaimer-policy.html">Disclaimer Policy</a>
+    </span>
+    <span id="scrollTopBtn">
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.2505 1.25L20.5 7.50076L14.2506 13.7502" stroke="#000" stroke-width="1.5"></path>
+        <line x1="0.499512" y1="7.25" x2="20.4995" y2="7.25" stroke="#000" stroke-width="1.5"></line>
+      </svg>
+    </span>
+  </div>
+</footer>
+
+<!-- Website Scripts -->
+<script src="./common.js" defer></script>
+<script src="load.js" defer></script>
+<script src="menu.js" defer></script>
+<script src="./swiper/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    AOS.init({ duration: 500, once: true, offset: 80 });
+
+    // Section 1 Hero Slider JS
+    if (typeof Swiper !== 'undefined') {
+      new Swiper(".cx-hero-slider", {
+        slidesPerView: 1,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+        speed: 1000,
+        loop: true,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: ".cx-hero-pagination",
+          clickable: true
+        }
+      });
+    }
+
+    // Section 4 Why Partner Slider JS
+    const track = document.querySelector('[data-why-track]');
+    const prevBtn = document.querySelector('[data-why-prev]');
+    const nextBtn = document.querySelector('[data-why-next]');
+    const dotsContainer = document.querySelector('[data-why-dots]');
+    if (!track) return;
+
+    const slides = Array.from(track.children);
+    let currentIndex = 0;
+
+    function getSlidesPerView() {
+      if (window.innerWidth <= 480) return 1;
+      if (window.innerWidth <= 768) return 2;
+      if (window.innerWidth <= 1024) return 3;
+      return 4;
+    }
+
+    function getMaxIndex() {
+      return Math.max(0, slides.length - getSlidesPerView());
+    }
+
+    function updateSlider() {
+      const maxIndex = getMaxIndex();
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      if (currentIndex < 0) currentIndex = 0;
+
+      const slideWidth = slides[0].getBoundingClientRect().width + 20; // 20px gap
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+      // Update dots
+      if (dotsContainer) {
+        const totalDots = maxIndex + 1;
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement('button');
+          dot.className = `cx-why-dot ${i === currentIndex ? 'active' : ''}`;
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlider();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        currentIndex = Math.max(0, currentIndex - 1);
+        updateSlider();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        currentIndex = Math.min(getMaxIndex(), currentIndex + 1);
+        updateSlider();
+      });
+    }
+
+    window.addEventListener('resize', updateSlider);
+    updateSlider();
+
+    // Section 6 Outcomes Slider JS
+    const outTrack = document.querySelector('[data-outcomes-track]');
+    const outPrevBtn = document.querySelector('[data-outcomes-prev]');
+    const outNextBtn = document.querySelector('[data-outcomes-next]');
+    const outDotsContainer = document.querySelector('[data-outcomes-dots]');
+    if (outTrack) {
+      const outSlides = Array.from(outTrack.children);
+      let outCurrentIndex = 0;
+
+      function getOutSlidesPerView() {
+        if (window.innerWidth <= 480) return 1;
+        if (window.innerWidth <= 768) return 2;
+        return 3;
+      }
+
+      function getOutMaxIndex() {
+        return Math.max(0, outSlides.length - getOutSlidesPerView());
+      }
+
+      function updateOutcomesSlider() {
+        const maxIndex = getOutMaxIndex();
+        if (outCurrentIndex > maxIndex) outCurrentIndex = maxIndex;
+        if (outCurrentIndex < 0) outCurrentIndex = 0;
+
+        const slideWidth = outSlides[0].getBoundingClientRect().width + 20; // 20px gap
+        outTrack.style.transform = `translateX(-${outCurrentIndex * slideWidth}px)`;
+
+        // Update dots
+        if (outDotsContainer) {
+          const totalDots = maxIndex + 1;
+          outDotsContainer.innerHTML = '';
+          for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('button');
+            dot.className = `cx-outcome-dot ${i === outCurrentIndex ? 'active' : ''}`;
+            dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            dot.addEventListener('click', () => {
+              outCurrentIndex = i;
+              updateOutcomesSlider();
+            });
+            outDotsContainer.appendChild(dot);
+          }
+        }
+      }
+
+      if (outPrevBtn) {
+        outPrevBtn.addEventListener('click', () => {
+          outCurrentIndex = Math.max(0, outCurrentIndex - 1);
+          updateOutcomesSlider();
+        });
+      }
+
+      if (outNextBtn) {
+        outNextBtn.addEventListener('click', () => {
+          outCurrentIndex = Math.min(getOutMaxIndex(), outCurrentIndex + 1);
+          updateOutcomesSlider();
+        });
+      }
+
+      window.addEventListener('resize', updateOutcomesSlider);
+      updateOutcomesSlider();
+    }
+
+    // Section 5 Metric Circle Liquid Fill Scroll Observer & Hover Re-trigger JS
+    const impactSec = document.querySelector('#impact');
+    if (impactSec) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            impactSec.classList.add('is-inview');
+          }
+        });
+      }, { threshold: 0.25 });
+      observer.observe(impactSec);
+    }
+
+    document.querySelectorAll('.cx-impact-circle').forEach(circle => {
+      circle.addEventListener('mouseenter', function() {
+        this.classList.remove('is-filled');
+        void this.offsetWidth;
+        this.classList.add('is-filled');
+      });
+    });
+
+    // Section 7 Accordions Toggle JS
+    document.querySelectorAll('.cx-acc-trigger').forEach(trigger => {
+      trigger.addEventListener('click', function () {
+        const accItem = this.closest('.cx-acc-item');
+        const isOpen = accItem.classList.contains('is-open');
+        
+        // Toggle current item
+        if (isOpen) {
+          accItem.classList.remove('is-open');
+          this.setAttribute('aria-expanded', 'false');
+        } else {
+          accItem.classList.add('is-open');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+
+
+    // Milestone Credential Running Counter Animation (ODURA MARI NUMBERS)
+    function animateCounters() {
+      const counters = document.querySelectorAll('.cx-credential-num[data-target], .cx-milestone-sphere-num[data-target], .cx-step-num[data-target]');
+      if (!counters.length) return;
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const numElem = entry.target;
+            const target = parseFloat(numElem.getAttribute('data-target'));
+            const suffix = numElem.getAttribute('data-suffix') || '';
+            const prefix = numElem.getAttribute('data-prefix') || '';
+            const useComma = numElem.getAttribute('data-format') === 'comma';
+            
+            if (!isNaN(target)) {
+              let startTimestamp = null;
+              const duration = 1800;
+              
+              function step(timestamp) {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                // Ease-out cubic
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const currentVal = Math.floor(easeProgress * target);
+                
+                let displayVal = currentVal;
+                if (useComma) {
+                  displayVal = currentVal.toLocaleString('en-US');
+                }
+                numElem.textContent = `${prefix}${displayVal}${suffix}`;
+                
+                if (progress < 1) {
+                  window.requestAnimationFrame(step);
+                } else {
+                  const finalVal = useComma ? target.toLocaleString('en-US') : target;
+                  numElem.textContent = `${prefix}${finalVal}${suffix}`;
+                }
+              }
+              
+              window.requestAnimationFrame(step);
+            }
+            obs.unobserve(numElem);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      counters.forEach(num => observer.observe(num));
+    }
+
+    animateCounters();
+  });
+  window.addEventListener('load', function () {
+    if (typeof AOS !== 'undefined') AOS.refresh();
+  });
+</script>
+</body>
+</html>
+

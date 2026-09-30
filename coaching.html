@@ -1,0 +1,3604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Coaching | GLF</title>
+<meta name="description" content="Coaching programs from GAD's Leadership Foundation." />
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Corporate Header & Footer Stylesheets -->
+<link rel="stylesheet" href="social.css" />
+<link rel="stylesheet" href="footer.css" />
+<link rel="stylesheet" href="common.css?v=101" />
+<link rel="stylesheet" href="./style.css?v=512" />
+<link rel="stylesheet" href="./responsive.css?v=14" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<link rel="stylesheet" href="improve.css?v=102" />
+<style>
+/* ==========================================================================
+   COACHING PAGE INTERNAL STYLES (UNIQUE SCOPE & CUSTOM GRADIENT SYSTEM)
+   ========================================================================== */
+
+/* Header top bar phone, email & social icons (white & high visibility) */
+#header-container .menu-first,
+#header-container .menu-first a,
+#header-container .menu-first div > a,
+#header-container .menu-first i {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  opacity: 1 !important;
+}
+#header-container .menu-first a:hover {
+  color: rgb(67, 83, 207) !important;
+}
+
+/* Header navbar links (dark slate on white navbar) */
+#header-container .nav-link,
+#header-container .mega-btn,
+#header-container .nav-menu-ul-01 > li > a,
+#header-container .nav-menu-ul-01 > li > div {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  opacity: 1 !important;
+}
+#header-container .nav-link:hover,
+#header-container .mega-btn:hover {
+  color: rgb(67, 83, 207) !important;
+}
+
+/* Custom Hero Section */
+.cx-hero-section {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background-color: #060a14 !important;
+  padding-top: 180px !important;
+  padding-bottom: 4rem !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.cx-hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center right !important;
+  z-index: -2 !important;
+}
+.cx-hero-scrim {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 10, 20, 0.92) 0%,
+    rgba(6, 10, 20, 0.82) 42%,
+    rgba(6, 10, 20, 0.45) 70%,
+    rgba(6, 10, 20, 0.1) 100%
+  ) !important;
+  z-index: -1 !important;
+}
+.cx-hero-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+
+/* Hero H1 Title */
+/* Hero H1 Title */
+.cx-hero-title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  max-width: 65rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.55rem, 3.1vw, 2.75rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.01em !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  text-align: left !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7) !important;
+}
+.cx-hero-title span,
+.cx-hero-part {
+  display: block !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: 800 !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+  color: #ffffff !important;
+  margin-bottom: 0.55rem !important;
+}
+.cx-hero-title span:last-child,
+.cx-hero-part:last-child {
+  margin-bottom: 0 !important;
+}
+.cx-hero-title .cx-blue-highlight {
+  color: #3f62e8 !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #3f62e8 !important;
+  background-clip: initial !important;
+}
+
+/* Buttons */
+.cx-hero-btn-row {
+  margin-top: 1.75rem !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 1.15rem !important;
+}
+.cx-btn-solid {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, rgb(67, 83, 207) 0%, rgb(40, 52, 150) 100%) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 0.95rem 2.2rem !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 8px 24px -4px rgba(67, 83, 207, 0.5) !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+.cx-btn-solid:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 28px -4px rgba(67, 83, 207, 0.7) !important;
+}
+.cx-btn-ghost {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 0.95rem 2.2rem !important;
+  border-radius: 0.5rem !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+.cx-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Floating Stats Card */
+.cx-hero-stats-grid {
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  background: rgba(12, 18, 30, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7) !important;
+}
+@media (min-width: 768px) {
+  .cx-hero-stats-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+.cx-stat-box {
+  padding: 1.25rem 1.4rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+@media (min-width: 768px) {
+  .cx-stat-box {
+    border-bottom: none !important;
+  }
+  .cx-stat-box:last-child {
+    border-right: none !important;
+  }
+}
+.cx-stat-num {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.8rem, 3vw, 2.4rem) !important;
+  font-weight: 900 !important;
+  color: #3f62e8 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.01em !important;
+}
+.cx-stat-lbl {
+  margin-top: 0.5rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: #f1f5f9 !important;
+  opacity: 0.9 !important;
+}
+
+/* ==========================================================================
+   SECTION 2: MESSAGE FROM MR. GAD (EXACT REFERENCE MATCH)
+   ========================================================================== */
+.cx-sec-founder {
+  background-color: #f3f4f8 !important;
+  padding-block: 5rem 5rem !important;
+  border-top: 1px solid #e5e7eb !important;
+}
+.cx-founder-container {
+  width: 100% !important;
+  max-width: 72rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-founder-card {
+  position: relative !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(229, 231, 235, 0.8) !important;
+  border-radius: 0.85rem !important;
+  padding: clamp(1.75rem, 4vw, 3.5rem) clamp(1.25rem, 4vw, 4rem) !important;
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.07) !important;
+  overflow: hidden !important;
+}
+.cx-founder-card::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 4px !important;
+  background: linear-gradient(135deg, rgb(67, 83, 207) 0%, rgb(40, 52, 150) 100%) !important;
+}
+.cx-founder-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2.1rem, 4vw, 2.65rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: #0f172a !important;
+  margin: 0 0 1.75rem 0 !important;
+  line-height: 1.15 !important;
+}
+.cx-founder-title .cx-blue-text {
+  color: #3152e4 !important;
+  background: linear-gradient(135deg, #3558ff 0%, #1e36a3 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: inherit !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  display: inline-block !important;
+  vertical-align: baseline !important;
+}
+.cx-founder-body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.08rem !important;
+  line-height: 1.75 !important;
+  color: #334155 !important;
+}
+.cx-founder-body strong {
+  color: #3152e4 !important;
+  font-weight: 800 !important;
+}
+.cx-founder-footer {
+  margin-top: 2.5rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1.5px solid #cbd5e1 !important;
+}
+.cx-founder-name {
+  display: block !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #0f172a !important;
+}
+.cx-founder-role {
+  display: block !important;
+  margin-top: 0.35rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #6b7280 !important;
+}
+
+/* ==========================================================================
+   SECTION 3: HOLISTIC TRANSFORMATION / 7 ELEMENTS (SCOPED: .cx-sec-elements)
+   ========================================================================== */
+.cx-sec-elements {
+  background-color: #060913 !important;
+  color: #ffffff !important;
+  padding-block: 6rem 6rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  position: relative !important;
+}
+.cx-elements-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-elements-layout {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3rem !important;
+}
+@media (min-width: 1024px) {
+  .cx-elements-layout {
+    grid-template-columns: 0.9fr 1.1fr !important;
+    gap: 4rem !important;
+    align-items: start !important;
+  }
+}
+.cx-sticky-left {
+  position: relative !important;
+}
+@media (min-width: 1024px) {
+  .cx-sticky-left {
+    position: sticky !important;
+    top: 170px !important;
+    align-self: start !important;
+  }
+}
+.cx-elements-eyebrow {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: #06b6d4 !important;
+  background: linear-gradient(135deg, #06b6d4 0%, #60a5fa 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+  margin-bottom: 0.85rem !important;
+}
+.cx-elements-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  margin: 0 0 1.75rem 0 !important;
+}
+.cx-elements-desc-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.125rem !important;
+  line-height: 1.75 !important;
+  color: #cbd5e1 !important;
+}
+.cx-elements-right {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+}
+.cx-element-card {
+  position: relative !important;
+  background: rgba(15, 22, 38, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1.5px solid rgba(16, 185, 129, 0.35) !important;
+  border-left: 4px solid #10b981 !important;
+  border-radius: 0.75rem !important;
+  padding: 1.5rem 1.85rem !important;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.cx-element-card:hover {
+  transform: translateX(8px) !important;
+  border-color: rgba(16, 185, 129, 0.8) !important;
+  border-left-color: #10b981 !important;
+  box-shadow: 0 12px 35px -8px rgba(16, 185, 129, 0.35) !important;
+  background: rgba(20, 30, 52, 0.92) !important;
+}
+.cx-element-num {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: #06b6d4 !important;
+  background: linear-gradient(135deg, #06b6d4 0%, #60a5fa 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+}
+.cx-element-card-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0.35rem 0 0.25rem 0 !important;
+  line-height: 1.25 !important;
+}
+.cx-element-card-desc {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   SECTION 4: WHY PARTNER SLIDER (SCOPED: .cx-sec-why)
+   ========================================================================== */
+.cx-sec-why {
+  background-color: #f8fafc !important;
+  padding-block: 5.5rem 5.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  position: relative !important;
+}
+.cx-why-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-why-header {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 1.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+.cx-why-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.5rem, 3vw, 2.1rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: rgb(67, 83, 207) !important;
+  background: linear-gradient(135deg, rgb(67, 83, 207) 0%, rgb(40, 52, 150) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  max-width: 52rem !important;
+  margin: 0 !important;
+}
+.cx-why-nav-btns {
+  display: flex !important;
+  gap: 0.75rem !important;
+  align-self: flex-end !important;
+}
+.cx-why-btn {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #cbd5e1 !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+.cx-why-btn:hover {
+  border-color: rgb(67, 83, 207) !important;
+  color: rgb(67, 83, 207) !important;
+  background: #ffffff !important;
+  transform: scale(1.08) !important;
+  box-shadow: 0 6px 18px rgba(67, 83, 207, 0.25) !important;
+}
+.cx-why-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  stroke-width: 2.2 !important;
+}
+
+/* Track & Viewport */
+.cx-why-viewport {
+  overflow: hidden !important;
+  padding-block: 0.5rem 1rem !important;
+}
+.cx-why-track {
+  display: flex !important;
+  gap: 1.25rem !important;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.cx-why-slide {
+  flex: 0 0 calc(25% - 0.94rem) !important;
+  min-width: 260px !important;
+}
+@media (max-width: 1024px) {
+  .cx-why-slide { flex: 0 0 calc(33.333% - 0.85rem) !important; }
+}
+@media (max-width: 768px) {
+  .cx-why-slide { flex: 0 0 calc(50% - 0.65rem) !important; }
+}
+@media (max-width: 480px) {
+  .cx-why-slide { flex: 0 0 100% !important; }
+}
+
+/* Individual Card */
+.cx-why-card {
+  position: relative !important;
+  height: 440px !important;
+  border-radius: 1.25rem !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background-color: #0f172a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 16px 40px -12px rgba(15, 23, 42, 0.25) !important;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 2rem 1.5rem !important;
+}
+.cx-why-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 24px 50px -12px rgba(67, 83, 207, 0.35) !important;
+}
+.cx-why-card-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -2 !important;
+  transition: transform 0.55s ease !important;
+}
+.cx-why-card:hover .cx-why-card-bg {
+  transform: scale(1.08) !important;
+}
+.cx-why-card-scrim {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.15) 0%,
+    rgba(15, 23, 42, 0.65) 50%,
+    rgba(15, 23, 42, 0.95) 100%
+  ) !important;
+  z-index: -1 !important;
+}
+.cx-why-card-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 15rem !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Dots Indicator */
+.cx-why-dots {
+  margin-top: 2rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+}
+.cx-why-dot {
+  height: 8px !important;
+  width: 8px !important;
+  border-radius: 50% !important;
+  background-color: #cbd5e1 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.35s ease !important;
+}
+.cx-why-dot.active {
+  background: linear-gradient(135deg, rgb(67, 83, 207) 0%, rgb(40, 52, 150) 100%) !important;
+  width: 32px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 0 10px rgba(67, 83, 207, 0.4) !important;
+}
+
+/* ==========================================================================
+   SECTION 5: PROVEN LEADERSHIP IMPACT / METRICS (SCOPED: .cx-sec-impact)
+   ========================================================================== */
+.cx-sec-impact {
+  background-color: #060913 !important;
+  color: #ffffff !important;
+  padding-block: 6rem 6rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  text-align: center !important;
+  position: relative !important;
+}
+.cx-impact-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-impact-eyebrow {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: rgb(67, 83, 207) !important;
+  margin-bottom: 0.75rem !important;
+}
+.cx-impact-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  max-width: 48rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 4rem !important;
+}
+.cx-impact-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3.5rem !important;
+  justify-items: center !important;
+}
+@media (min-width: 768px) {
+  .cx-impact-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2.5rem !important;
+  }
+}
+.cx-impact-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+.cx-impact-circle {
+  width: 13rem !important;
+  height: 13rem !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #060913 !important;
+  border: 2px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.6) !important;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease !important;
+  cursor: pointer !important;
+}
+.cx-impact-circle:hover {
+  transform: translateY(-8px) scale(1.05) !important;
+}
+
+/* Liquid Wave Fill Component */
+.cx-metric-fill {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 0% !important;
+  z-index: 1 !important;
+  transition: height 2.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.cx-sec-impact.is-inview .cx-metric-fill,
+.cx-impact-circle.is-filled .cx-metric-fill {
+  height: 100% !important;
+}
+
+.cx-circle-blue .cx-metric-fill {
+  background: linear-gradient(180deg, #00c2e8 0%, #009bbd 100%) !important;
+}
+.cx-circle-blue:hover {
+  box-shadow: 0 24px 50px -10px rgba(0, 163, 196, 0.55) !important;
+}
+
+.cx-circle-gold .cx-metric-fill {
+  background: linear-gradient(180deg, #8ede3a 0%, #74c043 100%) !important;
+}
+.cx-circle-gold:hover {
+  box-shadow: 0 24px 50px -10px rgba(116, 192, 67, 0.55) !important;
+}
+
+.cx-circle-rose .cx-metric-fill {
+  background: linear-gradient(180deg, #2a4c7e 0%, #1c355e 100%) !important;
+}
+.cx-circle-rose:hover {
+  box-shadow: 0 24px 50px -10px rgba(28, 53, 94, 0.55) !important;
+}
+
+/* Wave Surface Animations */
+.cx-metric-fill::before,
+.cx-metric-fill::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 220% !important;
+  height: 220% !important;
+  top: -190% !important;
+  left: -60% !important;
+  border-radius: 40% !important;
+}
+.cx-metric-fill::before {
+  background: rgba(255, 255, 255, 0.25) !important;
+  animation: cxWaveSpin 6s linear infinite !important;
+}
+.cx-metric-fill::after {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 35% !important;
+  animation: cxWaveSpin 9s linear infinite !important;
+}
+
+@keyframes cxWaterRise {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes cxWaveSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cx-impact-number {
+  position: relative !important;
+  z-index: 10 !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6) !important;
+  line-height: 1 !important;
+}
+.cx-impact-desc {
+  margin-top: 1.5rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   SECTION 6: COACHING OUTCOMES SLIDER (SCOPED: .cx-sec-outcomes)
+   ========================================================================== */
+.cx-sec-outcomes {
+  background-color: #f8fafc !important;
+  padding-block: 5.5rem 5.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  position: relative !important;
+}
+.cx-outcomes-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-outcomes-header {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 1.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+/* ==========================================================================
+   SECTION 6: GLF'S SIGNATURE COACHING OUTCOMES (ARROW RIBBON INFOGRAPHIC DESIGN)
+   ========================================================================== */
+.cx-sec-outcomes {
+  background: #ffffff !important;
+  padding-block: 6rem !important;
+  position: relative !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+.cx-outcomes-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin: 0 auto !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.cx-outcomes-header-centered {
+  text-align: center !important;
+  margin-bottom: 4rem !important;
+  width: 100% !important;
+}
+.cx-outcomes-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2rem, 3.8vw, 3rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: #0f172a !important;
+  margin: 0 !important;
+}
+
+/* 2-Column Infographic Grid */
+.cx-ribbon-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem 6.5rem !important;
+  width: 100% !important;
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+  justify-content: center !important;
+}
+@media (max-width: 991px) {
+  .cx-ribbon-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+    max-width: 42rem !important;
+  }
+}
+
+/* Ribbon Column */
+.cx-ribbon-col {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.4rem !important;
+}
+
+/* Individual Ribbon Row */
+.cx-ribbon-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  padding-bottom: 1.05rem !important;
+  border-bottom: 1px solid #edf2f7 !important;
+  transition: transform 0.25s ease !important;
+}
+.cx-ribbon-row:hover {
+  transform: translateX(4px) !important;
+}
+
+/* Ribbon Arrow Shape with Clip Path (Uniform Exact Size) */
+.cx-ribbon-arrow {
+  flex-shrink: 0 !important;
+  width: 105px !important;
+  min-width: 105px !important;
+  max-width: 105px !important;
+  height: 44px !important;
+  padding-left: 1.1rem !important;
+  padding-right: 1.4rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 0.65rem !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.9rem !important;
+  clip-path: polygon(0% 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 0% 100%) !important;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.12) !important;
+  transition: all 0.25s ease !important;
+}
+
+/* Ribbon Color Shades (GAD Blues, Cyans, Teals, and Accents) */
+.cx-rb-c1 { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; }
+.cx-rb-c2 { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important; }
+.cx-rb-c3 { background: linear-gradient(135deg, #009bbd 0%, #00839e 100%) !important; }
+.cx-rb-c4 { background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%) !important; }
+.cx-rb-c5 { background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important; }
+.cx-rb-c6 { background: linear-gradient(135deg, #00839e 0%, #00687e 100%) !important; }
+.cx-rb-c7 { background: linear-gradient(135deg, #0ea5e9 0%, #009bbd 100%) !important; }
+.cx-rb-c8 { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; }
+.cx-rb-c9 { background: linear-gradient(135deg, #1c355e 0%, #172554 100%) !important; }
+.cx-rb-c10 { background: linear-gradient(135deg, #009bbd 0%, #0284c7 100%) !important; }
+
+.cx-ribbon-num {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+}
+.cx-ribbon-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.cx-ribbon-icon svg {
+  width: 17px !important;
+  height: 17px !important;
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+/* Outcome Text */
+.cx-ribbon-text {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  color: #334155 !important;
+  margin: 0 !important;
+  transition: color 0.2s ease !important;
+}
+@media (max-width: 480px) {
+  .cx-ribbon-row {
+    gap: 0.85rem !important;
+  }
+  .cx-ribbon-arrow {
+    width: 85px !important;
+    min-width: 85px !important;
+    max-width: 85px !important;
+    height: 38px !important;
+    padding-left: 0.75rem !important;
+    padding-right: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+  .cx-ribbon-text {
+    font-size: 0.9rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   SECTION 7: COACHING ECOSYSTEMS 1, 2, 3 (SCOPED: .cx-sec-eco)
+   ========================================================================== */
+.cx-sec-eco {
+  padding: 0 !important;
+}
+.cx-eco-block {
+  padding-block: 5.5rem 5.5rem !important;
+  position: relative !important;
+}
+.cx-eco-1 {
+  background-color: #060913 !important;
+  color: #ffffff !important;
+}
+.cx-eco-2 {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+.cx-eco-3 {
+  background-color: #f5f0ea !important;
+  color: #0f172a !important;
+  border-top: 1px solid #e5dfd5 !important;
+}
+
+.cx-eco-container {
+  width: 100% !important;
+  max-width: 78rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-eco-header-centered {
+  text-align: center !important;
+  max-width: 54rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 3rem !important;
+}
+.cx-eco-badge {
+  display: inline-block !important;
+  padding: 0.35rem 1.25rem !important;
+  border-radius: 999px !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1rem !important;
+}
+.cx-eco-1 .cx-eco-badge {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+.cx-eco-2 .cx-eco-badge, .cx-eco-3 .cx-eco-badge {
+  background: #e8dfd5 !important;
+  color: #1e3a8a !important;
+  border: 1px solid #d4c8b8 !important;
+}
+
+.cx-eco-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2rem, 3.8vw, 2.75rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 0.75rem 0 !important;
+  line-height: 1.15 !important;
+}
+.cx-eco-1 .cx-eco-title { color: #ffffff !important; }
+.cx-eco-2 .cx-eco-title, .cx-eco-3 .cx-eco-title { color: #0f172a !important; }
+
+.cx-eco-tagline {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 2.25rem !important;
+  line-height: 1.5 !important;
+}
+.cx-eco-1 .cx-eco-badge {
+  background: rgba(91, 112, 245, 0.18) !important;
+  color: #5b70f5 !important;
+  border: 1px solid rgba(91, 112, 245, 0.5) !important;
+  box-shadow: 0 0 15px rgba(91, 112, 245, 0.3) !important;
+}
+
+.cx-eco-1 .cx-eco-tagline {
+  color: #5b70f5 !important;
+  -webkit-text-fill-color: #5b70f5 !important;
+  background: transparent !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-shadow: 0 0 18px rgba(91, 112, 245, 0.65), 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  opacity: 1 !important;
+}
+.cx-eco-2 .cx-eco-tagline, .cx-eco-3 .cx-eco-tagline {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+  background: transparent !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+  opacity: 1 !important;
+}
+
+/* Eco Media Image Container */
+.cx-eco-media-wrap,
+.cx-eco-video-wrap {
+  width: 100% !important;
+  border-radius: 1.25rem !important;
+  overflow: hidden !important;
+  position: relative !important;
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.35) !important;
+  max-height: 480px !important;
+}
+.cx-eco-media-img,
+.cx-eco-video {
+  width: 100% !important;
+  height: 420px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Body & Content */
+.cx-eco-content {
+  text-align: center !important;
+}
+
+.cx-eco-body-text {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.75 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 2.75rem !important;
+  max-width: 60rem !important;
+  margin-inline: auto !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+.cx-eco-1 .cx-eco-body-text { color: #94a3b8 !important; }
+.cx-eco-2 .cx-eco-body-text, .cx-eco-3 .cx-eco-body-text { color: #475569 !important; }
+
+.cx-eco-subheading {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.25rem !important;
+  text-align: center !important;
+  display: block !important;
+}
+.cx-eco-1 .cx-eco-subheading { color: #ffffff !important; }
+.cx-eco-2 .cx-eco-subheading, .cx-eco-3 .cx-eco-subheading { color: #0f172a !important; }
+
+/* Product Suite Header Row & Know More Arrow Link */
+.cx-eco-suite-head {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin-bottom: 1.25rem !important;
+  text-align: center !important;
+}
+.cx-eco-suite-head .cx-eco-subheading {
+  margin-bottom: 0 !important;
+}
+.cx-know-more-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+.cx-eco-1 .cx-know-more-link {
+  color: #38bdf8 !important;
+}
+.cx-eco-2 .cx-know-more-link, .cx-eco-3 .cx-know-more-link {
+  color: rgb(67, 83, 207) !important;
+}
+.cx-know-more-link:hover {
+  transform: translateX(4px) !important;
+}
+.cx-know-more-link svg {
+  transition: transform 0.25s ease !important;
+}
+.cx-know-more-link:hover svg {
+  transform: translateX(4px) !important;
+}
+
+/* Ideal Pill List */
+.cx-ideal-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.85rem !important;
+  max-width: 62rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 3rem !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+.cx-ideal-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.6rem 1.35rem !important;
+  border-radius: 999px !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease !important;
+  cursor: default !important;
+}
+
+.cx-eco-1 .cx-ideal-item {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #f1f5f9 !important;
+}
+.cx-eco-1 .cx-ideal-item:hover {
+  background: rgba(16, 185, 129, 0.12) !important;
+  border-color: rgba(16, 185, 129, 0.5) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2) !important;
+}
+
+.cx-eco-2 .cx-ideal-item,
+.cx-eco-3 .cx-ideal-item {
+  background: #ffffff !important;
+  border: 1px solid #e2d8ce !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+.cx-eco-2 .cx-ideal-item:hover,
+.cx-eco-3 .cx-ideal-item:hover {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  color: #065f46 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15) !important;
+}
+
+/* Accordion Group */
+.cx-acc-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  max-width: 62rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 3rem !important;
+  width: 100% !important;
+}
+.cx-acc-item {
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+.cx-eco-1 .cx-acc-item {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.08) !important;
+}
+.cx-eco-2 .cx-acc-item, .cx-eco-3 .cx-acc-item {
+  background: #ffffff !important;
+  border: 1.5px solid #e2d8ce !important;
+}
+.cx-acc-item.is-open {
+  border-color: rgb(67, 83, 207) !important;
+}
+
+.cx-acc-trigger {
+  width: 100% !important;
+  padding: 1.25rem 1.5rem !important;
+  background: transparent !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+  text-align: left !important;
+}
+.cx-acc-heading-link {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+.cx-eco-1 .cx-acc-heading-link,
+.cx-eco-1 .cx-acc-item.is-open .cx-acc-heading-link {
+  color: #ffffff !important;
+}
+.cx-eco-2 .cx-acc-heading-link,
+.cx-eco-3 .cx-acc-heading-link {
+  color: #0f172a !important;
+}
+.cx-eco-2 .cx-acc-item.is-open .cx-acc-heading-link,
+.cx-eco-3 .cx-acc-item.is-open .cx-acc-heading-link {
+  color: rgb(67, 83, 207) !important;
+}
+
+.cx-acc-icon {
+  width: 20px !important;
+  height: 20px !important;
+  stroke: rgb(67, 83, 207) !important;
+  transition: transform 0.3s ease !important;
+}
+.cx-acc-item.is-open .cx-acc-icon {
+  transform: rotate(180deg) !important;
+}
+
+.cx-acc-panel {
+  display: none !important;
+  padding: 0 1.5rem 1.25rem 1.5rem !important;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+.cx-acc-item.is-open .cx-acc-panel {
+  display: block !important;
+}
+.cx-eco-1 .cx-acc-panel { color: #ffffff !important; }
+.cx-eco-2 .cx-acc-panel, .cx-eco-3 .cx-acc-panel { color: #475569 !important; }
+
+/* Inside Accordion Know More Link */
+.cx-acc-know-more {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  margin-top: 0.85rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+.cx-eco-1 .cx-acc-know-more {
+  color: #38bdf8 !important;
+}
+.cx-eco-2 .cx-acc-know-more, .cx-eco-3 .cx-acc-know-more {
+  color: rgb(67, 83, 207) !important;
+}
+.cx-acc-know-more:hover {
+  transform: translateX(4px) !important;
+}
+.cx-acc-know-more svg {
+  transition: transform 0.25s ease !important;
+}
+.cx-acc-know-more:hover svg {
+  transform: translateX(4px) !important;
+}
+
+/* Milestones Chips & Trophy Title */
+.cx-milestones-block {
+  margin-bottom: 2.5rem !important;
+  padding-top: 1.75rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  max-width: 62rem !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+.cx-milestones-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.6rem !important;
+  text-align: center !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  margin-bottom: 1.5rem !important;
+}
+.cx-trophy-icon {
+  width: 22px !important;
+  height: 22px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+}
+.cx-eco-1 .cx-trophy-icon {
+  stroke: #fbbf24 !important;
+  filter: drop-shadow(0 2px 6px rgba(251, 191, 36, 0.4)) !important;
+}
+.cx-eco-2 .cx-trophy-icon {
+  stroke: #0284c7 !important;
+  filter: drop-shadow(0 2px 6px rgba(2, 132, 199, 0.35)) !important;
+}
+.cx-eco-3 .cx-trophy-icon {
+  stroke: #d97706 !important;
+  filter: drop-shadow(0 2px 6px rgba(217, 119, 6, 0.25)) !important;
+}
+.cx-eco-2 .cx-milestones-block, .cx-eco-3 .cx-milestones-block {
+  border-top-color: #e2d8ce !important;
+}
+.cx-chips {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.65rem !important;
+  margin-top: 0.75rem !important;
+}
+.cx-chip {
+  display: inline-block !important;
+  padding: 0.45rem 1.1rem !important;
+  border-radius: 999px !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+.cx-eco-1 .cx-chip {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
+}
+.cx-eco-2 .cx-chip, .cx-eco-3 .cx-chip {
+  background: #ffffff !important;
+  border: 1px solid #e2d8ce !important;
+  color: #0f172a !important;
+}
+
+
+/* ==========================================================================
+   ASCENDING GROWTH STEPPER MILESTONES (COMPACT SLEEK DESIGN)
+   ========================================================================== */
+.cx-milestone-stepper-wrap {
+  width: 100% !important;
+  max-width: 52rem !important;
+  margin-inline: auto !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 2rem !important;
+  padding-inline: 1rem !important;
+}
+
+.cx-milestone-stepper {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  position: relative !important;
+  width: 100% !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Step Column */
+.cx-step-col {
+  flex: 1 !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Ascending Step Heights */
+/* 3-Step Layout (Ecosystem 1) */
+.cx-stepper-3 .cx-step-col:nth-child(1) { margin-bottom: 0px !important; }
+.cx-stepper-3 .cx-step-col:nth-child(2) { margin-bottom: 26px !important; }
+.cx-stepper-3 .cx-step-col:nth-child(3) { margin-bottom: 52px !important; }
+
+/* 4-Step Layout (Ecosystem 2 & 3) */
+.cx-stepper-4 .cx-step-col:nth-child(1) { margin-bottom: 0px !important; }
+.cx-stepper-4 .cx-step-col:nth-child(2) { margin-bottom: 22px !important; }
+.cx-stepper-4 .cx-step-col:nth-child(3) { margin-bottom: 44px !important; }
+.cx-stepper-4 .cx-step-col:nth-child(4) { margin-bottom: 66px !important; }
+
+/* Top Section (Step Index, Pearl, Connector) */
+.cx-step-top {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+  width: 100% !important;
+  z-index: 3 !important;
+}
+
+/* Step Badge (01 • ..........) */
+.cx-step-badge {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  width: 100% !important;
+  padding-left: 0.5rem !important;
+  margin-bottom: -1.25rem !important;
+  z-index: 1 !important;
+}
+
+.cx-step-index {
+  font-family: "Outfit", "Plus Jakarta Sans", ui-sans-serif, sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1 !important;
+}
+.cx-eco-1 .cx-step-index {
+  color: #fbbf24 !important;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.4) !important;
+}
+.cx-eco-2 .cx-step-index {
+  color: #0284c7 !important;
+  text-shadow: 0 0 8px rgba(2, 132, 199, 0.25) !important;
+}
+.cx-eco-3 .cx-step-index {
+  color: #c59b27 !important;
+}
+
+.cx-step-dot {
+  width: 4px !important;
+  height: 4px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+}
+.cx-eco-1 .cx-step-dot {
+  background-color: #fbbf24 !important;
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.6) !important;
+}
+.cx-eco-2 .cx-step-dot {
+  background-color: #0284c7 !important;
+  box-shadow: 0 0 6px rgba(2, 132, 199, 0.5) !important;
+}
+.cx-eco-3 .cx-step-dot {
+  background-color: #c59b27 !important;
+}
+
+.cx-step-dotted-line {
+  flex: 1 !important;
+  height: 1px !important;
+  border-bottom: 1px dotted rgba(197, 155, 39, 0.35) !important;
+  margin-right: 0.75rem !important;
+}
+.cx-eco-1 .cx-step-dotted-line {
+  border-bottom-color: rgba(251, 191, 36, 0.3) !important;
+}
+.cx-eco-2 .cx-step-dotted-line {
+  border-bottom-color: rgba(2, 132, 199, 0.35) !important;
+}
+.cx-eco-3 .cx-step-dotted-line {
+  border-bottom-color: rgba(197, 155, 39, 0.35) !important;
+}
+
+/* 3D Pearl Sphere Node */
+.cx-step-pearl {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease !important;
+  cursor: pointer !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* 1. Eco 1 (Dark Theme) */
+.cx-eco-1 .cx-step-pearl {
+  background: radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.18) 0%, rgba(30, 41, 59, 0.8) 55%, rgba(15, 23, 42, 0.95) 100%) !important;
+  border: 1.5px solid rgba(251, 191, 36, 0.5) !important;
+  box-shadow: 0 8px 22px -3px rgba(0, 0, 0, 0.6), 0 0 16px rgba(251, 191, 36, 0.2), inset 0 2px 5px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(251, 191, 36, 0.25) !important;
+}
+.cx-eco-1 .cx-step-pearl:hover {
+  transform: translateY(-4px) scale(1.08) !important;
+  box-shadow: 0 12px 28px -3px rgba(251, 191, 36, 0.35), 0 0 20px rgba(251, 191, 36, 0.3) !important;
+}
+
+/* 2. Eco 2 (Royal Navy & Electric Sapphire Theme) */
+.cx-eco-2 .cx-step-pearl {
+  background: radial-gradient(circle at 35% 25%, #ffffff 0%, #f0f9ff 45%, #dbeafe 100%) !important;
+  border: 1.5px solid rgba(2, 132, 199, 0.45) !important;
+  box-shadow: 0 8px 20px -3px rgba(2, 132, 199, 0.22), 0 3px 6px rgba(0, 0, 0, 0.04), inset 0 2px 5px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(2, 132, 199, 0.22) !important;
+}
+.cx-eco-2 .cx-step-pearl:hover {
+  transform: translateY(-4px) scale(1.08) !important;
+  box-shadow: 0 12px 28px -3px rgba(2, 132, 199, 0.4), inset 0 2px 6px rgba(255, 255, 255, 1) !important;
+}
+
+/* 3. Eco 3 (Classic Gold & Ivory Theme) */
+.cx-eco-3 .cx-step-pearl {
+  background: radial-gradient(circle at 35% 25%, #ffffff 0%, #faf6f0 45%, #ede3d1 100%) !important;
+  border: 1.5px solid rgba(197, 155, 39, 0.4) !important;
+  box-shadow: 0 8px 20px -3px rgba(184, 134, 11, 0.2), 0 3px 6px rgba(0, 0, 0, 0.04), inset 0 2px 5px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(197, 155, 39, 0.22) !important;
+}
+.cx-eco-3 .cx-step-pearl:hover {
+  transform: translateY(-4px) scale(1.08) !important;
+  box-shadow: 0 12px 28px -3px rgba(184, 134, 11, 0.3), inset 0 2px 6px rgba(255, 255, 255, 1) !important;
+}
+
+.cx-pearl-icon {
+  width: 22px !important;
+  height: 22px !important;
+  transition: transform 0.3s ease !important;
+}
+.cx-eco-1 .cx-pearl-icon {
+  stroke: #fbbf24 !important;
+  color: #fbbf24 !important;
+}
+.cx-eco-2 .cx-pearl-icon {
+  stroke: #0284c7 !important;
+  color: #0284c7 !important;
+}
+.cx-eco-3 .cx-pearl-icon {
+  stroke: #1e293b !important;
+  color: #1e293b !important;
+}
+.cx-step-pearl:hover .cx-pearl-icon {
+  transform: scale(1.1) !important;
+}
+
+/* Dashed vertical connector from Pearl to Step Line */
+.cx-step-connector {
+  width: 0 !important;
+  height: 10px !important;
+  border-left: 1.5px dashed rgba(197, 155, 39, 0.6) !important;
+  margin-inline: auto !important;
+}
+.cx-eco-1 .cx-step-connector {
+  border-left-color: rgba(251, 191, 36, 0.6) !important;
+}
+.cx-eco-2 .cx-step-connector {
+  border-left-color: rgba(2, 132, 199, 0.6) !important;
+}
+.cx-eco-3 .cx-step-connector {
+  border-left-color: rgba(197, 155, 39, 0.6) !important;
+}
+
+/* Continuous Stepped Line */
+.cx-step-line-segment {
+  width: 100% !important;
+  position: relative !important;
+  height: 1.5px !important;
+  background-color: #c59b27 !important;
+  z-index: 2 !important;
+}
+.cx-eco-1 .cx-step-line-segment {
+  background-color: #fbbf24 !important;
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.4) !important;
+}
+.cx-eco-2 .cx-step-line-segment {
+  background: linear-gradient(90deg, #0284c7 0%, #2563eb 100%) !important;
+  box-shadow: 0 0 6px rgba(2, 132, 199, 0.35) !important;
+}
+
+/* Left Vertical Riser on Step 1 */
+.cx-step-col:first-child .cx-step-line-segment::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1.5px !important;
+  height: 28px !important;
+  background-color: #c59b27 !important;
+}
+.cx-eco-1 .cx-step-col:first-child .cx-step-line-segment::before {
+  background-color: #fbbf24 !important;
+}
+.cx-eco-2 .cx-step-col:first-child .cx-step-line-segment::before {
+  background-color: #0284c7 !important;
+}
+.cx-eco-3 .cx-step-col:first-child .cx-step-line-segment::before {
+  background-color: #c59b27 !important;
+}
+
+/* Vertical Risers connecting between steps */
+.cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1.5px !important;
+  height: 26px !important;
+  background-color: #c59b27 !important;
+}
+.cx-stepper-4 .cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  height: 22px !important;
+}
+.cx-eco-1 .cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  background-color: #fbbf24 !important;
+}
+.cx-eco-2 .cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  background-color: #0284c7 !important;
+}
+.cx-eco-3 .cx-step-col:not(:first-child) .cx-step-line-segment::before {
+  background-color: #c59b27 !important;
+}
+
+/* Arrowhead at end of last step */
+.cx-step-arrow {
+  position: absolute !important;
+  right: -6px !important;
+  top: -4px !important;
+  width: 10px !important;
+  height: 10px !important;
+  color: #c59b27 !important;
+}
+.cx-eco-1 .cx-step-arrow {
+  color: #fbbf24 !important;
+}
+.cx-eco-2 .cx-step-arrow {
+  color: #2563eb !important;
+}
+.cx-eco-3 .cx-step-arrow {
+  color: #c59b27 !important;
+}
+
+/* Bottom Metrics Section (Big Serif Number & Subtitle) */
+.cx-step-bottom {
+  padding-top: 1.15rem !important;
+  text-align: center !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.cx-step-num {
+  font-family: "Outfit", "Plus Jakarta Sans", ui-sans-serif, sans-serif !important;
+  font-size: clamp(1.65rem, 2.6vw, 2.25rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.03em !important;
+  font-feature-settings: "tnum" on, "lnum" on !important;
+  margin-bottom: 0.25rem !important;
+  transition: transform 0.3s ease !important;
+}
+
+.cx-eco-1 .cx-step-num {
+  color: #ffffff !important;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.2) !important;
+}
+.cx-eco-2 .cx-step-num {
+  color: #0c2b5e !important;
+}
+.cx-eco-3 .cx-step-num {
+  color: #0b1e3f !important;
+}
+
+.cx-step-label {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+}
+.cx-eco-1 .cx-step-label {
+  color: #94a3b8 !important;
+}
+.cx-eco-2 .cx-step-label,
+.cx-eco-3 .cx-step-label {
+  color: #334155 !important;
+}
+
+/* Responsive adjustment for Mobile / Small Screens */
+@media (max-width: 768px) {
+  .cx-milestone-stepper {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 2rem !important;
+  }
+  .cx-stepper-3 .cx-step-col,
+  .cx-stepper-4 .cx-step-col {
+    margin-bottom: 0 !important;
+  }
+  .cx-step-line-segment::before {
+    display: none !important;
+  }
+  .cx-step-arrow {
+    display: none !important;
+  }
+  .cx-step-badge {
+    margin-bottom: 0.35rem !important;
+  }
+}
+
+/* CTA Wrap */
+.cx-eco-cta-wrap {
+  margin-top: 2rem !important;
+}
+.cx-eco-btn-solid {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem 2.25rem !important;
+  border-radius: 0.5rem !important;
+  background: linear-gradient(135deg, rgb(67, 83, 207) 0%, rgb(40, 52, 150) 100%) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 25px -5px rgba(67, 83, 207, 0.4) !important;
+  transition: all 0.25s ease !important;
+}
+.cx-eco-btn-solid:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 30px -4px rgba(67, 83, 207, 0.6) !important;
+}
+
+/* ==========================================================================
+   SECTION 8: WHY LEADERS CHOOSE US / TAG CLOUD (EXACT REFERENCE MATCH)
+   ========================================================================== */
+.cx-sec-choose {
+  background-color: #f3f4f8 !important;
+  padding-block: 5rem 5rem !important;
+  border-top: 1px solid #e5e7eb !important;
+  position: relative !important;
+}
+.cx-choose-container {
+  width: 100% !important;
+  max-width: 82rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+  text-align: center !important;
+}
+.cx-choose-eyebrow {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: rgb(67, 83, 207) !important;
+  margin-bottom: 0.75rem !important;
+  text-align: center !important;
+}
+.cx-choose-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: uppercase !important;
+  color: #0d121c !important;
+  margin: 0 auto 1.5rem auto !important;
+  max-width: 68rem !important;
+  text-align: center !important;
+}
+.cx-choose-title .cx-blue-text {
+  color: rgb(67, 83, 207) !important;
+  background: linear-gradient(135deg, rgb(67, 83, 207) 0%, rgb(40, 52, 150) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  display: block !important;
+  margin-top: 0.25rem !important;
+  text-align: center !important;
+}
+.cx-choose-desc {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.925rem !important;
+  line-height: 1.75 !important;
+  color: #4b5563 !important;
+  max-width: 54rem !important;
+  margin-inline: auto !important;
+  margin-bottom: 2.25rem !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+.cx-tag-cloud {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.75rem 0.85rem !important;
+  max-width: 76rem !important;
+  margin-inline: auto !important;
+}
+.cx-tag-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.65rem 1.25rem !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 0.5rem !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #475569 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.25s ease !important;
+  cursor: default !important;
+}
+.cx-tag-item:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgb(67, 83, 207) !important;
+  color: rgb(67, 83, 207) !important;
+  box-shadow: 0 6px 16px rgba(67, 83, 207, 0.2) !important;
+}
+
+/* ==========================================================================
+   SECTION 9: CONTACT CTA (SCOPED: .cx-sec-cta)
+   ========================================================================== */
+.cx-sec-cta {
+  background-color: #060913 !important;
+  color: #ffffff !important;
+  padding-block: 6rem 6rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  text-align: center !important;
+  position: relative !important;
+}
+.cx-cta-container {
+  width: 100% !important;
+  max-width: 54rem !important;
+  margin-inline: auto !important;
+  padding-inline: 1.5rem !important;
+}
+.cx-cta-title {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(2rem, 3.8vw, 2.75rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+.cx-cta-title .cx-blue-text {
+  color: rgb(67, 83, 207) !important;
+  background: linear-gradient(135deg, rgb(67, 83, 207) 0%, rgb(40, 52, 150) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  display: inline-block !important;
+  vertical-align: baseline !important;
+}
+.cx-cta-desc {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  color: #94a3b8 !important;
+  margin-bottom: 2.5rem !important;
+}
+.cx-cta-btn-wrap {
+  margin-bottom: 2rem !important;
+}
+.cx-cta-btn-solid {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.1rem 2.5rem !important;
+  border-radius: 0.5rem !important;
+  background: linear-gradient(135deg, rgb(67, 83, 207) 0%, rgb(40, 52, 150) 100%) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: 0 12px 30px -5px rgba(67, 83, 207, 0.45) !important;
+  transition: all 0.25s ease !important;
+}
+.cx-cta-btn-solid:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 16px 36px -4px rgba(67, 83, 207, 0.6) !important;
+}
+.cx-cta-subtext {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+}
+</style>
+</head>
+<body class="coaching-page">
+
+<!-- WEBSITE HEADER CONTAINER (Loaded dynamically by load.js) -->
+<div id="header-container"></div>
+
+<main>
+  <!-- SECTION 1: HERO SECTION (SCOPED) -->
+  <section class="cx-hero-section" id="top">
+    <img class="cx-hero-bg" src="images/3%20PILLARS%20OF%20LEADERSHIP%20STRATEGY.webp" width="1920" height="1080" alt="3 Pillars of Leadership Strategy" loading="eager" onerror="this.style.display='none'" />
+    <div class="cx-hero-scrim"></div>
+    <div class="cx-hero-container">
+      <h1 class="cx-hero-title">
+        <span class="cx-hero-part">UNLOCK EXTRAORDINARY<br>LEADERSHIP.</span>
+        <span class="cx-hero-part cx-blue-highlight">ACCELERATE<br>TRANSFORMATION.</span>
+        <span class="cx-hero-part">CREATE LASTING IMPACT.</span>
+      </h1>
+      <div class="cx-hero-btn-row">
+        <a class="cx-btn-solid open-partner-modal" href="javascript:void(0)" onclick="openPartnerModal(event)">BEGIN YOUR JOURNEY</a>
+        <a class="cx-btn-ghost" href="#ecosystems">EXPLORE COACHING ECOSYSTEMS</a>
+      </div>
+      <dl class="cx-hero-stats-grid">
+        <div class="cx-stat-box"><dt class="cx-stat-num">15+</dt><dd class="cx-stat-lbl">YEARS OF PRACTICE</dd></div>
+        <div class="cx-stat-box"><dt class="cx-stat-num">10,000+</dt><dd class="cx-stat-lbl">SUCCESS STORIES</dd></div>
+        <div class="cx-stat-box"><dt class="cx-stat-num">3,600+</dt><dd class="cx-stat-lbl">CEOS &amp; LEADERS COACHED</dd></div>
+        <div class="cx-stat-box"><dt class="cx-stat-num">900+</dt><dd class="cx-stat-lbl">CLIENTS PARTNERED</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- SECTION 2: MESSAGE FROM MR. GAD -->
+  <section class="cx-sec-founder" id="message">
+    <div class="cx-founder-container">
+      <div class="cx-founder-card">
+        <h2 class="cx-founder-title">MESSAGE  &nbsp;FROM <span class="cx-blue-text">&nbsp;MR. GAD</span></h2>
+        <div class="cx-founder-body">
+          <p>Leadership is an integral part of Life. Whatever role you play in your profession, leadership is the most important part of your growth and breakthrough. Leadership is the very soul of your future. In today's rapidly evolving business landscape, success is no longer determined merely by experience or expertise — it is determined by a leader's ability to continuously evolve, inspire, transform, and deliver extraordinary outcomes.</p>
+          <p>At GAD's Leadership Foundation, for the past 15 years we have partnered with Fortune 500 companies, Top Global Brands, Business Leaders, Entrepreneurs, Senior Executives, CEOs, CXOs, Family Business Owners and high-potential professionals to unlock their highest potential and create breakthrough personal, professional, and business results. We have created an exceptional impact by building <strong>10,000+ Success stories</strong> to date.</p>
+        </div>
+        <!-- <div class="cx-founder-footer">
+          <span class="cx-founder-name">MR. GAD</span>
+          <span class="cx-founder-role">FOUNDER &amp; CHIEF LEADERSHIP STRATEGIST, GLF</span>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: HOLISTIC TRANSFORMATION / 7 ELEMENTS OF LEADERSHIP -->
+  <section class="cx-sec-elements" id="approach">
+    <div class="cx-elements-container">
+      <div class="cx-elements-layout">
+        <!-- Left Sticky Header -->
+        <div class="cx-sticky-left">
+          <p class="cx-elements-eyebrow">HOLISTIC TRANSFORMATION</p>
+          <h2 class="cx-elements-title">BUILDING LEGACIES.<br>BUILDING LEADERS.</h2>
+          <div class="cx-elements-desc-stack">
+            <p>Our executive coaching engagements go beyond traditional development interventions.</p>
+            <p>We believe transformation truly happens when a leader is built on all Seven elements of leadership mastery.</p>
+            <p>This will enable identity transformation and will ensure deep and sustainable results.</p>
+            <p>Our coaching journeys are designed to help you accelerate business growth, strengthen leadership effectiveness, and build an enduring enterprise legacy.</p>
+          </div>
+        </div>
+
+        <!-- Right 7 Element Cards Stack -->
+        <div class="cx-elements-right">
+          <article class="cx-element-card">
+            <span class="cx-element-num">ELEMENT 01</span>
+            <h3 class="cx-element-card-title">BEHAVIOURAL COACHING</h3>
+            <p class="cx-element-card-desc">Leadership Behaviour, Character &amp; Attitude</p>
+          </article>
+          <article class="cx-element-card">
+            <span class="cx-element-num">ELEMENT 02</span>
+            <h3 class="cx-element-card-title">COMPETENCY COACHING</h3>
+            <p class="cx-element-card-desc">Leadership Skills &amp; Executive Competencies</p>
+          </article>
+          <article class="cx-element-card">
+            <span class="cx-element-num">ELEMENT 03</span>
+            <h3 class="cx-element-card-title">LIFE COACHING</h3>
+            <p class="cx-element-card-desc">Leadership Visioning, Purpose, Destiny &amp; Direction</p>
+          </article>
+          <article class="cx-element-card">
+            <span class="cx-element-num">ELEMENT 04</span>
+            <h3 class="cx-element-card-title">LEADERSHIP COACHING</h3>
+            <p class="cx-element-card-desc">Leadership Strategy &amp; Enabling Results</p>
+          </article>
+          <article class="cx-element-card">
+            <span class="cx-element-num">ELEMENT 05</span>
+            <h3 class="cx-element-card-title">BUSINESS COACHING</h3>
+            <p class="cx-element-card-desc">Business Leadership Mastery</p>
+          </article>
+          <article class="cx-element-card">
+            <span class="cx-element-num">ELEMENT 06</span>
+            <h3 class="cx-element-card-title">PERFORMANCE COACHING</h3>
+            <p class="cx-element-card-desc">High Performance Leadership &amp; Building Legacy</p>
+          </article>
+          <article class="cx-element-card">
+            <span class="cx-element-num">ELEMENT 07</span>
+            <h3 class="cx-element-card-title">BRAND COACHING</h3>
+            <p class="cx-element-card-desc">Leadership Brand</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: WHY CORPORATE COMPANIES PARTNER WITH GLF -->
+  <section class="cx-sec-why" id="why">
+    <div class="cx-why-container">
+      <div class="cx-why-header">
+        <h2 class="cx-why-title">WHY GLOBAL ORGANIZATIONS CHOOSE GLF</h2>
+        <div class="cx-why-nav-btns">
+          <button class="cx-why-btn" type="button" data-why-prev aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <button class="cx-why-btn" type="button" data-why-next aria-label="Next slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="cx-why-viewport" data-why-viewport>
+        <div class="cx-why-track" data-why-track>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Build World-Class Organisations, Brands & Businesses.webp" alt="Build World Class Organisations, Brands &amp; Business" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">BUILD WORLD CLASS ORGANISATIONS, BRANDS &amp; BUSINESS</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Business Growth Acceleration.webp" alt="Business Growth Acceleration" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">BUSINESS GROWTH ACCELERATION</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Build a Culture of High Performance.webp" alt="Build A Culture Of High Performance" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">BUILD A CULTURE OF HIGH PERFORMANCE</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Build Creative & Innovative Organisations.webp" alt="Build Creative &amp; Innovative Organisations" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">BUILD CREATIVE &amp; INNOVATIVE ORGANISATIONS</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Strengthen Strategic Thinking & Decision-Making.webp" alt="Strengthen Strategic Thinking And Decision-Making" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">STRENGTHEN STRATEGIC THINKING AND DECISION-MAKING</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Enhance Executive Presence & Leadership Influence.webp" alt="Enhance Executive Presence And Leadership Influence" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">ENHANCE EXECUTIVE PRESENCE AND LEADERSHIP INFLUENCE</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Accelerate Business Progression & Organisational Delivery.webp" alt="Accelerate Business Progressions And Organisational Delivery" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">ACCELERATE BUSINESS PROGRESSIONS AND ORGANISATIONAL DELIVERY</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Build High-Performing Individuals.webp" alt="Build High-Performing Individuals" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">BUILD HIGH-PERFORMING INDIVIDUALS</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Create Future Leadership Pipelines.webp" alt="Create Future Leadership Pipelines" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">CREATE FUTURE LEADERSHIP PIPELINES</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Navigate Complexity, Disruption & Transformation.webp" alt="Navigate Complexity, Disruption, And Transformation" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">NAVIGATE COMPLEXITY, DISRUPTION, AND TRANSFORMATION</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Deliver World-Class Business Results.webp" alt="Deliver World Class Business Results" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">DELIVER WORLD CLASS BUSINESS RESULTS</h3>
+            </article>
+          </div>
+          <div class="cx-why-slide">
+            <article class="cx-why-card">
+              <img class="cx-why-card-bg" src="./post-banner-coaching/Create Sustainable Success.webp" alt="Create Sustainable Success" loading="lazy" />
+              <div class="cx-why-card-scrim"></div>
+              <h3 class="cx-why-card-title">CREATE SUSTAINABLE SUCCESS</h3>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="cx-why-dots" data-why-dots></div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: PROVEN LEADERSHIP IMPACT -->
+  <section class="cx-sec-impact" id="impact">
+    <div class="cx-impact-container">
+      <p class="cx-impact-eyebrow">PROVEN LEADERSHIP IMPACT</p>
+      <h2 class="cx-impact-title">MEASURABLE OUTCOMES DRIVEN BY<br>GLF COACHING ENGAGEMENTS</h2>
+      <div class="cx-impact-grid">
+        <div class="cx-impact-item">
+          <div class="cx-impact-circle cx-circle-blue">
+            <div class="cx-metric-fill"></div>
+            <span class="cx-impact-number">10X</span>
+          </div>
+          <p class="cx-impact-desc">PERFORMANCE</p>
+        </div>
+        <div class="cx-impact-item">
+          <div class="cx-impact-circle cx-circle-gold">
+            <div class="cx-metric-fill"></div>
+            <span class="cx-impact-number">20X</span>
+          </div>
+          <p class="cx-impact-desc">PERSONAL EFFECTIVENESS</p>
+        </div>
+        <div class="cx-impact-item">
+          <div class="cx-impact-circle cx-circle-rose">
+            <div class="cx-metric-fill"></div>
+            <span class="cx-impact-number">10X</span>
+          </div>
+          <p class="cx-impact-desc">YOUR FOCUS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: GLF'S SIGNATURE COACHING OUTCOMES (ARROW RIBBON INFOGRAPHIC) -->
+  <section class="cx-sec-outcomes" id="outcomes">
+    <div class="cx-outcomes-container">
+      <div class="cx-outcomes-header-centered">
+        <h2 class="cx-outcomes-title">GLF'S SIGNATURE COACHING OUTCOMES</h2>
+      </div>
+
+      <div class="cx-ribbon-grid">
+        <!-- Left Column: Items 01 to 09 -->
+        <div class="cx-ribbon-col">
+          <!-- Row 01 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c1">
+              <span class="cx-ribbon-num">01</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Ability to lead people, business &amp; process effectively</p>
+          </div>
+
+          <!-- Row 02 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c2">
+              <span class="cx-ribbon-num">02</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Break limiting beliefs and be reborn with total inner power</p>
+          </div>
+
+          <!-- Row 03 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c3">
+              <span class="cx-ribbon-num">03</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Create meaningful personal, professional and business success</p>
+          </div>
+
+          <!-- Row 04 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c4">
+              <span class="cx-ribbon-num">04</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Building powerful relationships</p>
+          </div>
+
+          <!-- Row 05 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c5">
+              <span class="cx-ribbon-num">05</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Become charismatic &amp; inspirational</p>
+          </div>
+
+          <!-- Row 06 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c6">
+              <span class="cx-ribbon-num">06</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Total transformation in all areas of life</p>
+          </div>
+
+          <!-- Row 07 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c7">
+              <span class="cx-ribbon-num">07</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Build legacy and sustained global enterprises</p>
+          </div>
+
+          <!-- Row 08 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c8">
+              <span class="cx-ribbon-num">08</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Enhanced leadership effectiveness</p>
+          </div>
+
+          <!-- Row 09 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c9">
+              <span class="cx-ribbon-num">09</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Improved strategic capability</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Items 10 to 17 -->
+        <div class="cx-ribbon-col">
+          <!-- Row 10 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c1">
+              <span class="cx-ribbon-num">10</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Greater executive presence</p>
+          </div>
+
+          <!-- Row 11 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c2">
+              <span class="cx-ribbon-num">11</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Stronger stakeholder influence</p>
+          </div>
+
+          <!-- Row 12 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c3">
+              <span class="cx-ribbon-num">12</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Achieve accelerated business growth</p>
+          </div>
+
+          <!-- Row 13 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c4">
+              <span class="cx-ribbon-num">13</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Increased perseverance, grit &amp; accountability</p>
+          </div>
+
+          <!-- Row 14 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c5">
+              <span class="cx-ribbon-num">14</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Improved decision-making &amp; problem-solving capability</p>
+          </div>
+
+          <!-- Row 15 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c6">
+              <span class="cx-ribbon-num">15</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Higher team engagement</p>
+          </div>
+
+          <!-- Row 16 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c7">
+              <span class="cx-ribbon-num">16</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Sustainable behavioural transformation</p>
+          </div>
+
+          <!-- Row 17 -->
+          <div class="cx-ribbon-row">
+            <div class="cx-ribbon-arrow cx-rb-c8">
+              <span class="cx-ribbon-num">17</span>
+              <span class="cx-ribbon-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              </span>
+            </div>
+            <p class="cx-ribbon-text">Creating long-term organisational impact</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: COACHING ECOSYSTEMS 1, 2, 3 -->
+  <section id="ecosystems" class="cx-sec-eco">
+    <!-- ECOSYSTEM 1 -->
+    <div class="cx-eco-block cx-eco-1">
+      <div class="cx-eco-container">
+        <div class="cx-eco-header-centered">
+          <span class="cx-eco-badge" style="background: rgba(91, 112, 245, 0.18) !important; color: #5b70f5 !important; border: 1px solid rgba(91, 112, 245, 0.5) !important; box-shadow: 0 0 15px rgba(91, 112, 245, 0.3) !important;">COACHING ECOSYSTEM 1</span>
+          <h3 class="cx-eco-title">CORPORATE COACHING SERVICES</h3>
+          <p class="cx-eco-tagline" style="color: #5b70f5 !important; -webkit-text-fill-color: #5b70f5 !important; background: transparent !important; -webkit-background-clip: unset !important; background-clip: unset !important; text-shadow: 0 0 18px rgba(91, 112, 245, 0.65), 0 2px 4px rgba(0, 0, 0, 0.9) !important; opacity: 1 !important;">BUILDING THE LEADERS OF TOMORROW. FORMULATING THE LEGACIES OF THE FUTURE.</p>
+          <div class="cx-eco-media-wrap">
+            <img src="images/corporate-coaching-ecosystem-1.jpg" alt="Corporate Coaching Services" class="cx-eco-media-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="cx-eco-content">
+          <p class="cx-eco-body-text">For the past 15 years, we have built a very powerful coaching ecosystem for corporate organisations that are aspiring for growth and transformation.  These companies range from 100 Crore Organisations to Fortune 500 companies. We have built globally acclaimed coaching systems that has enabled the transformation of 3600+ CEO’s & Leaders to date.   This signature ecosystem has enabled powerful results for hundreds of organisations in the areas of: achieving business growth & transformation, creating business turn-around, building highly capable leadership teams,  creating high-performance cultures, enabling world-class business ecosystem, leadership succession readiness and future-ready leadership force.</p>
+          
+          <h4 class="cx-eco-subheading">IDEAL FOR</h4>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">CEOs &amp; CXOs</li>
+            <li class="cx-ideal-item">VPs to Directors</li>
+            <li class="cx-ideal-item">Senior Leaders</li>
+            <li class="cx-ideal-item">Functional Heads</li>
+            <li class="cx-ideal-item">Mid-Management Leaders</li>
+            <li class="cx-ideal-item">High-Potential Leaders</li>
+            <li class="cx-ideal-item">Future Identified Leaders</li>
+          </ul>
+
+          <h4 class="cx-eco-subheading">Our Suite Of Corporate Coaching Products:</h4>
+          <div class="cx-acc-group">
+            <div class="cx-acc-item is-open">
+              <button class="cx-acc-trigger" type="button" aria-expanded="true">
+                <span class="cx-acc-heading-link">Executive Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>A highly personalised coaching engagement designed to enhance leadership effectiveness, strategic capability, executive presence, and decision-making for leaders operating in critical roles.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Senior Management Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Empowers senior leaders to transition from functional excellence to enterprise leadership by strengthening strategic thinking, business acumen, people leadership, and execution capability.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Business Leadership Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Designed for business leaders responsible for growth, profitability, and organisational performance, focusing on business strategy, leadership excellence, and sustainable growth.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Performance Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Helps leaders and professionals unlock peak performance by strengthening accountability, productivity, execution discipline, focus, and results orientation.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Competency Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Targets the development of specific leadership and managerial competencies critical for business success, including communication, strategic thinking, emotional intelligence, problem solving, decision-making, influencing, and team leadership.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Behavioural &amp; Life Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Facilitates personal growth and behavioural transformation by enhancing self-awareness, emotional intelligence, resilience, confidence, and life effectiveness.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Transformational Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>A deep coaching journey that enables profound shifts in identity, mindset, beliefs, and leadership consciousness, leading to lasting personal and professional transformation.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Sales Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Equips sales professionals and sales leaders with the mindset, capabilities, and strategies required to improve customer engagement, sales effectiveness, and business performance.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Succession Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Prepares identified high-potential leaders for future leadership roles by accelerating behavioural preparedness, leadership readiness, executive maturity, and strategic perspective.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cx-milestones-block">
+            <h4 class="cx-eco-subheading cx-milestones-title">
+              OUR MILESTONES
+            </h4>
+            
+            <div class="cx-milestone-stepper-wrap">
+              <div class="cx-milestone-stepper cx-stepper-3">
+                <!-- Step 1 -->
+                <div class="cx-step-col cx-step-1">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-start"></div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="500" data-suffix="+">0+</div>
+                    <p class="cx-step-label">Coaching Projects</p>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="cx-step-col cx-step-2">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-mid"></div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="15000" data-suffix="+" data-format="comma">0+</div>
+                    <p class="cx-step-label">Hours of Coaching</p>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="cx-step-col cx-step-3">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-end">
+                    <svg class="cx-step-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="650" data-suffix="+">0+</div>
+                    <p class="cx-step-label">Enterprise Clients</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cx-eco-cta-wrap">
+            <a class="cx-eco-btn-solid open-partner-modal" href="javascript:void(0)" onclick="openPartnerModal(event)">ENQUIRE ABOUT CORPORATE COACHING SERVICES</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ECOSYSTEM 2 -->
+    <div class="cx-eco-block cx-eco-2">
+      <div class="cx-eco-container">
+        <div class="cx-eco-header-centered">
+          <span class="cx-eco-badge">COACHING ECOSYSTEM 2</span>
+          <h3 class="cx-eco-title">SIGNATURE COACHING SERVICES</h3>
+          <p class="cx-eco-tagline">LEAD BEYOND BOUNDARIES. CREATE BEYOND POSSIBILITIES. BECOME LIMITLESS.</p>
+          <div class="cx-eco-media-wrap">
+            <img src="images/signature-coaching.webp" alt="Signature Coaching Services" class="cx-eco-media-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="cx-eco-content">
+          <p class="cx-eco-body-text">Having designed and delivered hundreds of highly acclaimed coaching journeys for the past 16 years, our 900+ Clients stand as a testimony to our quality & trust. Our deep expertise has made us their coaching and transformation partner, entrusting us with their vision and dreams. From this deep expertise was born our, “Signature Coaching Services”. These are our unique and exclusive content that has been built for the top aspiring leaders. These transformative engagements focus on creating accelerated business growth, creating breakthrough results in all areas of life, wealth creation, strategies to live healthy and live longer, and globally proven business breakthrough blueprints for entrepreneurs and business owners.</p>
+          
+          <h4 class="cx-eco-subheading">IDEAL FOR</h4>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">CEOs &amp; CXOs</li>
+            <li class="cx-ideal-item">Aspirational &amp; High-Performing Individuals</li>
+            <li class="cx-ideal-item">Top Entrepreneurs</li>
+            <li class="cx-ideal-item">Business Owners &amp; Co-Founders</li>
+            <li class="cx-ideal-item">Top Professionals — Architects, Doctors, Engineers, Law</li>
+            <li class="cx-ideal-item">Top Management Leaders</li>
+          </ul>
+
+          <h4 class="cx-eco-subheading">Our Suite Of Signature Coaching Products:</h4>
+          <div class="cx-acc-group">
+            <div class="cx-acc-item is-open">
+              <button class="cx-acc-trigger" type="button" aria-expanded="true">
+                <span class="cx-acc-heading-link">Business Growth Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Supports owners and leaders in accelerating growth, improving profitability, strengthening systems and scaling sustainably.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Results Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>A high-intensity engagement to achieve breakthrough goals through clarity, accountability and disciplined execution.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Life &amp; Wealth Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>A holistic journey across leadership, wealth creation, personal fulfilment, relationships, health and legacy.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Entrepreneur Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>For founders to strengthen leadership capability, overcome growth bottlenecks, build scalable businesses and create enterprise value.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cx-milestones-block">
+            <h4 class="cx-eco-subheading cx-milestones-title">
+              OUR MILESTONES
+            </h4>
+            
+            <div class="cx-milestone-stepper-wrap">
+              <div class="cx-milestone-stepper cx-stepper-4">
+                <!-- Step 1 -->
+                <div class="cx-step-col cx-step-1">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-start"></div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="250" data-suffix="+">0+</div>
+                    <p class="cx-step-label">Brands Advised</p>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="cx-step-col cx-step-2">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-mid"></div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="3600" data-suffix="+" data-format="comma">0+</div>
+                    <p class="cx-step-label">Leaders Coached</p>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="cx-step-col cx-step-3">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-mid"></div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="4000" data-suffix="+" data-format="comma">0+</div>
+                    <p class="cx-step-label">Professionals Mentored</p>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="cx-step-col cx-step-4">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-end">
+                    <svg class="cx-step-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="200" data-suffix="+">0+</div>
+                    <p class="cx-step-label">Leaders Scaled</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cx-eco-cta-wrap">
+            <a class="cx-eco-btn-solid open-partner-modal" href="javascript:void(0)" onclick="openPartnerModal(event)">ENQUIRE ABOUT SIGNATURE COACHING SERVICES</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ECOSYSTEM 3 -->
+    <div class="cx-eco-block cx-eco-3">
+      <div class="cx-eco-container">
+        <div class="cx-eco-header-centered">
+          <span class="cx-eco-badge">COACHING ECOSYSTEM 3</span>
+          <h3 class="cx-eco-title">PRIVATE COACHING</h3>
+          <p class="cx-eco-tagline">TRANSFORM YOURSELF. TRANSFORM YOUR LEADERSHIP. TRANSFORM YOUR BUSINESS.</p>
+          <div class="cx-eco-media-wrap">
+            <img src="images/private-coaching.webp" alt="Private Coaching Services" class="cx-eco-media-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="cx-eco-content">
+          <p class="cx-eco-body-text">While all our coaching journeys run for about 12 months, our Private Coaching programs run for a period of 18 -20 months. This is not just a coaching journey but also a mentoring journey. This approach is designed for total breakthrough and exceptional transformation. The private coaching program also includes sessions of “personal strategic & business advisory” from Mr GAD. It’s a truly elite journey of Coaching and Mentoring tailored specifically for the needs of an individual. From deeper behavioural transformation to mastering the globally proven billion-dollar business laws, you will be empowered to master everything here.</p>
+          
+          <h4 class="cx-eco-subheading">IDEAL FOR</h4>
+          <ul class="cx-ideal-list">
+            <li class="cx-ideal-item">Family Business Leaders</li>
+            <li class="cx-ideal-item">Next Generation Family Business Owners</li>
+            <li class="cx-ideal-item">Elite Performers</li>
+            <li class="cx-ideal-item">CEOs &amp; CXOs</li>
+            <li class="cx-ideal-item">Founders &amp; Co-Founders</li>
+            <li class="cx-ideal-item">Business Owners</li>
+          </ul>
+
+          <h4 class="cx-eco-subheading">Our Suite Of Private Coaching Products:</h4>
+          <div class="cx-acc-group">
+            <div class="cx-acc-item is-open">
+              <button class="cx-acc-trigger" type="button" aria-expanded="true">
+                <span class="cx-acc-heading-link">Elite Coaching For Elite Professionals</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Personal strategic and business advisory sessions with Mr GAD for high-impact leaders.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">Family Business Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Navigating family business dynamics, succession readiness, and long-term enterprise legacy.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="cx-acc-item">
+              <button class="cx-acc-trigger" type="button" aria-expanded="false">
+                <span class="cx-acc-heading-link">CEO / CXO Coaching</span>
+                <svg class="cx-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cx-acc-panel">
+                <p>Exclusive 1-on-1 strategic advisory and breakthrough executive performance coaching.</p>
+                <a href="javascript:void(0)" onclick="openPartnerModal(event)" class="cx-acc-know-more open-partner-modal">
+                  KNOW MORE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cx-milestones-block">
+            <h4 class="cx-eco-subheading cx-milestones-title">
+              OUR MILESTONES
+            </h4>
+            
+            <div class="cx-milestone-stepper-wrap">
+              <div class="cx-milestone-stepper cx-stepper-4">
+                <!-- Step 1 -->
+                <div class="cx-step-col cx-step-1">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4M5 21V10.85M19 21V10.85M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-start"></div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="50" data-suffix="+">0+</div>
+                    <p class="cx-step-label">Elite Business Families</p>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="cx-step-col cx-step-2">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-mid"></div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="150" data-suffix="+">0+</div>
+                    <p class="cx-step-label">Entrepreneurs Mentored</p>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="cx-step-col cx-step-3">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-mid"></div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num" data-target="1000" data-suffix="+" data-format="comma">0+</div>
+                    <p class="cx-step-label">Keynotes Delivered</p>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="cx-step-col cx-step-4">
+                  <div class="cx-step-top">
+                    <div class="cx-step-pearl">
+                      <svg class="cx-pearl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="5 6 12 3 19 6"/><line x1="4" y1="10" x2="4" y2="21"/><line x1="20" y1="10" x2="20" y2="21"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="12" y1="14" x2="12" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/></svg>
+                    </div>
+                    <div class="cx-step-connector"></div>
+                  </div>
+                  
+                  <div class="cx-step-line-segment cx-line-end">
+                    <svg class="cx-step-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </div>
+                  
+                  <div class="cx-step-bottom">
+                    <div class="cx-step-num">Top Tier</div>
+                    <p class="cx-step-label">Visiting Faculty, Leading B-Schools</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cx-eco-cta-wrap">
+            <a class="cx-eco-btn-solid open-partner-modal" href="javascript:void(0)" onclick="openPartnerModal(event)">ENQUIRE ABOUT PRIVATE COACHING</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: WHY LEADERS CHOOSE US / TAG CLOUD -->
+  <section class="cx-sec-choose" id="choose">
+    <div class="cx-choose-container">
+      <p class="cx-choose-eyebrow">WHY LEADERS ACROSS INDUSTRIES CHOOSE OUR COACHING</p>
+      <h2 class="cx-choose-title">
+        EVIDENCE-BASED. BUSINESS-FOCUSED.<br>
+        <span class="cx-blue-text">TRANSFORMATION-DRIVEN.</span>
+      </h2>
+      <p class="cx-choose-desc">Our coaching engagements integrate globally recognised coaching methodologies, case studies, mentoring scenarios, behavioural science, leadership psychology, executive assessment frameworks, and real-world business experience to deliver measurable outcomes and scientific transformations. Clients choose us for our ability to seamlessly combine the greatness of all focused forms of coaching into a powerful and holistic Leadership Effectiveness Coaching</p>
+      
+      <div class="cx-tag-cloud">
+        <span class="cx-tag-item">Life Coaching</span>
+        <span class="cx-tag-item">Behavioural Coaching</span>
+        <span class="cx-tag-item">Competency Coaching</span>
+        <span class="cx-tag-item">Performance Coaching</span>
+        <span class="cx-tag-item">Executive Coaching</span>
+        <span class="cx-tag-item">Strategic Coaching</span>
+        <span class="cx-tag-item">Business Growth Coaching</span>
+        <span class="cx-tag-item">Business Transformation Coaching</span>
+        <span class="cx-tag-item">Transformational Coaching</span>
+        <span class="cx-tag-item">CEO Coaching</span>
+        <span class="cx-tag-item">Entrepreneur Coaching</span>
+        <span class="cx-tag-item">Succession Coaching</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: CONTACT CTA -->
+  <section class="cx-sec-cta" id="contact">
+    <div class="cx-cta-container">
+      <h2 class="cx-cta-title">
+        WHICH COACHING JOURNEY IS RIGHT FOR <span class="cx-blue-text">YOU?</span>
+      </h2>
+      <p class="cx-cta-desc">Whether you are a CEO seeking strategic clarity, an entrepreneur aspiring to scale your business, an organisation developing future leaders, or an individual committed to personal transformation, our coaching ecosystem offers a customised pathway to unlock your highest potential and create lasting impact.</p>
+      
+      <div class="cx-cta-btn-wrap">
+        <a class="cx-cta-btn-solid open-partner-modal" href="javascript:void(0)" onclick="openPartnerModal(event)">SPEAK TO OUR PROGRAM MANAGER TODAY</a>
+      </div>
+      
+      <p class="cx-cta-subtext">BEGIN YOUR TRANSFORMATIONAL JOURNEY TODAY…!!!</p>
+    </div>
+  </section>
+
+  <!-- =============================================
+       PARTNER WITH US MODAL POPUP
+  ============================================= -->
+  <div id="partnerModal" class="partner-modal-overlay">
+    <div class="partner-modal-container">
+      <button class="partner-modal-close" id="closePartnerModalBtn" aria-label="Close modal">&times;</button>
+      
+      <div class="gate-container partner-gate-box">
+        <h2 class="gate-title">Partner With Us</h2>
+        <p class="gate-desc">Fill out this quick form to connect with Mr. GAD and explore strategic partnerships, corporate consulting, and leadership advisory.</p>
+        
+        <div id="partner-response-msg" style="display: none; padding: 14px; border-radius: 0.75rem; margin-bottom: 25px; font-size: 0.95rem; text-align: center; font-weight: 500; border: 1px solid transparent;"></div>
+
+        <form class="gate-form" id="partnerModalForm">
+          <input type="hidden" name="ref" value="coaching_partner">
+          
+          <div class="form-group">
+            <label for="partner-name">Full Name *</label>
+            <input type="text" id="partner-name" name="name" required placeholder="Your Name">
+          </div>
+          
+          <div class="form-group">
+            <label for="partner-email">Work Email *</label>
+            <input type="email" id="partner-email" name="email" required placeholder="you@company.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="partner-phone">Phone Number *</label>
+            <input type="tel" id="partner-phone" name="phone" required placeholder="e.g. +91 98765 43210">
+          </div>
+          
+          <button type="submit" id="partnerSubmitBtn" class="submit-btn partner-submit-btn" style="margin-top: 15px;">Partner With Us</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- WEBSITE FOOTER -->
+<footer>
+  <!-- Footer Before -->
+  <div class="footer-before">
+    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+      Start Exploring the GAD world
+    </div>
+    <a href="./mr-gad.html" target="_blank">
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.2505 1.25L20.5 7.50076L14.2506 13.7502" stroke="#000" stroke-width="1.5"></path>
+        <line x1="0.499512" y1="7.25" x2="20.4995" y2="7.25" stroke="#000" stroke-width="1.5"></line>
+      </svg>
+    </a>
+  </div>
+
+  <!-- logo -->
+  <div class="footer-logo">
+    <img src="./logo/LogoW.webp" alt="image" loading="lazy" />
+  </div>
+
+  <!-- Footer Main -->
+  <div class="footer">
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+      <h3>Coaching</h3>
+      <a href="./elite-coaching.html" target="_self">Elite Coaching</a>
+      <a href="./leadership-coaching.html" target="_self">Leadership Coaching</a>
+      <a href="./business-growth-coaching.html" target="_self">Business Coaching</a>
+    </div>
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+      <h3>Consulting</h3>
+      <a href="./board-advsiory.html" target="_self">Board Advisory</a>
+      <a href="./organizational-structuring.html" target="_self">Organisational Structuring</a>
+      <a href="./business-strategy.html" target="_self">Business Strategy</a>
+    </div>
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">
+      <h3>Corporate</h3>
+      <a href="./hi-po-culture.html" target="_self">Hi-Po Culture</a>
+      <a href="./succession-planning.html" target="_self">Succession Planning</a>
+      <a href="./senior-management-coaching.html" target="_self">Senior Management Coaching</a>
+    </div>
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+      <h3>Events</h3>
+      <a href="./upcoming-events.html" target="_self">Upcoming Events</a>
+      <a href="./growth-university.html" target="_self">Growth University</a>
+      <a href="./articles.html" target="_self">Articles</a>
+    </div>
+
+    <div class="foot-div" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
+      <h3>Shop</h3>
+      <a href="./influencing-skills.html" target="_self">Influencing</a>
+      <a href="./presentation-skills.html" target="_self">Presentation</a>
+      <a href="./hi-po-leadership.html" target="_self">Leadership</a>
+    </div>
+  </div>
+
+  <div class="footer-after">
+    <div>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">B</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">E</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">C</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">O</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">M</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">E</span>
+    </div>
+
+    <div>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">L</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">I</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="900">M</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1000">I</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1100">T</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">L</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1300">E</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1400">S</span>
+      <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="1500">S</span>
+    </div>
+  </div>
+
+  <div class="footer-social">
+    <div class="footer-contact">
+      <a href="tel:918939106000">
+        <i class="fa-solid fa-phone"></i> +91 89391 06000
+      </a>
+      <a href="mailto:info@geraldarundass.com">
+        <i class="fa-solid fa-envelope"></i> info@geraldarundass.com
+      </a>
+    </div>
+
+    <div class="footer-social-icons">
+      <a class="facebook" href="https://www.facebook.com/profile.php?id=61574957045555" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a class="instagram" href="https://www.instagram.com/geraldarundass/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a class="linkedin" href="https://www.linkedin.com/company/gadsleadershipfoundation/" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a class="youtube" href="https://www.youtube.com/channel/UCi3g8LPK_E4Aa31VLcZD6zQ" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Copyrights -->
+  <div class="copyrights">
+    <span class="cp-02">
+      © Copyright | All rights reserved : GAD'S LEADERSHIP FOUNDATION
+    </span>
+    <span class="policy-links">
+      <a href="./privacy-policy.html">Privacy Policy</a>
+      <a href="./product-policy.html">Product Policy</a>
+      <a href="./refund-cancellation.html">Refund and Cancellation</a>
+      <a href="./terms-condition.html">Terms &amp; Condition</a>
+      <a href="./price-policy.html">Price Policy</a>
+      <a href="./disclaimer-policy.html">Disclaimer Policy</a>
+    </span>
+    <span id="scrollTopBtn">
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.2505 1.25L20.5 7.50076L14.2506 13.7502" stroke="#000" stroke-width="1.5"></path>
+        <line x1="0.499512" y1="7.25" x2="20.4995" y2="7.25" stroke="#000" stroke-width="1.5"></line>
+      </svg>
+    </span>
+  </div>
+</footer>
+
+<!-- Website Scripts -->
+<script src="./common.js" defer></script>
+<script src="load.js" defer></script>
+<script src="menu.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    AOS.init({ duration: 500, once: true, offset: 80 });
+
+    // Section 4 Why Partner Slider JS
+    const track = document.querySelector('[data-why-track]');
+    const prevBtn = document.querySelector('[data-why-prev]');
+    const nextBtn = document.querySelector('[data-why-next]');
+    const dotsContainer = document.querySelector('[data-why-dots]');
+    if (!track) return;
+
+    const slides = Array.from(track.children);
+    let currentIndex = 0;
+
+    function getSlidesPerView() {
+      if (window.innerWidth <= 480) return 1;
+      if (window.innerWidth <= 768) return 2;
+      if (window.innerWidth <= 1024) return 3;
+      return 4;
+    }
+
+    function getMaxIndex() {
+      return Math.max(0, slides.length - getSlidesPerView());
+    }
+
+    function updateSlider() {
+      const maxIndex = getMaxIndex();
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      if (currentIndex < 0) currentIndex = 0;
+
+      const slideWidth = slides[0].getBoundingClientRect().width + 20; // 20px gap
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+      // Update dots
+      if (dotsContainer) {
+        const totalDots = maxIndex + 1;
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement('button');
+          dot.className = `cx-why-dot ${i === currentIndex ? 'active' : ''}`;
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlider();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        currentIndex = Math.max(0, currentIndex - 1);
+        updateSlider();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        currentIndex = Math.min(getMaxIndex(), currentIndex + 1);
+        updateSlider();
+      });
+    }
+
+    window.addEventListener('resize', updateSlider);
+    updateSlider();
+
+    // Section 6 Outcomes Slider JS
+    const outTrack = document.querySelector('[data-outcomes-track]');
+    const outPrevBtn = document.querySelector('[data-outcomes-prev]');
+    const outNextBtn = document.querySelector('[data-outcomes-next]');
+    const outDotsContainer = document.querySelector('[data-outcomes-dots]');
+    if (outTrack) {
+      const outSlides = Array.from(outTrack.children);
+      let outCurrentIndex = 0;
+
+      function getOutSlidesPerView() {
+        if (window.innerWidth <= 480) return 1;
+        if (window.innerWidth <= 768) return 2;
+        return 3;
+      }
+
+      function getOutMaxIndex() {
+        return Math.max(0, outSlides.length - getOutSlidesPerView());
+      }
+
+      function updateOutcomesSlider() {
+        const maxIndex = getOutMaxIndex();
+        if (outCurrentIndex > maxIndex) outCurrentIndex = maxIndex;
+        if (outCurrentIndex < 0) outCurrentIndex = 0;
+
+        const slideWidth = outSlides[0].getBoundingClientRect().width + 20; // 20px gap
+        outTrack.style.transform = `translateX(-${outCurrentIndex * slideWidth}px)`;
+
+        // Update dots
+        if (outDotsContainer) {
+          const totalDots = maxIndex + 1;
+          outDotsContainer.innerHTML = '';
+          for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('button');
+            dot.className = `cx-outcome-dot ${i === outCurrentIndex ? 'active' : ''}`;
+            dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            dot.addEventListener('click', () => {
+              outCurrentIndex = i;
+              updateOutcomesSlider();
+            });
+            outDotsContainer.appendChild(dot);
+          }
+        }
+      }
+
+      if (outPrevBtn) {
+        outPrevBtn.addEventListener('click', () => {
+          outCurrentIndex = Math.max(0, outCurrentIndex - 1);
+          updateOutcomesSlider();
+        });
+      }
+
+      if (outNextBtn) {
+        outNextBtn.addEventListener('click', () => {
+          outCurrentIndex = Math.min(getOutMaxIndex(), outCurrentIndex + 1);
+          updateOutcomesSlider();
+        });
+      }
+
+      window.addEventListener('resize', updateOutcomesSlider);
+      updateOutcomesSlider();
+    }
+
+    // Section 5 Metric Circle Liquid Fill Scroll Observer & Hover Re-trigger JS
+    const impactSec = document.querySelector('#impact');
+    if (impactSec) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            impactSec.classList.add('is-inview');
+          }
+        });
+      }, { threshold: 0.25 });
+      observer.observe(impactSec);
+    }
+
+    document.querySelectorAll('.cx-impact-circle').forEach(circle => {
+      circle.addEventListener('mouseenter', function() {
+        this.classList.remove('is-filled');
+        void this.offsetWidth;
+        this.classList.add('is-filled');
+      });
+    });
+
+    // Section 7 Accordions Toggle JS
+    document.querySelectorAll('.cx-acc-trigger').forEach(trigger => {
+      trigger.addEventListener('click', function () {
+        const accItem = this.closest('.cx-acc-item');
+        const isOpen = accItem.classList.contains('is-open');
+        
+        // Toggle current item
+        if (isOpen) {
+          accItem.classList.remove('is-open');
+          this.setAttribute('aria-expanded', 'false');
+        } else {
+          accItem.classList.add('is-open');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+
+
+    // Milestone Credential Running Counter Animation (ODURA MARI NUMBERS)
+    function animateCounters() {
+      const counters = document.querySelectorAll('.cx-credential-num[data-target], .cx-milestone-sphere-num[data-target], .cx-step-num[data-target]');
+      if (!counters.length) return;
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const numElem = entry.target;
+            const target = parseFloat(numElem.getAttribute('data-target'));
+            const suffix = numElem.getAttribute('data-suffix') || '';
+            const prefix = numElem.getAttribute('data-prefix') || '';
+            const useComma = numElem.getAttribute('data-format') === 'comma';
+            
+            if (!isNaN(target)) {
+              let startTimestamp = null;
+              const duration = 1800;
+              
+              function step(timestamp) {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                // Ease-out cubic
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const currentVal = Math.floor(easeProgress * target);
+                
+                let displayVal = currentVal;
+                if (useComma) {
+                  displayVal = currentVal.toLocaleString('en-US');
+                }
+                numElem.textContent = `${prefix}${displayVal}${suffix}`;
+                
+                if (progress < 1) {
+                  window.requestAnimationFrame(step);
+                } else {
+                  const finalVal = useComma ? target.toLocaleString('en-US') : target;
+                  numElem.textContent = `${prefix}${finalVal}${suffix}`;
+                }
+              }
+              
+              window.requestAnimationFrame(step);
+            }
+            obs.unobserve(numElem);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      counters.forEach(num => observer.observe(num));
+    }
+
+    animateCounters();
+
+    // ==========================================
+    // PARTNER WITH US MODAL SCRIPT (COACHING PAGE)
+    // ==========================================
+    const partnerModal = document.getElementById("partnerModal");
+    const closeBtn = document.getElementById("closePartnerModalBtn");
+    const form = document.getElementById("partnerModalForm");
+    const submitBtn = document.getElementById("partnerSubmitBtn");
+    const responseMsg = document.getElementById("partner-response-msg");
+
+    window.openPartnerModal = function(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      if (partnerModal) {
+        partnerModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    };
+
+    document.querySelectorAll(".open-partner-modal").forEach(function(btn) {
+      btn.addEventListener("click", window.openPartnerModal);
+    });
+
+    function closeModal() {
+      if (partnerModal) {
+        partnerModal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+    if (partnerModal) {
+      partnerModal.addEventListener("click", function(e) {
+        if (e.target === partnerModal) closeModal();
+      });
+    }
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && partnerModal && partnerModal.classList.contains("active")) {
+        closeModal();
+      }
+    });
+
+    function showMsg(message, isSuccess = false) {
+      if (!responseMsg) return;
+      responseMsg.textContent = message;
+      responseMsg.style.display = "block";
+      if (isSuccess) {
+        responseMsg.style.background = "#e8f5e9";
+        responseMsg.style.color = "#2e7d32";
+        responseMsg.style.borderColor = "#c8e6c9";
+      } else {
+        responseMsg.style.background = "#ffebee";
+        responseMsg.style.color = "#c62828";
+        responseMsg.style.borderColor = "#ffcdd2";
+      }
+    }
+
+    if (form) {
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Submitting... <span class="spinner"></span>';
+        if (responseMsg) responseMsg.style.display = "none";
+
+        const formData = new FormData(form);
+
+        fetch("submit-partner.php", {
+          method: "POST",
+          body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data.status === "success") {
+            showMsg(data.message || "Thank you! Our leadership advisory team will contact you shortly.", true);
+            submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Request Submitted';
+            form.reset();
+            setTimeout(() => {
+              closeModal();
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = 'Partner With Us';
+              if (responseMsg) responseMsg.style.display = "none";
+            }, 2500);
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Partner With Us';
+            showMsg(data.message || "An error occurred. Please try again.");
+          }
+        })
+        .catch(err => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Partner With Us';
+          showMsg("Network error. Please try again later.");
+          console.error(err);
+        });
+      });
+    }
+  });
+  window.addEventListener('load', function () {
+    if (typeof AOS !== 'undefined') AOS.refresh();
+  });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://geraldarundass.com/#coaching-service",
+  "name": "Leadership, Executive, Business and Personal Coaching",
+  "serviceType": [
+    "Leadership Coaching",
+    "Executive Coaching",
+    "Business Coaching",
+    "Corporate Coaching",
+    "Life Coaching",
+    "Private Coaching",
+    "Signature Coaching"
+  ],
+  "url": "https://geraldarundass.com/",
+  "description": "GADS Leadership Foundation provides leadership, executive, business, corporate, life, private and signature coaching designed to help CEOs, C-Suite leaders, founders, entrepreneurs, business owners and professionals develop leadership capabilities, improve decision-making, achieve business growth and create meaningful personal and professional transformation.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://geraldarundass.com/#organization",
+    "name": "GLF | GADS Leadership Foundation",
+    "alternateName": "GLF",
+    "url": "https://geraldarundass.com/"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Chennai"
+    },
+    {
+      "@type": "Country",
+      "name": "India"
+    }
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": [
+      "CEOs",
+      "C-Suite Leaders",
+      "Business Owners",
+      "Founders",
+      "Co-Founders",
+      "Entrepreneurs",
+      "Executives",
+      "Senior Managers",
+      "Corporate Leaders",
+      "Professionals"
+    ]
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "GLF Coaching Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "@id": "https://geraldarundass.com/#leadership-coaching",
+          "name": "Leadership Coaching",
+          "serviceType": "Leadership Coaching",
+          "description": "Leadership coaching focused on leadership effectiveness, decision-making, influence, people leadership and leadership transformation."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "@id": "https://geraldarundass.com/#executive-coaching",
+          "name": "Executive Coaching",
+          "serviceType": "Executive Coaching",
+          "description": "Executive coaching designed to help senior leaders and executives improve leadership performance, strategic thinking, decision-making and professional effectiveness."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "@id": "https://geraldarundass.com/#business-coaching",
+          "name": "Business Coaching",
+          "serviceType": "Business Coaching",
+          "description": "Business coaching focused on business growth, strategic thinking, execution, entrepreneurial mindset and sustainable business performance."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "@id": "https://geraldarundass.com/#corporate-coaching",
+          "name": "Corporate Coaching",
+          "serviceType": "Corporate Coaching",
+          "description": "Corporate coaching that supports leadership development, employee performance, organisational effectiveness and business transformation."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "@id": "https://geraldarundass.com/#life-coaching",
+          "name": "Life Coaching",
+          "serviceType": "Life Coaching",
+          "description": "Life coaching focused on personal development, clarity, confidence, mindset transformation, goals and meaningful personal growth."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "@id": "https://geraldarundass.com/#private-coaching",
+          "name": "Private Coaching",
+          "serviceType": "Private Coaching",
+          "description": "One-to-one private coaching designed around individual leadership, business, personal and professional development goals."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "@id": "https://geraldarundass.com/#signature-coaching",
+          "name": "Signature Coaching",
+          "serviceType": "Signature Coaching",
+          "description": "Signature coaching for leaders, entrepreneurs and professionals seeking deeper transformation, leadership development and long-term personal and business growth."
+        }
+      }
+    ]
+  }
+}
+</script>
+ 
+</body>
+</html>
