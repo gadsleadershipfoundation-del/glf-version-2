@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (preloader) {
       preloader.classList.add("preloader-hide");
     }
-  }, 1000); // 2000ms = 2 seconds
+  }, 1000); // 1000ms = 1 second
 });
 
 // ---------------------------------------------------
@@ -26,8 +26,6 @@ window.addEventListener("resize", function () {
 // -------------------------------------------------
 // Scroll Top Button
 function scrollToTop() {
-  console.log("clicked");
-
   window.scrollTo({
     top: 0,
     behavior: "smooth",
@@ -153,13 +151,108 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Global Partner With Us handler
+// -------------------------------------------------
+// Global Partner With Us handler (Opens on-page modal)
 function openPartnerModal(e) {
-  if (e) e.preventDefault();
-  const prefix = getSiteRootPrefix();
-  window.location.href = prefix + 'download-gate.php?ref=partner';
+  if (e && e.preventDefault) e.preventDefault();
+  const modal = document.getElementById("partnerModal");
+  if (modal) {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
 }
 window.openPartnerModal = openPartnerModal;
 
+// -------------------------------------------------
+// Tawk.to Live Chat Script
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+  var s1 = document.createElement("script");
+  s1.async = true;
+  s1.src = 'https://embed.tawk.to/6abcc49e39a9aa34473b1d51/1k3om03d0';
+  s1.charset = 'UTF-8';
+  s1.setAttribute('crossorigin', '*');
+  (document.head || document.documentElement).appendChild(s1);
+})();
 
+// Tawk.to to Mailmunch Auto-Sync Callbacks
+Tawk_API.onPrechatSubmit = function (data) {
+  syncTawkLeadToMailmunch(data);
+};
+Tawk_API.onOfflineSubmit = function (data) {
+  syncTawkLeadToMailmunch(data);
+};
 
+function syncTawkLeadToMailmunch(tawkData) {
+  if (!tawkData) return;
+  var email = tawkData.email || '';
+  var name = tawkData.name || '';
+  var phone = tawkData.phone || '';
+  var designation = '';
+  
+  if (tawkData.questions && Array.isArray(tawkData.questions)) {
+    tawkData.questions.forEach(function (q) {
+      var label = (q.name || q.label || '').toLowerCase();
+      var val = q.answer || q.value || '';
+      if (label.indexOf('designation') !== -1) designation = val;
+      if (label.indexOf('phone') !== -1 && !phone) phone = val;
+    });
+  }
+
+  // 1. Direct Background POST to Mailmunch Form (Widget ID: 1172402)
+  if (email) {
+    try {
+      var formData = new URLSearchParams();
+      formData.append('email', email);
+      formData.append('first_name', name);
+      formData.append('phone', phone);
+      formData.append('site_id', '1104096');
+      formData.append('widget_id', '1172402');
+
+      fetch('https://a.mailmunch.co/widgets/1172402/submit', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData.toString()
+      }).then(function () {
+        console.log('Lead synced to Mailmunch successfully');
+      }).catch(function (e) {
+        console.log('Mailmunch direct post:', e);
+      });
+    } catch (err) {
+      console.log('Mailmunch sync error:', err);
+    }
+  }
+
+  // 2. Server-side Webhook & CSV Backup
+  var prefix = typeof getSiteRootPrefix === 'function' ? getSiteRootPrefix() : './';
+  fetch(prefix + 'api/tawk-webhook.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event: 'tawk_lead_submit',
+      visitor: { name: name, email: email, phone: phone },
+      questions: [
+        { label: 'designation', value: designation },
+        { label: 'phone', value: phone }
+      ]
+    })
+  }).catch(function (err) {
+    console.warn('Lead sync notice:', err);
+  });
+}
+
+// -------------------------------------------------
+// Mailmunch Site Tracking Script
+(function () {
+  if (!document.getElementById("mailmunch-script")) {
+    var mm = document.createElement("script");
+    mm.id = "mailmunch-script";
+    mm.src = "//a.mailmunch.co/app/v1/site.js";
+    mm.setAttribute("data-mailmunch-site-id", "1104096");
+    mm.async = true;
+    (document.head || document.documentElement).appendChild(mm);
+  }
+})();
